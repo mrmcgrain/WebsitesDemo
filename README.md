@@ -18,3 +18,7 @@ GitHub Pages hub for website mockups and demos.
 GitHub Pages URL format:
 
 `https://mrmcgrain.github.io/WebsitesDemo/sites/my-project/`
+
+## Current additions
+
+- `sites/mikid-modern-redesign/` — M.I.K.I.D. modern redesign concept preserving homepage content and logo-driven colors.
