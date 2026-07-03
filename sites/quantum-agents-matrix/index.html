@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Quantum Agents in the Matrix</title>
+  <style>
+    :root{--bg:#06080f;--card:#0f1424;--line:#1f2a48;--text:#e6eeff;--muted:#95a6d8;--green:#30ff8a;--cyan:#39d6ff;--vio:#9b6bff}
+    *{box-sizing:border-box}
+    body{margin:0;color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 600px at 80% -10%,#13214a 0%,transparent 45%),radial-gradient(900px 400px at -10% 0%,#0e4e36 0%,transparent 50%),var(--bg)}
+    .matrix{position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:linear-gradient(transparent 96%,#58ff9a 96%),linear-gradient(90deg,transparent 96%,#58ff9a 96%);background-size:24px 24px}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:8px 0 20px}
+    .logo{font-weight:800;letter-spacing:.6px}
+    .logo span{color:var(--green)}
+    .btn{display:inline-block;padding:11px 16px;border-radius:12px;text-decoration:none;color:#021216;font-weight:700;background:linear-gradient(120deg,var(--green),var(--cyan))}
+    .hero{padding:38px 0 26px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}
+    h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:0 0 12px}
+    p{color:var(--muted);line-height:1.6}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .chip{font-size:.85rem;border:1px solid #2a3965;background:#0f1832;padding:7px 10px;border-radius:999px;color:#b6c5ef}
+    .panel{border:1px solid var(--line);background:linear-gradient(180deg,#0f1731,#0c1327);border-radius:16px;padding:14px}
+    .scan{height:280px;border:1px solid #2a3d72;border-radius:12px;position:relative;overflow:hidden;background:#0b1020}
+    .scan:before{content:"";position:absolute;left:0;right:0;top:-25%;height:25%;background:linear-gradient(180deg,transparent,rgba(57,214,255,.25),transparent);animation:sweep 2.8s linear infinite}
+    @keyframes sweep{to{top:110%}}
+    .nodes{position:absolute;inset:0}
+    .node{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+    .n1{left:14%;top:18%}.n2{left:50%;top:25%}.n3{left:74%;top:14%}.n4{left:23%;top:58%}.n5{left:62%;top:60%}.n6{left:84%;top:78%}
+    .line{position:absolute;height:1px;background:linear-gradient(90deg,rgba(57,214,255,.1),rgba(57,214,255,.7),rgba(57,214,255,.1));transform-origin:left center}
+    .l1{left:14%;top:18%;width:38%;transform:rotate(8deg)} .l2{left:50%;top:25%;width:24%;transform:rotate(-20deg)}
+    .l3{left:23%;top:58%;width:39%;transform:rotate(2deg)} .l4{left:62%;top:60%;width:23%;transform:rotate(27deg)}
+    .section{margin:22px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .card{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:14px}
+    .kpi{font-size:1.4rem;font-weight:800;color:#d7ffea}
+    .small{font-size:.88rem;color:var(--muted)}
+    footer{padding:16px 0 30px;color:#91a0cd}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="matrix"></div>
+  <div class="wrap">
+    <div class="nav">
+      <div class="logo">Q<span>AGENTS</span> // MATRIX</div>
+      <a class="btn" href="entanglement-demo.html">Launch Entanglement Demo</a>
+    </div>
+
+    <section class="hero">
+      <div>
+        <h1>Quantum Agents in the Matrix</h1>
+        <p>Autonomous agents coordinating across a cryptographically verifiable matrix. Built for mission-critical decisions, secure orchestration, and high-frequency adaptation in adversarial environments.</p>
+        <div class="chips">
+          <span class="chip">Quantum Entropy</span>
+          <span class="chip">Agent Mesh</span>
+          <span class="chip">Zero-Trust Runtime</span>
+          <span class="chip">Audit-Ready Provenance</span>
+        </div>
+        <a class="btn" id="launch" href="#contact">Request Access</a>
+      </div>
+      <div class="panel">
+        <div class="scan">
+          <div class="nodes">
+            <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div>
+            <div class="node n4"></div><div class="node n5"></div><div class="node n6"></div>
+            <div class="line l1"></div><div class="line l2"></div><div class="line l3"></div><div class="line l4"></div>
+          </div>
+        </div>
+        <p class="small">Live topology: 2,048 agents • 9 dimensions • 41ms median consensus</p>
+      </div>
+    </section>
+
+    <section class="section grid">
+      <div class="card"><div class="kpi">99.999%</div><div class="small">Uptime across matrix zones</div></div>
+      <div class="card"><div class="kpi">3.2M/s</div><div class="small">Secure inference transactions</div></div>
+      <div class="card"><div class="kpi">12x</div><div class="small">Faster decision convergence</div></div>
+    </section>
+
+    <section class="section grid">
+      <div class="card"><h3>Quantum Keyed Coordination</h3><p>Every inter-agent message is seeded by high-entropy key material with tamper-evident signatures.</p></div>
+      <div class="card"><h3>Self-Healing Agent Fabric</h3><p>Agents detect drift, reroute tasks, and recover consensus without central bottlenecks.</p></div>
+      <div class="card" id="contact"><h3>Enterprise Onboarding</h3><p>Deploy private matrix clusters, compliance controls, and role-scoped operator tooling.</p></div>
+    </section>
+
+    <footer>© 2026 QAGENTS MATRIX • Built for secure autonomous systems.</footer>
+  </div>
+</body>
+</html>

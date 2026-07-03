@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brandon Landry — Cinematic Full-Stack Engineer</title>
+  <meta name="description" content="A cinematic portfolio refactor for Brandon Landry, full-stack engineer building AI pipelines, AWS infrastructure, Flutter apps, and client sites." />
+  <meta property="og:title" content="Brandon Landry — Cinematic Full-Stack Engineer" />
+  <meta property="og:description" content="AI voice synthesis pipelines, AWS CDK infrastructure, client sites, mobile apps, and developer tools." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Brandon Landry home">
+        <span class="brand-mark">BL</span>
+        <span>Brandon Landry</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#systems">Systems</a>
+        <a href="#story">About</a>
+        <a href="mailto:brandon@brandonlandry.com" class="pill-link">Let’s build</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Full-stack engineer / AI systems / AWS CDK</p>
+        <h1 id="hero-title">Building production systems with a cinematic sense of momentum.</h1>
+        <p class="lede">I’m Brandon Landry. I connect ambitious product ideas to real infrastructure: AI voice pipelines, hybrid search engines, production client sites, Flutter apps, and AWS-backed platforms.</p>
+        <div class="hero-actions">
+          <a class="primary-cta" href="#projects">Explore the reel</a>
+          <a class="secondary-cta" href="mailto:brandon@brandonlandry.com">brandon@brandonlandry.com</a>
+        </div>
+        <dl class="metrics" aria-label="Portfolio highlights">
+          <div><dt>187+</dt><dd>Repos maintained</dd></div>
+          <div><dt>45K+</dt><dd>Portal users served</dd></div>
+          <div><dt>19</dt><dd>AWS stacks on one build</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Featured project preview">
+        <div class="cinema-card">
+          <div class="scanline" aria-hidden="true"></div>
+          <div class="card-topbar"><span></span><span></span><span></span><strong>FEATURED BUILD</strong></div>
+          <div class="holo-stage">
+            <div class="ring ring-one"></div>
+            <div class="ring ring-two"></div>
+            <div class="core-pulse"></div>
+            <div class="node node-one">AI</div>
+            <div class="node node-two">TTS</div>
+            <div class="node node-three">AWS</div>
+          </div>
+          <div class="audio-panel">
+            <div>
+              <p class="kicker">repo-story</p>
+              <h2>Codebases into documentary audiobooks.</h2>
+              <p>Survey, explore, synthesize, research, narrate — a five-phase voice pipeline for technical storytelling.</p>
+            </div>
+            <audio controls preload="none" src="https://brandonlandry.com/audio/book.m4b">Your browser does not support audio playback.</audio>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Core capabilities">
+      <div class="marquee-track">
+        <span>AI pipelines</span><span>CDK infrastructure</span><span>CloudFront</span><span>Hybrid search</span><span>Flutter apps</span><span>React islands</span><span>Serverless CMS</span><span>Developer tools</span>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> Selected work</p>
+        <h2 id="projects-title">Project cards that feel like trailers.</h2>
+        <p>Each build keeps the original portfolio’s content, but reframes it with richer hierarchy, luminous depth, and a sharper conversion path.</p>
+      </div>
+      <div class="filters reveal" role="list" aria-label="Project filters">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="ai" type="button">AI</button>
+        <button class="filter" data-filter="aws" type="button">AWS</button>
+        <button class="filter" data-filter="client" type="button">Client</button>
+        <button class="filter" data-filter="fullstack" type="button">Full-stack</button>
+      </div>
+      <div class="project-grid">
+        <article class="project-card hero-project reveal" data-category="ai fullstack">
+          <div class="project-glow"></div><p class="tag">Side Project</p><h3>repo-story</h3><p>Turn any Git repository into a documentary audiobook with an AI voice synthesis pipeline.</p><div class="chips"><span>Python</span><span>AI</span><span>TTS</span><span>CLI</span></div><a href="https://brandonlandry.com/projects/repo-story/">View case study</a>
+        </article>
+        <article class="project-card reveal" data-category="client aws fullstack">
+          <div class="project-glow"></div><p class="tag">Client</p><h3>finsetdesign.com</h3><p>Production designer portfolio with Astro, React islands, Lambda uploads, Hono APIs, and masonry gallery UX.</p><div class="chips"><span>Astro</span><span>React</span><span>AWS CDK</span><span>Lambda</span></div><a href="https://brandonlandry.com/projects/finsetdesign/">View case study</a>
+        </article>
+        <article class="project-card reveal" data-category="ai fullstack">
+          <div class="project-glow"></div><p class="tag">Side Project</p><h3>mbox-parser</h3><p>Legal document search engine combining ChromaDB vectors, SQLite FTS5, RRF, GPU embeddings, and Claude analysis.</p><div class="chips"><span>Python</span><span>ChromaDB</span><span>SQLite</span><span>Claude</span></div><a href="https://brandonlandry.com/projects/mbox-parser/">View case study</a>
+        </article>
+        <article class="project-card reveal" data-category="client aws fullstack">
+          <div class="project-glow"></div><p class="tag">Client</p><h3>opificermedia.com</h3><p>Serverless videography portfolio with Cognito auth, Lambda API, presigned S3 uploads, Quill editor, and CloudFront CDN.</p><div class="chips"><span>SAM</span><span>Cognito</span><span>S3</span><span>CloudFront</span></div><a href="https://brandonlandry.com/projects/opificermedia/">View case study</a>
+        </article>
+        <article class="project-card reveal" data-category="aws fullstack">
+          <div class="project-glow"></div><p class="tag">Brand</p><h3>brandonlandry.com</h3><p>Next.js static export, MDX collections, AWS CDK, S3, CloudFront, Route53, ACM, and GitHub Actions CI/CD.</p><div class="chips"><span>Next.js</span><span>MDX</span><span>CDK</span><span>CI/CD</span></div><a href="https://brandonlandry.com/projects/this-site/">View case study</a>
+        </article>
+        <article class="project-card reveal" data-category="aws client">
+          <div class="project-glow"></div><p class="tag">Work</p><h3>Deer Valley USD Portal</h3><p>Enterprise portal architecture, database design, full-text search, ACLs, developer tooling, and team mentorship.</p><div class="chips"><span>PHP</span><span>Oracle</span><span>LDAP</span><span>Linux</span></div><a href="https://brandonlandry.com/projects/dvusd-portal/">View case study</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="systems" aria-labelledby="systems-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> Systems language</p>
+        <h2 id="systems-title">From idea to deployed architecture.</h2>
+        <p>The refreshed site highlights Brandon as an integrator: someone who can wire models, user interfaces, cloud services, and operational pipelines into one finished product.</p>
+      </div>
+      <div class="timeline reveal">
+        <div><span>01</span><h3>AI & ML</h3><p>Chatterbox TTS, ChromaDB, Claude, GPT workflows, narrative reports, and hybrid retrieval.</p></div>
+        <div><span>02</span><h3>AWS Infrastructure</h3><p>CDK, Lambda, S3, CloudFront, AppSync, DynamoDB, Cognito, Route53, ACM, EventBridge, and monitoring.</p></div>
+        <div><span>03</span><h3>Product Interfaces</h3><p>Next.js, Astro, React, Flutter, Three.js, Quill CMS workflows, and conversion-focused frontends.</p></div>
+      </div>
+    </section>
+
+    <section class="section story-panel" id="story" aria-labelledby="story-title">
+      <div class="story-card reveal">
+        <p class="eyebrow"><span></span> About Brandon</p>
+        <h2 id="story-title">A pipeline builder for the messy middle.</h2>
+        <p>Recent work focuses on AI integration: TTS engines, hybrid search systems for legal documents, and tools that transform code repositories into documentary audiobooks. The position is simple: connect powerful models to real workflows and ship the infrastructure around them.</p>
+        <div class="story-links">
+          <a href="https://github.com/hotpocket">GitHub</a>
+          <a href="https://linkedin.com/in/sirjava">LinkedIn</a>
+          <a href="mailto:brandon@brandonlandry.com">Email</a>
+        </div>
+      </div>
+      <aside class="quote-card reveal" aria-label="Portfolio positioning statement">
+        <p>“The infrastructure is the portfolio piece.”</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Brandon Landry · Full-stack engineer · AI pipelines · AWS infrastructure</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

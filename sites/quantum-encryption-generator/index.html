@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quantum Encryption Generator</title>
+  <style>
+    :root { --bg:#0b1020; --card:#121a33; --text:#e8ecff; --muted:#9aa6d1; --acc:#5eead4; --acc2:#60a5fa; --err:#f87171; }
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(135deg,#090d1a,#111b36);color:var(--text)}
+    .wrap{max-width:980px;margin:32px auto;padding:0 16px}
+    .card{background:var(--card);border:1px solid #26345f;border-radius:14px;padding:16px 18px;margin-bottom:14px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+    h1{margin:6px 0 6px;font-size:1.7rem}
+    p{color:var(--muted)}
+    label{display:block;margin:8px 0 6px;color:#c6d0f5;font-weight:600}
+    textarea,input{width:100%;box-sizing:border-box;background:#0e1530;color:var(--text);border:1px solid #334577;border-radius:10px;padding:10px}
+    textarea{min-height:110px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    button{background:linear-gradient(120deg,var(--acc),var(--acc2));color:#001028;border:none;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    button.alt{background:#1b2852;color:#d9e3ff;border:1px solid #3b4f89}
+    .small{font-size:.9rem;color:var(--muted)}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;word-break:break-all}
+    .ok{color:var(--acc)} .err{color:var(--err)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>Quantum Encryption Generator</h1>
+    <p>Generates AES-256-GCM keys from a quantum-style entropy seed and encrypts/decrypts text in-browser using Web Crypto.</p>
+    <p class="small">Note: this is a demo. If QRNG API is unavailable, it falls back to secure local randomness (crypto.getRandomValues).</p>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div>
+        <label>Entropy source</label>
+        <input id="entropyUrl" value="https://bracelet-factor-september-where.trycloudflare.com/qrng/bytes?n=32" />
+      </div>
+      <div>
+        <label>Status</label>
+        <div id="status" class="small">Ready.</div>
+      </div>
+    </div>
+    <div class="btns">
+      <button id="genKey">Generate Quantum Key</button>
+      <button id="exportKey" class="alt">Export Raw Key (hex)</button>
+      <button id="copyPayload" class="alt">Copy Encrypted Payload</button>
+    </div>
+    <label>Key fingerprint (SHA-256)</label>
+    <div id="fingerprint" class="mono small">(none)</div>
+  </div>
+
+  <div class="card">
+    <label>Plaintext</label>
+    <textarea id="plaintext" placeholder="Type message to encrypt..."></textarea>
+    <div class="btns">
+      <button id="encrypt">Encrypt</button>
+      <button id="decrypt" class="alt">Decrypt payload below</button>
+    </div>
+
+    <label>Encrypted payload (base64 JSON)</label>
+    <textarea id="payload" class="mono" placeholder="Will appear here after encryption"></textarea>
+
+    <label>Decrypted output</label>
+    <textarea id="decrypted" readonly></textarea>
+  </div>
+</div>
+
+<script>
+(() => {
+  let activeKey = null;
+
+  const $ = (id) => document.getElementById(id);
+  const status = (msg, good=true) => {
+    const el = $('status');
+    el.textContent = msg;
+    el.className = good ? 'small ok' : 'small err';
+  };
+
+  const toHex = (buf) => Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  const b64 = (bytes) => btoa(String.fromCharCode(...bytes));
+  const unb64 = (s) => Uint8Array.from(atob(s), c=>c.charCodeAt(0));
+
+  async function sha256Hex(bytes) {
+    const hash = await crypto.subtle.digest('SHA-256', bytes);
+    return toHex(hash);
+  }
+
+  async function getSeedBytes() {
+    const endpoint = $('entropyUrl').value.trim();
+    try {
+      status('Fetching quantum entropy…');
+      const res = await fetch(endpoint, { method: 'GET' });
+      if (!res.ok) throw new Error('QRNG endpoint not OK: ' + res.status);
+      const data = await res.json();
+      if (!data.hex || typeof data.hex !== 'string') throw new Error('Unexpected QRNG response');
+      const seed = new Uint8Array(data.hex.match(/.{1,2}/g).map(h => parseInt(h,16)));
+      if (seed.length < 32) throw new Error('Seed too short');
+      status('Using remote quantum entropy seed.');
+      return seed;
+    } catch (e) {
+      const fallback = new Uint8Array(32);
+      crypto.getRandomValues(fallback);
+      status('QRNG unavailable. Fallback: local CSPRNG seed.', false);
+      return fallback;
+    }
+  }
+
+  async function generateKey() {
+    const seed = await getSeedBytes();
+    const keyMaterial = await crypto.subtle.digest('SHA-256', seed); // derive 256-bit key
+    activeKey = await crypto.subtle.importKey(
+      'raw',
+      keyMaterial,
+      { name: 'AES-GCM' },
+      true,
+      ['encrypt', 'decrypt']
+    );
+    const fp = await sha256Hex(keyMaterial);
+    $('fingerprint').textContent = fp;
+    status('AES-256-GCM key generated.');
+  }
+
+  async function exportRawKey() {
+    if (!activeKey) return status('Generate a key first.', false);
+    const raw = await crypto.subtle.exportKey('raw', activeKey);
+    navigator.clipboard.writeText(toHex(raw));
+    status('Raw key copied as hex (clipboard).');
+  }
+
+  async function encryptText() {
+    if (!activeKey) return status('Generate a key first.', false);
+    const pt = $('plaintext').value;
+    if (!pt) return status('Enter plaintext first.', false);
+
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const encoded = new TextEncoder().encode(pt);
+    const ct = await crypto.subtle.encrypt({ name:'AES-GCM', iv }, activeKey, encoded);
+
+    const payloadObj = {
+      alg: 'AES-256-GCM',
+      iv: b64(iv),
+      ciphertext: b64(new Uint8Array(ct))
+    };
+    const payload = b64(new TextEncoder().encode(JSON.stringify(payloadObj)));
+    $('payload').value = payload;
+    status('Encrypted successfully.');
+  }
+
+  async function decryptPayload() {
+    if (!activeKey) return status('Generate a key first.', false);
+    try {
+      const payload = $('payload').value.trim();
+      const json = new TextDecoder().decode(unb64(payload));
+      const obj = JSON.parse(json);
+      const iv = unb64(obj.iv);
+      const ct = unb64(obj.ciphertext);
+
+      const pt = await crypto.subtle.decrypt({ name:'AES-GCM', iv }, activeKey, ct);
+      $('decrypted').value = new TextDecoder().decode(pt);
+      status('Decrypted successfully.');
+    } catch (e) {
+      status('Decrypt failed: invalid payload/key.', false);
+    }
+  }
+
+  function copyPayload() {
+    const p = $('payload').value.trim();
+    if (!p) return status('No payload to copy.', false);
+    navigator.clipboard.writeText(p);
+    status('Encrypted payload copied.');
+  }
+
+  $('genKey').addEventListener('click', generateKey);
+  $('exportKey').addEventListener('click', exportRawKey);
+  $('encrypt').addEventListener('click', encryptText);
+  $('decrypt').addEventListener('click', decryptPayload);
+  $('copyPayload').addEventListener('click', copyPayload);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pocket Creatures 3D</title>
+  <style>
+    :root{--bg:#0b1020;--panel:rgba(16,24,48,.88);--line:#31467c;--text:#e8efff;--muted:#9eb0de;--good:#5df2b5;--warn:#ffd166}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif}
+    #game{width:100%;height:100%}
+    .hud{position:fixed;left:12px;top:12px;z-index:10;display:flex;flex-direction:column;gap:8px;max-width:340px}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px;backdrop-filter:blur(6px)}
+    .title{font-weight:800;font-size:14px}
+    .muted{color:var(--muted);font-size:12px;line-height:1.35}
+    .stat{font-family:ui-monospace,Consolas,monospace;font-size:12px;color:#b8d8ff;margin-top:4px}
+    .battle{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);width:min(860px,94vw);z-index:20;display:none}
+    .battle.active{display:block}
+    .battle-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:10px}
+    .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    button{background:#16254d;color:var(--text);border:1px solid #4260a8;border-radius:10px;padding:9px 10px;cursor:pointer}
+    button:hover{background:#1d3163}
+    button.primary{background:linear-gradient(120deg,#72f1d0,#75a9ff);color:#061320;font-weight:700;border:none}
+    .log{height:110px;overflow:auto;background:#0e1734;border:1px solid #2d427a;border-radius:10px;padding:8px;font-size:12px;color:#c6d8ff}
+    .top-right{position:fixed;right:12px;top:12px;z-index:10;display:flex;flex-direction:column;gap:8px;max-width:300px}
+    .chip{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid #3b589f;font-size:11px;color:#b8d6ff;background:#121e44;margin:2px 4px 0 0}
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div class="hud">
+    <div class="panel">
+      <div class="title">Pocket Creatures 3D</div>
+      <div class="muted">Move: WASD / Arrow Keys • Sprint: Shift • Look: mouse drag • Interact near creature: E</div>
+      <div id="playerStats" class="stat">HP 100/100 | Balls 8 | Captured 0</div>
+    </div>
+    <div class="panel">
+      <div class="title">Objective</div>
+      <div class="muted">Explore the map, battle wild creatures, and catch as many as possible.</div>
+      <div id="objective" class="stat">Find a wild creature...</div>
+    </div>
+  </div>
+
+  <div class="top-right">
+    <div class="panel">
+      <div class="title">Your Team</div>
+      <div id="team" class="muted">No captures yet.</div>
+    </div>
+  </div>
+
+  <div id="battle" class="battle">
+    <div class="panel battle-grid">
+      <div>
+        <div id="battleTitle" class="title">Battle</div>
+        <div id="enemyStats" class="stat">Enemy HP</div>
+        <div id="battleLog" class="log"></div>
+      </div>
+      <div>
+        <div class="actions">
+          <button id="attackBtn" class="primary">Attack</button>
+          <button id="skillBtn">Skill Burst</button>
+          <button id="catchBtn">Throw Capture Orb</button>
+          <button id="runBtn">Run</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="module">
+import * as THREE from './vendor/three/three.module.js';
+
+const canvas = document.getElementById('game');
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.08;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.Fog(0x9ec7ff, 35, 120);
+
+const sky = new THREE.Mesh(
+  new THREE.SphereGeometry(260, 32, 16),
+  new THREE.MeshBasicMaterial({color:0x8fc6ff, side:THREE.BackSide})
+);
+scene.add(sky);
+
+const camera = new THREE.PerspectiveCamera(68, innerWidth/innerHeight, 0.1, 500);
+camera.position.set(0,7,12);
+
+const hemi = new THREE.HemisphereLight(0xe4f2ff, 0x3d4f31, 0.9); scene.add(hemi);
+const sun = new THREE.DirectionalLight(0xffffff, 1.25); sun.position.set(30,60,20); sun.castShadow = true;
+sun.shadow.mapSize.set(2048,2048);
+sun.shadow.camera.left = -70; sun.shadow.camera.right = 70;
+sun.shadow.camera.top = 70; sun.shadow.camera.bottom = -70;
+scene.add(sun);
+
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(220,220,32,32),
+  new THREE.MeshToonMaterial({color:0x67b95d})
+);
+ground.rotation.x = -Math.PI/2; ground.receiveShadow = true; scene.add(ground);
+
+const battleRing = new THREE.Mesh(
+  new THREE.TorusGeometry(9, 0.35, 16, 90),
+  new THREE.MeshToonMaterial({color:0xdccf90})
+);
+battleRing.position.set(0,0.08,0);
+battleRing.rotation.x = Math.PI/2;
+scene.add(battleRing);
+
+// Decorations
+for(let i=0;i<110;i++){
+  const trunk = new THREE.Mesh(new THREE.CylinderGeometry(.25,.35,2,8), new THREE.MeshToonMaterial({color:0x6b4b2a}));
+  const crown = new THREE.Mesh(new THREE.SphereGeometry(1.1,10,10), new THREE.MeshToonMaterial({color:0x2f8f49}));
+  const g = new THREE.Group(); g.add(trunk); g.add(crown);
+  crown.position.y = 1.7; trunk.position.y = 1;
+  trunk.castShadow = true;
+  crown.castShadow = true;
+  g.position.set((Math.random()-0.5)*180,0,(Math.random()-0.5)*180);
+  if(g.position.length() < 15) continue;
+  scene.add(g);
+}
+
+const player = {
+  pos: new THREE.Vector3(0,1.0,0),
+  hp:100,maxHp:100,balls:8,captured:[],speed:0.18,yaw:0
+};
+
+const playerMesh = new THREE.Mesh(
+  new THREE.CapsuleGeometry(0.55,1.2,4,8),
+  new THREE.MeshToonMaterial({color:0x3d79ff})
+);
+playerMesh.position.copy(player.pos);
+playerMesh.castShadow = true;
+scene.add(playerMesh);
+
+const playerOutline = new THREE.Mesh(
+  new THREE.CapsuleGeometry(0.59,1.22,4,8),
+  new THREE.MeshBasicMaterial({color:0x1d2030, side:THREE.BackSide})
+);
+playerMesh.add(playerOutline);
+
+const keys = new Set();
+addEventListener('keydown',e=>keys.add(e.key.toLowerCase()));
+addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));
+
+let dragging=false,prevX=0;
+canvas.addEventListener('mousedown',e=>{dragging=true;prevX=e.clientX;});
+addEventListener('mouseup',()=>dragging=false);
+addEventListener('mousemove',e=>{ if(!dragging) return; const dx=e.clientX-prevX; prevX=e.clientX; player.yaw -= dx*0.004; });
+
+const creatureDefs = [
+  {name:'Sparkit', color:0xffc857, hp:34, atk:[6,12], rarity:0.95},
+  {name:'Aquabub', color:0x4fc3f7, hp:42, atk:[5,10], rarity:0.85},
+  {name:'Leafloop', color:0x7ad66d, hp:48, atk:[4,9], rarity:0.7},
+  {name:'Emberox', color:0xff7043, hp:55, atk:[7,13], rarity:0.55},
+  {name:'Voidbit', color:0xb388ff, hp:62, atk:[8,15], rarity:0.3}
+];
+
+function pickDef(){
+  const r=Math.random(); let acc=0;
+  for(const d of creatureDefs){ acc += d.rarity; if(r<=acc) return d; }
+  return creatureDefs[0];
+}
+
+const wild = [];
+function outlineMesh(geo, s=1.07){
+  const m = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color:0x1a1f2f, side:THREE.BackSide}));
+  m.scale.setScalar(s);
+  return m;
+}
+
+function createStylizedCreature(def){
+  const g = new THREE.Group();
+  const bodyGeo = new THREE.SphereGeometry(0.72, 18, 18);
+  const headGeo = new THREE.SphereGeometry(0.52, 16, 16);
+  const earGeo = new THREE.ConeGeometry(0.16, 0.45, 8);
+  const eyeGeo = new THREE.SphereGeometry(0.08, 8, 8);
+
+  const body = new THREE.Mesh(bodyGeo, new THREE.MeshToonMaterial({color:def.color}));
+  body.position.y = 0.78;
+  const head = new THREE.Mesh(headGeo, new THREE.MeshToonMaterial({color:def.color}));
+  head.position.set(0, 1.44, 0.08);
+
+  const earL = new THREE.Mesh(earGeo, new THREE.MeshToonMaterial({color:def.color}));
+  earL.position.set(-0.25, 1.85, 0.02); earL.rotation.z = 0.18;
+  const earR = earL.clone(); earR.position.x = 0.25; earR.rotation.z = -0.18;
+
+  const eyeMat = new THREE.MeshBasicMaterial({color:0x101319});
+  const eyeL = new THREE.Mesh(eyeGeo, eyeMat); eyeL.position.set(-0.14,1.45,0.5);
+  const eyeR = eyeL.clone(); eyeR.position.x = 0.14;
+
+  const footGeo = new THREE.SphereGeometry(0.18, 8, 8);
+  const footL = new THREE.Mesh(footGeo, new THREE.MeshToonMaterial({color:def.color})); footL.position.set(-0.22,0.2,0.2);
+  const footR = footL.clone(); footR.position.x = 0.22;
+
+  g.add(body, head, earL, earR, eyeL, eyeR, footL, footR);
+  g.add(outlineMesh(bodyGeo), outlineMesh(headGeo), outlineMesh(earGeo), outlineMesh(earGeo), outlineMesh(footGeo), outlineMesh(footGeo));
+  g.children.forEach((ch, idx)=>{
+    if(idx>=8 && idx<=13){
+      if(idx===10) ch.position.copy(earL.position), ch.rotation.copy(earL.rotation);
+      if(idx===11) ch.position.copy(earR.position), ch.rotation.copy(earR.rotation);
+      if(idx===12) ch.position.copy(footL.position);
+      if(idx===13) ch.position.copy(footR.position);
+    }
+  });
+  g.traverse(m=>{ if(m.isMesh){ m.castShadow = true; m.receiveShadow = true; }});
+  return g;
+}
+
+function spawnCreature(x,z){
+  const def=pickDef();
+  const body = createStylizedCreature(def);
+  body.position.set(x,0,z);
+  body.userData = {def, hp:def.hp, maxHp:def.hp, alive:true, t:Math.random()*Math.PI*2};
+  scene.add(body); wild.push(body);
+}
+for(let i=0;i<26;i++) spawnCreature((Math.random()-0.5)*120,(Math.random()-0.5)*120);
+
+// Battle state
+const ui = {
+  playerStats: document.getElementById('playerStats'), objective: document.getElementById('objective'),
+  battle: document.getElementById('battle'), battleTitle: document.getElementById('battleTitle'), enemyStats: document.getElementById('enemyStats'),
+  battleLog: document.getElementById('battleLog'), team: document.getElementById('team')
+};
+const buttons = {
+  attack: document.getElementById('attackBtn'), skill: document.getElementById('skillBtn'), catch: document.getElementById('catchBtn'), run: document.getElementById('runBtn')
+};
+let battle = null;
+
+function log(msg){ ui.battleLog.innerHTML += msg + '<br>'; ui.battleLog.scrollTop = ui.battleLog.scrollHeight; }
+function randInt(min,max){ return Math.floor(Math.random()*(max-min+1))+min; }
+function updateHUD(){
+  ui.playerStats.textContent = `HP ${player.hp}/${player.maxHp} | Balls ${player.balls} | Captured ${player.captured.length}`;
+  ui.team.innerHTML = player.captured.length ? player.captured.map(n=>`<span class='chip'>${n}</span>`).join(' ') : 'No captures yet.';
+}
+
+function openBattle(creature){
+  battle = {creature, turn:'player'};
+  ui.battle.classList.add('active');
+  ui.battleTitle.textContent = `Wild ${creature.userData.def.name} appeared!`;
+  ui.enemyStats.textContent = `Enemy HP ${creature.userData.hp}/${creature.userData.maxHp}`;
+  ui.battleLog.innerHTML='';
+  log('A wild creature challenges you. Choose your action.');
+}
+
+function closeBattle(){ battle=null; ui.battle.classList.remove('active'); ui.objective.textContent='Find a wild creature...'; }
+
+function enemyTurn(){
+  if(!battle) return;
+  const c = battle.creature.userData;
+  const dmg = randInt(c.def.atk[0], c.def.atk[1]);
+  player.hp = Math.max(0, player.hp - dmg);
+  log(`${c.def.name} hit you for ${dmg} damage.`);
+  updateHUD();
+  if(player.hp<=0){
+    log('You blacked out! Restoring health and warping to camp...');
+    setTimeout(()=>{ player.hp=player.maxHp; player.pos.set(0,1,0); closeBattle(); updateHUD(); }, 1100);
+    return;
+  }
+  battle.turn='player';
+}
+
+function checkEnemyDefeat(){
+  const c=battle.creature.userData;
+  ui.enemyStats.textContent = `Enemy HP ${c.hp}/${c.maxHp}`;
+  if(c.hp<=0){
+    c.alive=false;
+    log(`${c.def.name} fainted!`);
+    setTimeout(()=>{ scene.remove(battle.creature); closeBattle(); }, 800);
+    return true;
+  }
+  return false;
+}
+
+buttons.attack.onclick = ()=>{
+  if(!battle || battle.turn!=='player') return;
+  const dmg=randInt(8,14); battle.creature.userData.hp = Math.max(0,battle.creature.userData.hp-dmg);
+  log(`You attacked for ${dmg} damage.`);
+  if(checkEnemyDefeat()) return;
+  battle.turn='enemy'; setTimeout(enemyTurn,650);
+};
+
+buttons.skill.onclick = ()=>{
+  if(!battle || battle.turn!=='player') return;
+  const crit = Math.random()<0.3;
+  const dmg = crit ? randInt(18,26) : randInt(6,10);
+  battle.creature.userData.hp = Math.max(0,battle.creature.userData.hp-dmg);
+  log(crit ? `Skill Burst CRIT! ${dmg} damage!` : `Skill Burst dealt ${dmg} damage.`);
+  if(checkEnemyDefeat()) return;
+  battle.turn='enemy'; setTimeout(enemyTurn,650);
+};
+
+buttons.catch.onclick = ()=>{
+  if(!battle || battle.turn!=='player') return;
+  if(player.balls<=0){ log('No capture orbs left!'); return; }
+  player.balls--; updateHUD();
+  const c = battle.creature.userData;
+  const hpFactor = 1 - (c.hp/c.maxHp);
+  const chance = Math.min(0.92, 0.18 + hpFactor*0.72);
+  if(Math.random()<chance){
+    log(`Captured ${c.def.name}!`);
+    player.captured.push(c.def.name);
+    c.alive=false;
+    scene.remove(battle.creature);
+    updateHUD();
+    setTimeout(closeBattle,700);
+  } else {
+    log('The creature broke free!');
+    battle.turn='enemy'; setTimeout(enemyTurn,650);
+  }
+};
+
+buttons.run.onclick = ()=>{
+  if(!battle || battle.turn!=='player') return;
+  if(Math.random()<0.75){ log('You escaped safely.'); setTimeout(closeBattle,450); }
+  else { log('Could not escape!'); battle.turn='enemy'; setTimeout(enemyTurn,650); }
+};
+
+function nearestCreature(){
+  let best=null,dist=Infinity;
+  for(const c of wild){
+    if(!c.userData.alive) continue;
+    const d = c.position.distanceTo(player.pos);
+    if(d<dist){dist=d; best=c;}
+  }
+  return {best,dist};
+}
+
+function tryInteract(){
+  if(battle) return;
+  const {best,dist}=nearestCreature();
+  if(best && dist<4.2){ openBattle(best); }
+}
+addEventListener('keydown',e=>{ if(e.key.toLowerCase()==='e') tryInteract(); });
+
+function movePlayer(){
+  if(battle) return;
+  const forward = new THREE.Vector3(Math.sin(player.yaw),0,Math.cos(player.yaw));
+  const right = new THREE.Vector3().crossVectors(forward,new THREE.Vector3(0,1,0)).negate();
+  const sprint = keys.has('shift') ? 1.75 : 1;
+  let v = new THREE.Vector3();
+  if(keys.has('w')||keys.has('arrowup')) v.add(forward);
+  if(keys.has('s')||keys.has('arrowdown')) v.sub(forward);
+  if(keys.has('a')||keys.has('arrowleft')) v.sub(right);
+  if(keys.has('d')||keys.has('arrowright')) v.add(right);
+  if(v.lengthSq()>0){ v.normalize().multiplyScalar(player.speed*sprint); player.pos.add(v); }
+  player.pos.x = Math.max(-95, Math.min(95, player.pos.x));
+  player.pos.z = Math.max(-95, Math.min(95, player.pos.z));
+}
+
+function animateCreatures(t){
+  for(const c of wild){
+    if(!c.userData.alive) continue;
+    c.userData.t += 0.02;
+    c.position.y = Math.sin(c.userData.t*2.4)*0.22;
+    c.rotation.y += 0.01;
+  }
+}
+
+function loop(t){
+  requestAnimationFrame(loop);
+  movePlayer();
+  animateCreatures(t);
+
+  playerMesh.position.lerp(player.pos,0.25);
+  playerMesh.rotation.y = player.yaw;
+
+  const camOffset = new THREE.Vector3(Math.sin(player.yaw+Math.PI)*8,5.5,Math.cos(player.yaw+Math.PI)*8);
+  camera.position.lerp(player.pos.clone().add(camOffset),0.08);
+  camera.lookAt(player.pos.x, player.pos.y+1.2, player.pos.z);
+
+  if(!battle){
+    const {best,dist}=nearestCreature();
+    ui.objective.textContent = best ? (dist<5 ? `Press E to battle ${best.userData.def.name}` : `Nearest wild ${best.userData.def.name}: ${dist.toFixed(1)}m`) : 'No wild creatures nearby';
+  }
+
+  renderer.render(scene,camera);
+}
+
+addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();});
+updateHUD();
+loop(0);
+</script>
+</body>
+</html>

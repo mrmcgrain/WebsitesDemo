@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raelee Steidly | Medical Billing Professional</title>
+  <meta name="description" content="Professional landing page for Raelee Steidly, medical billing specialist focused on accuracy, reimbursement support, claims workflow, and revenue cycle clarity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --navy: #061b31;
+      --ink: #273951;
+      --slate: #64748d;
+      --muted: #8a98ad;
+      --border: #e5edf5;
+      --soft: #f6f9fc;
+      --purple: #533afd;
+      --purple-dark: #4434d4;
+      --brand-dark: #1c1e54;
+      --teal: #11a7a7;
+      --mint: #15be53;
+      --ruby: #ea2261;
+      --magenta: #f96bee;
+      --shadow: rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px;
+      --soft-shadow: rgba(23,23,23,0.08) 0px 15px 35px 0px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      font-feature-settings: "ss01";
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.45;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255,255,255,.84);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(229,237,245,.75);
+    }
+    .nav { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--navy); font-weight: 600; letter-spacing: -.1px; }
+    .mark {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--purple), #27c1c3 60%, #b9b9f9);
+      box-shadow: rgba(50,50,93,.25) 0 12px 24px -12px;
+      display: grid; place-items: center; color: white; font-weight: 700;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; color: var(--navy); font-size: 15px; font-weight: 400; }
+    .nav-links a { opacity: .82; transition: .2s ease; }
+    .nav-links a:hover { opacity: 1; color: var(--purple); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 10px 17px; border-radius: 5px; font-weight: 500; line-height: 1; transition: .2s ease; border: 1px solid transparent; cursor: pointer; }
+    .btn-primary { background: var(--purple); color: white; box-shadow: rgba(83,58,253,.28) 0 14px 30px -15px; }
+    .btn-primary:hover { background: var(--purple-dark); transform: translateY(-1px); }
+    .btn-ghost { color: var(--purple); border-color: #b9b9f9; background: rgba(255,255,255,.78); }
+    .btn-ghost:hover { background: rgba(83,58,253,.06); transform: translateY(-1px); }
+    .hero { position: relative; padding: 96px 0 72px; min-height: 680px; display: flex; align-items: center; }
+    .hero::before {
+      content: ""; position: absolute; inset: -120px -220px auto auto; width: 680px; height: 680px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, rgba(249,107,238,.36), transparent 34%), radial-gradient(circle at 66% 52%, rgba(83,58,253,.24), transparent 32%), radial-gradient(circle at 46% 72%, rgba(17,167,167,.20), transparent 36%);
+      filter: blur(8px); pointer-events: none;
+    }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.02fr .98fr; gap: 64px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 5px 9px; border: 1px solid var(--border); border-radius: 5px; color: var(--navy); background: rgba(255,255,255,.8); box-shadow: rgba(23,23,23,.04) 0 8px 18px; font-size: 13px; font-weight: 500; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: rgba(21,190,83,.4) 0 0 0 5px; }
+    h1 { margin: 22px 0 18px; color: var(--navy); font-size: clamp(44px, 7vw, 72px); line-height: .98; letter-spacing: -1.6px; font-weight: 300; max-width: 710px; }
+    .lead { color: var(--slate); font-size: clamp(18px, 2.4vw, 22px); line-height: 1.38; font-weight: 300; max-width: 610px; margin: 0 0 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 34px; }
+    .trust { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 660px; }
+    .trust-card { padding: 14px 15px; background: white; border: 1px solid var(--border); border-radius: 7px; box-shadow: rgba(23,23,23,.05) 0 10px 20px; }
+    .trust-card strong { display: block; color: var(--navy); font-size: 24px; line-height: 1; font-weight: 300; font-feature-settings: "tnum"; }
+    .trust-card span { display: block; margin-top: 5px; color: var(--slate); font-size: 13px; }
+    .dashboard { position: relative; }
+    .panel { background: #fff; border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
+    .panel-top { height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid var(--border); background: linear-gradient(180deg, #fff, #fbfdff); }
+    .lights { display: flex; gap: 7px; }
+    .lights i { width: 10px; height: 10px; border-radius: 50%; background: #d7e1ee; }
+    .lights i:nth-child(1) { background: #ea2261; } .lights i:nth-child(2) { background: #f4c44f; } .lights i:nth-child(3) { background: #15be53; }
+    .panel-title { font-family: 'Source Code Pro', monospace; color: var(--muted); font-size: 12px; }
+    .panel-body { padding: 22px; }
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+    .metric { border: 1px solid var(--border); border-radius: 6px; padding: 15px; background: var(--soft); }
+    .metric small { color: var(--slate); font-size: 12px; }
+    .metric b { display: block; margin-top: 5px; color: var(--navy); font-size: 26px; line-height: 1; font-weight: 300; font-feature-settings: "tnum"; }
+    .claim-list { display: grid; gap: 10px; }
+    .claim { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; padding: 12px; border: 1px solid var(--border); border-radius: 6px; }
+    .icon { width: 34px; height: 34px; border-radius: 6px; display: grid; place-items: center; background: rgba(83,58,253,.08); color: var(--purple); }
+    .claim strong { display: block; color: var(--navy); font-weight: 500; }
+    .claim span { color: var(--slate); font-size: 13px; }
+    .status { padding: 2px 7px; border-radius: 4px; font-size: 11px; border: 1px solid rgba(21,190,83,.4); color: #108c3d; background: rgba(21,190,83,.14); }
+    .float-card { position: absolute; right: -22px; bottom: -38px; width: 250px; background: var(--brand-dark); color: white; border-radius: 8px; box-shadow: rgba(3,3,39,.25) 0 28px 45px -18px; padding: 18px; }
+    .float-card p { margin: 0 0 12px; color: rgba(255,255,255,.72); font-size: 14px; }
+    .float-card strong { font-size: 30px; font-weight: 300; line-height: 1; }
+    section { padding: 80px 0; }
+    .section-head { max-width: 720px; margin-bottom: 34px; }
+    .kicker { color: var(--purple); font-family: 'Source Code Pro', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
+    h2 { margin: 10px 0 12px; color: var(--navy); font-size: clamp(32px, 4vw, 48px); line-height: 1.08; letter-spacing: -.9px; font-weight: 300; }
+    .section-head p { margin: 0; color: var(--slate); font-size: 18px; font-weight: 300; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { padding: 26px; border: 1px solid var(--border); border-radius: 8px; background: white; box-shadow: rgba(23,23,23,.04) 0 8px 20px; transition: .22s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .card .icon { width: 42px; height: 42px; margin-bottom: 18px; }
+    .card h3 { margin: 0 0 9px; color: var(--navy); font-size: 24px; line-height: 1.14; letter-spacing: -.25px; font-weight: 300; }
+    .card p { margin: 0; color: var(--slate); font-size: 16px; font-weight: 300; }
+    .process { background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; counter-reset: step; }
+    .step { position: relative; padding: 22px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(255,255,255,.84); }
+    .step::before { counter-increment: step; content: "0" counter(step); display: inline-flex; margin-bottom: 22px; font-family: 'Source Code Pro', monospace; color: var(--purple); font-weight: 700; font-size: 12px; }
+    .step h3 { margin: 0 0 8px; color: var(--navy); font-size: 21px; font-weight: 300; letter-spacing: -.2px; }
+    .step p { margin: 0; color: var(--slate); font-size: 15px; }
+    .dark { position: relative; overflow: hidden; background: var(--brand-dark); color: white; }
+    .dark::after { content: ""; position: absolute; right: -140px; top: -140px; width: 420px; height: 420px; background: radial-gradient(circle, rgba(249,107,238,.28), transparent 65%); border-radius: 50%; }
+    .dark .section-head { position: relative; z-index: 1; }
+    .dark h2 { color: white; }
+    .dark .section-head p { color: rgba(255,255,255,.7); }
+    .dark-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .dark-card { padding: 24px; border: 1px solid rgba(255,255,255,.14); border-radius: 8px; background: rgba(255,255,255,.07); }
+    .dark-card h3 { margin: 0 0 9px; color: white; font-size: 23px; font-weight: 300; }
+    .dark-card p { margin: 0; color: rgba(255,255,255,.68); }
+    .cta { text-align: center; padding: 88px 0; }
+    .cta-box { position: relative; overflow: hidden; padding: 48px 30px; background: white; border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow); }
+    .cta-box::before { content: ""; position: absolute; inset: 0 auto auto 0; width: 100%; height: 5px; background: linear-gradient(90deg, var(--purple), var(--teal), var(--magenta)); }
+    .cta h2 { max-width: 740px; margin-left: auto; margin-right: auto; }
+    .cta p { max-width: 620px; margin: 0 auto 24px; color: var(--slate); font-size: 18px; font-weight: 300; }
+    footer { padding: 34px 0; border-top: 1px solid var(--border); color: var(--slate); font-size: 14px; }
+    .foot { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero { padding-top: 68px; min-height: auto; }
+      .hero-grid, .dark-grid { grid-template-columns: 1fr; }
+      .dashboard { max-width: 620px; }
+      .cards, .steps { grid-template-columns: 1fr 1fr; }
+      .float-card { right: 14px; bottom: -26px; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      .hero { padding: 48px 0 56px; }
+      h1 { letter-spacing: -1px; }
+      .trust, .metric-row, .cards, .steps { grid-template-columns: 1fr; }
+      .claim { grid-template-columns: 34px 1fr; }
+      .status { grid-column: 2; width: max-content; }
+      .float-card { position: static; width: auto; margin-top: 14px; }
+      section { padding: 58px 0; }
+      .foot { display: grid; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Raelee Steidly home"><span class="mark">RS</span><span>Raelee Steidly</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#value">Value</a>
+        <a class="btn btn-primary" href="#contact">Start a conversation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Medical billing support with revenue cycle clarity</span>
+          <h1>Precise medical billing support for healthier practices.</h1>
+          <p class="lead">Raelee Steidly helps healthcare teams bring organization, accuracy, and calm to billing workflows — from claims follow-up to patient account support and revenue cycle coordination.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Request billing support →</a>
+            <a class="btn btn-ghost" href="#services">Explore services</a>
+          </div>
+          <div class="trust" aria-label="Professional strengths">
+            <div class="trust-card"><strong>Clean</strong><span>claim workflows</span></div>
+            <div class="trust-card"><strong>Careful</strong><span>documentation review</span></div>
+            <div class="trust-card"><strong>Clear</strong><span>patient account communication</span></div>
+          </div>
+        </div>
+        <div class="dashboard" aria-label="Medical billing dashboard visual">
+          <div class="panel">
+            <div class="panel-top"><div class="lights"><i></i><i></i><i></i></div><div class="panel-title">billing-workflow.status</div></div>
+            <div class="panel-body">
+              <div class="metric-row">
+                <div class="metric"><small>Claims</small><b>142</b></div>
+                <div class="metric"><small>Follow-ups</small><b>28</b></div>
+                <div class="metric"><small>Clean rate</small><b>96%</b></div>
+              </div>
+              <div class="claim-list">
+                <div class="claim"><div class="icon">✓</div><div><strong>Eligibility confirmed</strong><span>Coverage details documented before submission</span></div><span class="status">ready</span></div>
+                <div class="claim"><div class="icon">↻</div><div><strong>Denial follow-up</strong><span>Appeal packet and payer notes organized</span></div><span class="status">active</span></div>
+                <div class="claim"><div class="icon">$</div><div><strong>Payment posting</strong><span>Remittance reviewed and account balanced</span></div><span class="status">posted</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="float-card">
+            <p>Designed to reduce administrative friction and keep reimbursement work moving.</p>
+            <strong>Calm, accurate, dependable.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Services</span>
+          <h2>Focused support across the billing lifecycle.</h2>
+          <p>A professional presence for practices that need reliable help keeping billing details accurate, timely, and easy to understand.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">01</div><h3>Claims preparation</h3><p>Review of billing details, documentation alignment, and claim readiness to support cleaner submissions.</p></article>
+          <article class="card"><div class="icon">02</div><h3>Payer follow-up</h3><p>Organized tracking for unpaid, denied, or delayed claims with clear next steps and concise status notes.</p></article>
+          <article class="card"><div class="icon">03</div><h3>Patient accounts</h3><p>Professional account support that emphasizes clarity, accuracy, and a respectful patient experience.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Process</span>
+          <h2>A measured workflow built for accuracy.</h2>
+          <p>Every step is designed to reduce rework, improve visibility, and keep the practice informed.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><h3>Review</h3><p>Assess current billing needs, claim queues, payer issues, and practice priorities.</p></div>
+          <div class="step"><h3>Organize</h3><p>Create clear tracking for claims, denials, payment posting, and outstanding account work.</p></div>
+          <div class="step"><h3>Resolve</h3><p>Work through follow-ups with concise documentation and a bias toward timely action.</p></div>
+          <div class="step"><h3>Report</h3><p>Share straightforward updates so teams know what moved, what needs attention, and what changed.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="value" class="dark">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Why it matters</span>
+          <h2>Medical billing is more than paperwork — it is operational trust.</h2>
+          <p>Raelee brings a detail-oriented, service-minded approach to billing work so providers can spend more time focused on patient care.</p>
+        </div>
+        <div class="dark-grid">
+          <div class="dark-card"><h3>Accuracy patients can feel</h3><p>Clear account handling helps reduce confusion, avoid avoidable back-and-forth, and support a more professional care experience.</p></div>
+          <div class="dark-card"><h3>Revenue cycle visibility</h3><p>Consistent follow-up and clean reporting help practices see what is pending, what is resolved, and where attention is needed next.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <span class="kicker">Contact</span>
+          <h2>Need dependable medical billing support?</h2>
+          <p>For billing support inquiries, practice-specific questions, or collaboration opportunities, connect with Raelee to discuss availability, scope, and next steps.</p>
+          <a class="btn btn-primary" href="mailto:?subject=Medical%20Billing%20Support%20Inquiry%20for%20Raelee%20Steidly">Start an email inquiry</a>
+          <a class="btn btn-ghost" href="#services" style="margin-left:8px">View services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>© <span id="year"></span> Raelee Steidly. Medical billing professional.</div>
+      <div>Claims • Follow-up • Patient accounts • Revenue cycle support</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

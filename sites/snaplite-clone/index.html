@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SnapLite Clone</title>
+  <style>
+    :root{--bg:#0f1220;--card:#171a2b;--line:#2b3152;--text:#f5f7ff;--muted:#9fa8d4;--accent:#fffc00;--accent2:#7c3aed}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 10% 0%,#1c2140,#0d1020 55%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:1100px;margin:20px auto;padding:0 14px}
+    .title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .title h1{margin:0;font-size:1.4rem}
+    .badge{padding:6px 10px;border:1px solid #5c5600;background:#262100;border-radius:999px;color:#fff59d;font-size:.8rem}
+    .grid{display:grid;grid-template-columns:380px 1fr;gap:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+    video,canvas,.preview{width:100%;border-radius:12px;border:1px solid #3b4170;background:#0b0e1a;display:block}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    button,select,input{border-radius:10px;border:1px solid #3b4170;background:#151936;color:var(--text);padding:8px 10px}
+    button.primary{background:linear-gradient(120deg,var(--accent),#f5df00);color:#111;font-weight:700;border:none}
+    button.secondary{background:linear-gradient(120deg,#8b5cf6,#6366f1);color:#fff;border:none}
+    textarea{width:100%;margin-top:8px;border-radius:10px;border:1px solid #3b4170;background:#10142c;color:#fff;padding:10px;min-height:70px}
+    .feed{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+    .snap{background:#11162e;border:1px solid #2d3561;border-radius:12px;overflow:hidden;position:relative}
+    .snap img{width:100%;height:210px;object-fit:cover;display:block}
+    .snap .meta{padding:8px}
+    .muted{color:var(--muted);font-size:.86rem}
+    .timer{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.68);padding:4px 8px;border-radius:999px;font-size:.8rem}
+    .viewer{position:fixed;inset:0;background:rgba(0,0,0,.87);display:none;align-items:center;justify-content:center;z-index:20}
+    .viewer.active{display:flex}
+    .story{max-width:min(92vw,500px);max-height:92vh;position:relative}
+    .story img{max-width:100%;max-height:92vh;border-radius:14px}
+    .story .caption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(0,0,0,.55);padding:8px 10px;border-radius:10px}
+    .bar{position:absolute;top:8px;left:8px;right:8px;height:4px;background:rgba(255,255,255,.2);border-radius:99px;overflow:hidden}
+    .bar>div{height:100%;width:0;background:var(--accent)}
+    .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">
+    <h1>SnapLite Clone</h1>
+    <div class="badge">Ephemeral snaps • local demo</div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <video id="cam" autoplay playsinline muted></video>
+      <canvas id="canvas" style="display:none"></canvas>
+      <img id="preview" class="preview" style="display:none" alt="preview" />
+
+      <div class="controls">
+        <button id="startCam">Start Camera</button>
+        <button id="snapBtn" class="primary">Take Snap</button>
+        <button id="retakeBtn">Retake</button>
+        <label for="uploadImg" style="display:inline-flex;align-items:center;cursor:pointer">Upload Image</label>
+        <input id="uploadImg" type="file" accept="image/*" style="max-width:190px" />
+      </div>
+      <p id="camStatus" class="muted">Camera not started.</p>
+
+      <textarea id="caption" maxlength="120" placeholder="Add a caption..."></textarea>
+      <div class="row">
+        <label class="muted">Expires in</label>
+        <select id="ttl">
+          <option value="3">3 sec</option>
+          <option value="5" selected>5 sec</option>
+          <option value="10">10 sec</option>
+        </select>
+        <button id="sendBtn" class="secondary">Send Snap</button>
+      </div>
+      <p class="muted">Tip: snaps disappear permanently after they are viewed once or when TTL expires.</p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0 0 10px">Inbox</h3>
+      <div id="feed" class="feed"></div>
+      <p id="empty" class="muted">No snaps yet. Create one from the camera panel.</p>
+    </div>
+  </div>
+</div>
+
+<div id="viewer" class="viewer">
+  <div class="story">
+    <div class="bar"><div id="progress"></div></div>
+    <img id="viewImg" alt="snap" />
+    <div id="viewCaption" class="caption"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const cam = document.getElementById('cam');
+  const canvas = document.getElementById('canvas');
+  const preview = document.getElementById('preview');
+  const caption = document.getElementById('caption');
+  const ttl = document.getElementById('ttl');
+  const camStatus = document.getElementById('camStatus');
+  const uploadImg = document.getElementById('uploadImg');
+  const feed = document.getElementById('feed');
+  const empty = document.getElementById('empty');
+  const viewer = document.getElementById('viewer');
+  const viewImg = document.getElementById('viewImg');
+  const viewCaption = document.getElementById('viewCaption');
+  const progress = document.getElementById('progress');
+
+  let stream = null;
+  let currentPhoto = null;
+  let snaps = [];
+
+  function uid(){ return Math.random().toString(36).slice(2) + Date.now().toString(36); }
+  function save(){ localStorage.setItem('snaplite_snaps', JSON.stringify(snaps)); }
+  function load(){ snaps = JSON.parse(localStorage.getItem('snaplite_snaps') || '[]'); }
+  function setCamStatus(msg){ camStatus.textContent = msg; }
+
+  async function startCamera(){
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      setCamStatus('Camera API unsupported in this browser. Use Upload Image.');
+      return;
+    }
+    if (!window.isSecureContext) {
+      setCamStatus('Camera requires HTTPS (or localhost). Current page is not secure. Use Upload Image or enable HTTPS.');
+      return;
+    }
+    try {
+      stopCamera();
+      stream = await navigator.mediaDevices.getUserMedia({
+        video: {
+          facingMode: { ideal: 'user' },
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        },
+        audio: false
+      });
+      cam.srcObject = stream;
+      await cam.play();
+      setCamStatus('Camera started. You can take a snap now.');
+    } catch (e) {
+      setCamStatus('Camera failed: ' + (e && e.message ? e.message : 'unknown error') + '. Use Upload Image.');
+    }
+  }
+
+  function stopCamera(){
+    if (!stream) return;
+    stream.getTracks().forEach(t => t.stop());
+    stream = null;
+  }
+
+  function takeSnap(){
+    if (!cam.videoWidth) {
+      setCamStatus('No active camera frame. Start Camera or Upload Image.');
+      return;
+    }
+    canvas.width = cam.videoWidth;
+    canvas.height = cam.videoHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(cam, 0, 0, canvas.width, canvas.height);
+    currentPhoto = canvas.toDataURL('image/jpeg', 0.9);
+    preview.src = currentPhoto;
+    preview.style.display = 'block';
+  }
+
+  function handleUpload(ev){
+    const file = ev.target.files && ev.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      currentPhoto = String(reader.result || '');
+      preview.src = currentPhoto;
+      preview.style.display = 'block';
+      setCamStatus('Image uploaded. Ready to send as snap.');
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function retake(){
+    currentPhoto = null;
+    preview.style.display = 'none';
+  }
+
+  function sendSnap(){
+    if (!currentPhoto) return alert('Take a snap first.');
+    const item = {
+      id: uid(),
+      img: currentPhoto,
+      caption: caption.value.slice(0,120),
+      ttl: Number(ttl.value),
+      createdAt: Date.now(),
+      viewed: false,
+    };
+    snaps.unshift(item);
+    save();
+    render();
+    caption.value='';
+    retake();
+  }
+
+  function purgeExpired(){
+    const now = Date.now();
+    snaps = snaps.filter(s => !s.viewed && (now - s.createdAt) < s.ttl * 1000);
+    save();
+  }
+
+  function render(){
+    purgeExpired();
+    feed.innerHTML = '';
+    empty.style.display = snaps.length ? 'none' : 'block';
+    snaps.forEach(s => {
+      const remain = Math.max(0, s.ttl - Math.floor((Date.now()-s.createdAt)/1000));
+      const el = document.createElement('div');
+      el.className = 'snap';
+      el.innerHTML = `
+        <span class="timer">${remain}s</span>
+        <img src="${s.img}" alt="snap" />
+        <div class="meta">
+          <div>${s.caption ? s.caption.replace(/[<>]/g,'') : 'No caption'}</div>
+          <div class="muted">Tap to view (one time)</div>
+        </div>`;
+      el.addEventListener('click', () => openSnap(s.id));
+      feed.appendChild(el);
+    });
+  }
+
+  function openSnap(id){
+    const idx = snaps.findIndex(s => s.id === id);
+    if (idx < 0) return;
+    const s = snaps[idx];
+    viewImg.src = s.img;
+    viewCaption.textContent = s.caption || '';
+    viewer.classList.add('active');
+
+    const start = performance.now();
+    function tick(t){
+      const p = Math.min(1, (t-start)/(s.ttl*1000));
+      progress.style.width = (p*100)+'%';
+      if (p < 1 && viewer.classList.contains('active')) requestAnimationFrame(tick);
+      else closeAndDelete(id);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function closeAndDelete(id){
+    viewer.classList.remove('active');
+    progress.style.width = '0%';
+    snaps = snaps.filter(s => s.id !== id);
+    save();
+    render();
+  }
+
+  document.getElementById('startCam').addEventListener('click', startCamera);
+  document.getElementById('snapBtn').addEventListener('click', takeSnap);
+  document.getElementById('retakeBtn').addEventListener('click', retake);
+  document.getElementById('sendBtn').addEventListener('click', sendSnap);
+  uploadImg.addEventListener('change', handleUpload);
+  viewer.addEventListener('click', () => viewer.classList.remove('active'));
+
+  load();
+  render();
+  setInterval(render, 1000);
+  window.addEventListener('beforeunload', stopCamera);
+})();
+</script>
+</body>
+</html>

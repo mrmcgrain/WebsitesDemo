@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fan Fusion Phoenix 2026 | June 5–7</title>
+  <meta name="description" content="A cinematic landing page for Fan Fusion Phoenix 2026 — June 5–7, 2026 at Phoenix Convention Center." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#05010f;
+      --void:#000;
+      --ink:#fff;
+      --muted:#b7b4c8;
+      --hot:#ff2bd6;
+      --sun:#ffb000;
+      --cyan:#00dcff;
+      --violet:#7c3cff;
+      --lime:#8dff4d;
+      --card:rgba(255,255,255,.075);
+      --line:rgba(255,255,255,.16);
+      --glow:0 0 40px rgba(255,43,214,.32), 0 0 90px rgba(0,220,255,.18);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255,43,214,.35), transparent 32%),
+        radial-gradient(circle at 85% 15%, rgba(0,220,255,.26), transparent 30%),
+        radial-gradient(circle at 70% 75%, rgba(255,176,0,.18), transparent 34%),
+        linear-gradient(160deg,#02000a 0%,#0a0224 48%,#16000f 100%);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.42;z-index:0;
+      background-image:linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px, transparent 1px);
+      background-size:48px 48px;
+      mask-image:radial-gradient(circle at center, black, transparent 78%);
+    }
+    body:after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:1;mix-blend-mode:screen;opacity:.22;
+      background:repeating-linear-gradient(0deg,transparent 0 6px,rgba(255,255,255,.09) 7px);
+    }
+    a{color:inherit;text-decoration:none}
+    .shell{position:relative;z-index:2;width:min(1180px,calc(100% - 36px));margin:0 auto}
+    .nav{
+      position:sticky;top:14px;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:18px;
+      margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(5,1,15,.72);backdrop-filter:blur(18px);box-shadow:0 20px 80px rgba(0,0,0,.35)
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em;text-transform:uppercase}
+    .brand-mark{width:34px;height:34px;border-radius:50%;background:conic-gradient(from 40deg,var(--hot),var(--sun),var(--cyan),var(--violet),var(--hot));box-shadow:var(--glow)}
+    .nav-links{display:flex;gap:18px;color:#dedbf1;font-size:14px}
+    .pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:13px 18px;font-weight:800;letter-spacing:-.02em;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.1);box-shadow:inset 0 1px rgba(255,255,255,.18);transition:transform .2s ease, box-shadow .2s ease}
+    .pill:hover{transform:translateY(-2px);box-shadow:var(--glow)}
+    .pill.primary{background:linear-gradient(100deg,var(--hot),var(--violet) 45%,var(--cyan));color:white;border:0}
+    .hero{min-height:calc(100vh - 90px);display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:44px;padding:80px 0 70px}
+    .eyebrow{font-family:'Azeret Mono',monospace;color:var(--cyan);letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:700;text-shadow:0 0 20px rgba(0,220,255,.55)}
+    h1{font-size:clamp(54px,9.4vw,126px);line-height:.82;margin:18px 0 22px;letter-spacing:-.085em;font-weight:900;text-transform:uppercase;text-wrap:balance}
+    .gradient-text{background:linear-gradient(90deg,#fff 0%,#ffecfd 30%,#ffc64b 58%,#00dcff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+    .lead{font-size:clamp(18px,2.2vw,25px);line-height:1.35;color:#eee9ff;max-width:690px;margin:0 0 28px;letter-spacing:-.03em}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:28px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:680px}
+    .stat{padding:16px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.075);backdrop-filter:blur(14px)}
+    .stat b{display:block;font-size:24px;letter-spacing:-.05em}.stat span{font-size:12px;color:var(--muted);font-family:'Azeret Mono',monospace;text-transform:uppercase}
+    .poster{position:relative;min-height:590px;display:grid;place-items:center;perspective:1200px}
+    .card-3d{position:relative;width:min(480px,100%);aspect-ratio:4/5;border-radius:38px;padding:28px;background:linear-gradient(150deg,rgba(255,255,255,.18),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.22);box-shadow:0 40px 140px rgba(0,0,0,.55),var(--glow);transform:rotateX(8deg) rotateY(-12deg);overflow:hidden}
+    .card-3d:before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 180deg,transparent,var(--hot),transparent,var(--cyan),transparent,var(--sun),transparent);animation:spin 10s linear infinite;opacity:.42}.card-3d>*{position:relative;z-index:1}@keyframes spin{to{transform:rotate(360deg)}}
+    .badge{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 12px;background:rgba(0,0,0,.34);font-family:'Azeret Mono',monospace;font-size:12px;color:#fff}
+    .cosmic{font-size:clamp(52px,7vw,82px);line-height:.84;letter-spacing:-.08em;font-weight:900;margin:90px 0 20px;text-transform:uppercase}
+    .mini{color:var(--muted);line-height:1.45;font-size:16px}
+    .rings{height:170px;margin-top:50px;border-radius:999px;border:2px solid rgba(255,255,255,.2);background:radial-gradient(circle,rgba(255,255,255,.3),transparent 12%),linear-gradient(90deg,rgba(255,43,214,.65),rgba(0,220,255,.62));filter:blur(.2px);transform:rotate(-16deg);box-shadow:0 0 70px rgba(0,220,255,.35)}
+    section{padding:82px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}.section-head h2{font-size:clamp(36px,6vw,76px);line-height:.9;letter-spacing:-.07em;margin:0;text-transform:uppercase}.section-head p{max-width:420px;color:var(--muted);line-height:1.5}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{min-height:260px;padding:24px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.045));box-shadow:0 20px 70px rgba(0,0,0,.28);position:relative;overflow:hidden}.feature:after{content:"";position:absolute;right:-50px;bottom:-60px;width:160px;height:160px;border-radius:50%;background:var(--accent);filter:blur(45px);opacity:.5}.feature h3{font-size:28px;margin:0 0 12px;letter-spacing:-.045em}.feature p{color:#d8d2ea;line-height:1.48}.icon{font-size:38px;margin-bottom:30px;display:block}
+    .schedule{display:grid;grid-template-columns:1fr 1fr;gap:16px}.day{padding:26px;border-radius:30px;border:1px solid var(--line);background:rgba(0,0,0,.32)}.day strong{color:var(--sun);font-family:'Azeret Mono',monospace;text-transform:uppercase;font-size:13px}.day h3{font-size:32px;letter-spacing:-.05em;margin:10px 0}.day ul{margin:0;padding-left:18px;color:#dfdaf0;line-height:1.8}
+    .cta{margin:80px 0 40px;padding:44px;border-radius:42px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:22px;background:linear-gradient(120deg,rgba(255,43,214,.27),rgba(124,60,255,.25),rgba(0,220,255,.22));border:1px solid rgba(255,255,255,.22);box-shadow:var(--glow)}.cta h2{font-size:clamp(38px,6vw,78px);line-height:.9;letter-spacing:-.07em;margin:0;text-transform:uppercase}.cta p{color:#f5efff;max-width:680px;line-height:1.5}.footer{padding:28px 0 45px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.ticker{position:relative;z-index:2;overflow:hidden;border-block:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.24);padding:14px 0;white-space:nowrap}.ticker span{display:inline-block;padding-left:100%;animation:marquee 24s linear infinite;font-family:'Azeret Mono',monospace;color:#fff;text-transform:uppercase;letter-spacing:.08em}@keyframes marquee{to{transform:translateX(-100%)}}
+    @media (max-width:880px){.nav-links{display:none}.hero{grid-template-columns:1fr;padding-top:48px}.poster{min-height:430px}.card-3d{transform:none}.stats,.grid,.schedule{grid-template-columns:1fr}.section-head,.cta{grid-template-columns:1fr;display:grid}.cta{padding:28px}.footer{display:block}.hero-actions .pill{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top"><span class="brand-mark"></span><span>Fan Fusion Phoenix 2026</span></a>
+      <div class="nav-links"><a href="#worlds">Worlds</a><a href="#lineup">Lineup</a><a href="#plan">Plan</a></div>
+      <a class="pill" href="https://www.phoenixfanfusion.com/pricing" target="_blank" rel="noopener">Tickets ↗</a>
+    </nav>
+  </div>
+  <main id="top" class="shell">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Phoenix Convention Center · June 5–7, 2026</div>
+        <h1><span class="gradient-text">Enter the multiverse</span> of fandom.</h1>
+        <p class="lead">A loud, neon, cosplay-charged landing page concept for Phoenix Fan Fusion 2026 — built for anime crews, comic collectors, gamers, makers, and every desert geek with a badge.</p>
+        <div class="hero-actions">
+          <a class="pill primary" href="https://www.phoenixfanfusion.com/pricing" target="_blank" rel="noopener">Grab your badge</a>
+          <a class="pill" href="#lineup">Preview the vibe</a>
+        </div>
+        <div class="stats" aria-label="Event highlights">
+          <div class="stat"><b>3</b><span>days</span></div>
+          <div class="stat"><b>∞</b><span>fandoms</span></div>
+          <div class="stat"><b>AZ</b><span>downtown Phoenix</span></div>
+        </div>
+      </div>
+      <div class="poster" aria-hidden="true">
+        <div class="card-3d">
+          <span class="badge">COSPLAY // PANELS // GAMING</span>
+          <div class="cosmic">Badge up.<br/>Power on.</div>
+          <p class="mini">Three days of costumes, collectibles, celebrity panels, artists, tabletop quests, arcade battles, photo ops, and late-night hotel-lobby lore.</p>
+          <div class="rings"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="ticker"><span>Fan Fusion Phoenix 2026 • June 5–7 • Phoenix Convention Center • Cosplay • Comics • Anime • Gaming • Creators • Panels • Artist Alley • </span></div>
+  <main class="shell">
+    <section id="worlds">
+      <div class="section-head">
+        <h2>Choose your universe.</h2>
+        <p>Designed as a high-energy event front end: fast to scan, big on visual impact, and ready for schedule, guest, vendor, and ticket integrations.</p>
+      </div>
+      <div class="grid">
+        <article class="feature" style="--accent:var(--hot)"><span class="icon">🦸</span><h3>Cosplay City</h3><p>Hero shots, contest callouts, photo meetups, prop-check info, and a bold runway-style presentation for every build.</p></article>
+        <article class="feature" style="--accent:var(--cyan)"><span class="icon">🎮</span><h3>Game Zone</h3><p>Arcade glow, tabletop quests, tournaments, retro cabinets, and side-quest cards that keep fans moving through the hall.</p></article>
+        <article class="feature" style="--accent:var(--sun)"><span class="icon">✨</span><h3>Artist Alley</h3><p>Creator-first tiles for prints, comics, crafts, exclusives, commissions, and limited drops with collectible energy.</p></article>
+      </div>
+    </section>
+    <section id="lineup">
+      <div class="section-head">
+        <h2>Weekend pulse.</h2>
+        <p>A sample content structure for the landing page. Real guests, room numbers, and times can be wired in once the final schedule is available.</p>
+      </div>
+      <div class="schedule">
+        <div class="day"><strong>Friday · June 5</strong><h3>Portal opens</h3><ul><li>Badge pickup and preview shopping</li><li>Opening cosplay photo waves</li><li>Creator panels and first quests</li></ul></div>
+        <div class="day"><strong>Saturday · June 6</strong><h3>Maximum fusion</h3><ul><li>Main stage panels and meetups</li><li>Cosplay contest spotlight</li><li>Gaming tournaments and after-hours hangs</li></ul></div>
+        <div class="day"><strong>Sunday · June 7</strong><h3>Final boss day</h3><ul><li>Last-chance exclusives</li><li>Family fandom moments</li><li>Closing celebrations and photo drops</li></ul></div>
+        <div class="day"><strong>Location</strong><h3>Phoenix Convention Center</h3><ul><li>Downtown Phoenix, Arizona</li><li>Easy CTA path to tickets</li><li>Responsive mobile-first event design</li></ul></div>
+      </div>
+    </section>
+    <section id="plan" class="cta">
+      <div>
+        <h2>Ready to badge in?</h2>
+        <p>This hosted prototype is built as a static front end, so it can be expanded into a full event microsite with guest cards, maps, countdowns, ticket modules, sponsor rails, and schedule filters.</p>
+      </div>
+      <a class="pill primary" href="https://www.phoenixfanfusion.com/pricing" target="_blank" rel="noopener">Open tickets</a>
+    </section>
+    <footer class="footer">
+      <span>Fan Fusion Phoenix 2026 landing page concept.</span>
+      <span>Dates/location based on publicly listed Phoenix Fan Fusion 2026 info.</span>
+    </footer>
+  </main>
+</body>
+</html>
