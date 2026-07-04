@@ -21,4 +21,5 @@ GitHub Pages URL format:
 
 ## Current additions
 
-- `sites/mikid-modern-redesign/` — M.I.K.I.D. modern redesign concept preserving homepage content and logo-driven colors.
+- `sites/mikid-modern-redesign/` — M.I.K.I.D. previous modern redesign concept preserving homepage content and logo-driven colors.
+- `sites/mikid-cinematic-redesign/` — M.I.K.I.D. cinematic redo with scroll motion and partner-logo trust section.

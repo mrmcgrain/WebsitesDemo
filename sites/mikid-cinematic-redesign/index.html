@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>M.I.K.I.D. — Cinematic Redesign Concept</title>
+  <meta name="description" content="Cinematic redesign concept for M.I.K.I.D., preserving original homepage content, partner visibility, and a logo-driven color system." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #30479a;
+      --blue-2: #18275f;
+      --blue-3: #0b1230;
+      --green: #43b64a;
+      --orange: #f7941d;
+      --red: #e84b3c;
+      --cream: #fbf8f1;
+      --paper: #ffffff;
+      --ink: #101936;
+      --muted: #75819d;
+      --line: rgba(255,255,255,.16);
+      --dark-line: rgba(15,28,68,.12);
+      --shadow: 0 34px 90px rgba(8, 17, 48, .34);
+      --radius: 30px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background:#050816; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #050816;
+      overflow-x: hidden;
+    }
+    body::before {
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events:none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(247,148,29,.22), transparent 26rem),
+        radial-gradient(circle at 88% 0%, rgba(67,182,74,.18), transparent 31rem),
+        radial-gradient(circle at 50% 55%, rgba(48,71,154,.32), transparent 42rem),
+        linear-gradient(180deg, rgba(5,8,22,.48), #050816 78%);
+    }
+    a { color: inherit; }
+    .wrap { width: min(1180px, calc(100% - 38px)); margin: 0 auto; position:relative; z-index:1; }
+    .cinema-wrap { width:min(1440px, calc(100% - 24px)); margin:0 auto; position:relative; z-index:1; }
+    .eyebrow { display:inline-flex; align-items:center; gap:.65rem; color:#dce6ff; font-size:.75rem; letter-spacing:.18em; text-transform:uppercase; font-weight:900; }
+    .eyebrow::before { content:""; width:.56rem; height:.56rem; border-radius:999px; background:var(--orange); box-shadow:16px 0 0 var(--green), 32px 0 0 var(--red); margin-right:2rem; }
+    .pill { display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .78rem; border:1px solid rgba(255,255,255,.18); border-radius:999px; background:rgba(255,255,255,.09); color:#fff; font-weight:900; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; backdrop-filter: blur(16px); }
+    header { position: fixed; top: 0; left:0; right:0; z-index: 20; backdrop-filter: blur(22px); background: linear-gradient(180deg, rgba(5,8,22,.86), rgba(5,8,22,.42)); border-bottom:1px solid rgba(255,255,255,.09); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap: 1rem; padding: 14px 0; }
+    .logo-frame { display:inline-flex; align-items:center; padding:8px 12px; border-radius:18px; background:rgba(255,255,255,.92); box-shadow: 0 12px 30px rgba(0,0,0,.18); }
+    .logo { height: 54px; width: auto; display:block; }
+    .links { display:flex; gap: 1.05rem; align-items:center; font-size:.88rem; color:#cbd6f5; font-weight:800; }
+    .links a { text-decoration:none; opacity:.86; transition:.2s ease; }
+    .links a:hover { opacity:1; color:#fff; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding: .92rem 1.08rem; border-radius: 999px; text-decoration:none; font-weight:900; border:1px solid transparent; transition:.25s ease; white-space:nowrap; }
+    .btn.primary { background: linear-gradient(135deg, var(--orange), #ffb348); color:#1c1630; box-shadow:0 18px 42px rgba(247,148,29,.28); }
+    .btn.primary:hover { transform: translateY(-3px); box-shadow:0 22px 54px rgba(247,148,29,.38); }
+    .btn.ghost { border-color: rgba(255,255,255,.18); color:#fff; background:rgba(255,255,255,.08); backdrop-filter: blur(14px); }
+    .btn.light { border-color: rgba(48,71,154,.18); color:var(--blue); background:#fff; }
+    .hero { min-height: 100vh; display:grid; align-items:end; position:relative; isolation:isolate; padding: 118px 0 34px; overflow:hidden; }
+    .hero::before { content:""; position:absolute; inset:0; z-index:-3; background:url('assets/kids-tug-war.jpg') center/cover no-repeat; transform:scale(1.08); filter:saturate(1.08) contrast(1.05); animation: slowZoom 16s ease-in-out infinite alternate; }
+    .hero::after { content:""; position:absolute; inset:0; z-index:-2; background:linear-gradient(90deg, rgba(5,8,22,.92) 0%, rgba(5,8,22,.72) 38%, rgba(5,8,22,.20) 72%), linear-gradient(0deg, #050816 0%, transparent 42%); }
+    @keyframes slowZoom { from { transform:scale(1.04) translate3d(0,0,0); } to { transform:scale(1.14) translate3d(-1.5%, -1%, 0); } }
+    h1 { font-size: clamp(3.2rem, 9vw, 8.6rem); line-height:.86; letter-spacing:-.085em; margin: 22px 0 24px; color:#fff; max-width: 1020px; text-wrap:balance; }
+    .lead { font-size: clamp(1.1rem, 2.05vw, 1.55rem); line-height:1.46; color:#d9e2ff; margin:0 0 28px; max-width: 720px; font-weight:600; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin: 0 0 34px; }
+    .stats { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:1px; max-width: 850px; border:1px solid rgba(255,255,255,.14); border-radius:24px; overflow:hidden; background:rgba(255,255,255,.12); backdrop-filter:blur(20px); }
+    .stat { padding:20px; background:rgba(7,13,35,.42); }
+    .stat strong { display:block; font-size:1.85rem; color:#fff; letter-spacing:-.045em; }
+    .stat span { color:#c6d1f2; font-weight:800; font-size:.82rem; }
+    section { padding: 92px 0; position:relative; z-index:1; }
+    .section-head { display:flex; justify-content:space-between; gap:28px; align-items:end; margin-bottom:30px; }
+    h2 { font-size: clamp(2.35rem, 5.6vw, 5.65rem); line-height:.9; letter-spacing:-.073em; margin:14px 0 0; color:#fff; max-width:850px; text-wrap:balance; }
+    .light-section h2, .white-card h2 { color:var(--blue-2); }
+    .section-head p { max-width: 520px; color:#b8c4e4; line-height:1.62; margin:0; font-weight:700; }
+    .light-section { background:linear-gradient(180deg, #f8f5ef, #fff); color:var(--ink); }
+    .light-section .eyebrow { color:var(--blue); }
+    .light-section .section-head p { color:#5e6881; }
+    .panel { background: rgba(255,255,255,.075); border:1px solid rgba(255,255,255,.13); border-radius: var(--radius); overflow:hidden; backdrop-filter: blur(18px); }
+    .about { display:grid; grid-template-columns:.95fr 1.05fr; min-height:560px; }
+    .about-media { position:relative; overflow:hidden; }
+    .about img { width:100%; height:100%; object-fit:cover; min-height:560px; filter:saturate(1.05) contrast(1.03); }
+    .about-media::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(8,14,37,.28), transparent 55%); }
+    .about-copy { padding:48px; display:flex; flex-direction:column; justify-content:center; background:linear-gradient(135deg, rgba(255,255,255,.94), rgba(245,248,255,.86)); }
+    .about-copy p { color:#3e4b68; line-height:1.72; font-size:1.06rem; font-weight:600; }
+    .cards { display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
+    .card { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:26px; padding:28px; position:relative; overflow:hidden; min-height:320px; color:#fff; backdrop-filter: blur(16px); transition:.35s ease; }
+    .card:hover { transform: translateY(-8px); background:rgba(255,255,255,.12); }
+    .card::after { content:""; position:absolute; width:190px; height:190px; border-radius:999px; right:-76px; top:-76px; opacity:.22; background:var(--accent, var(--blue)); filter:blur(2px); }
+    .icon { width:58px; height:58px; display:grid; place-items:center; border-radius:18px; background:var(--soft, rgba(255,255,255,.12)); color:var(--accent, #fff); font-size:1.7rem; margin-bottom:30px; }
+    h3 { font-size:1.7rem; margin:0 0 14px; letter-spacing:-.045em; color:inherit; }
+    .card p, .story p, .involved p { color:#c4cee9; line-height:1.62; margin:0; font-weight:600; }
+    .film-strip { display:grid; grid-template-columns:1.2fr .8fr; gap:16px; align-items:stretch; }
+    .quote { min-height:520px; padding:38px; background:linear-gradient(145deg, rgba(9,17,47,.78), rgba(30,47,113,.82)), url('assets/family-daughter.jpg') center/cover no-repeat; color:#fff; border-radius:var(--radius); border:1px solid rgba(255,255,255,.14); display:flex; flex-direction:column; justify-content:end; overflow:hidden; position:relative; }
+    .quote::before { content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(5,8,22,.82), rgba(5,8,22,.18)); }
+    .quote > * { position:relative; z-index:1; }
+    .quote blockquote { margin:18px 0 0; font-size:clamp(2rem,4.1vw,4.5rem); line-height:.92; letter-spacing:-.07em; font-weight:900; }
+    .quote cite { display:block; margin-top:20px; color:#d9e2ff; font-style:normal; font-weight:900; }
+    .story { padding:36px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:var(--radius); display:flex; flex-direction:column; justify-content:center; }
+    .story h3 { color:#fff; margin-bottom:18px; }
+    .mental { background: radial-gradient(circle at 90% 20%, rgba(247,148,29,.24), transparent 20rem), linear-gradient(135deg, var(--blue-2), var(--blue)); color:white; border-radius:36px; padding:46px; position:relative; overflow:hidden; min-height:390px; display:flex; flex-direction:column; justify-content:center; border:1px solid rgba(255,255,255,.18); }
+    .mental::after { content:"13–20%"; position:absolute; right:22px; bottom:-22px; font-size:min(18vw, 180px); font-weight:900; color:rgba(255,255,255,.10); letter-spacing:-.09em; }
+    .mental h2 { color:white; max-width:810px; }
+    .mental p { color:#dbe3ff; line-height:1.7; max-width:760px; font-size:1.1rem; font-weight:650; }
+    .partner-section { background: #f9f6ef; color:var(--ink); overflow:hidden; }
+    .partner-section h2 { color: var(--blue-2); }
+    .partner-section .eyebrow { color: var(--blue); }
+    .partner-marquee { display:flex; gap:18px; width:max-content; animation: marquee 34s linear infinite; margin-top:24px; }
+    .partner-track { display:flex; gap:18px; overflow:hidden; mask-image:linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+    @keyframes marquee { to { transform:translateX(-50%); } }
+    .partner-logo { width:220px; height:126px; border-radius:24px; background:#fff; border:1px solid var(--dark-line); display:grid; place-items:center; padding:24px; flex:0 0 auto; box-shadow: 0 18px 44px rgba(32,44,86,.08); }
+    .partner-logo img { max-width:100%; max-height:76px; object-fit:contain; filter:saturate(.95); }
+    .partner-copy { max-width:760px; color:#5e6881; font-weight:700; line-height:1.65; }
+    .involved { display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:stretch; }
+    .cta { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:var(--radius); padding:36px; color:#fff; backdrop-filter:blur(16px); }
+    .cta h2 { font-size:clamp(2.1rem,4.4vw,4rem); }
+    .cta-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    footer { padding: 36px 0; border-top:1px solid rgba(255,255,255,.12); color:#aeb9d7; background:#050816; position:relative; z-index:1; }
+    footer .wrap { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+    .reveal { opacity:1; transform:translateY(0); transition: opacity .85s ease, transform .85s cubic-bezier(.2,.8,.2,1); }
+    .js .reveal { opacity:1; transform:translateY(18px); }
+    .js .reveal.in-view { opacity:1; transform:translateY(0); }
+    .reveal.delay-1 { transition-delay:.08s; }
+    .reveal.delay-2 { transition-delay:.16s; }
+    .reveal.delay-3 { transition-delay:.24s; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+      .reveal { opacity:1; transform:none; }
+    }
+    @media (max-width: 900px) {
+      .links { display:none; }
+      h1 { font-size:clamp(3rem,15vw,5.6rem); }
+      .about, .film-strip, .involved { grid-template-columns: 1fr; }
+      .about img, .about { min-height: auto; }
+      .cards { grid-template-columns:1fr; }
+      .section-head { display:block; }
+      .stats { grid-template-columns:1fr; }
+      .about-copy { padding:30px; }
+      .hero { min-height:92vh; }
+      .partner-logo { width:190px; height:112px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo-frame" href="#top" aria-label="M.I.K.I.D. home"><img class="logo" src="assets/logo.png" alt="M.I.K.I.D. Logo"></a>
+      <nav class="links" aria-label="Concept navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#partners">Partners</a>
+        <a href="#stories">Stories</a>
+        <a href="#involved">Get Involved</a>
+      </nav>
+      <a class="btn primary" href="https://www.mikid.org/give">Make a Donation</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="cinema-wrap">
+        <div class="reveal">
+          <span class="eyebrow">Strengthening Families Since 1987</span>
+          <h1>Family support with a cinematic sense of hope.</h1>
+          <p class="lead">M.I.K.I.D. exists to improve the behavioral health and wellness of children and youth through a family centered approach.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://www.mikid.org/programs-services">Programs & Services</a>
+            <a class="btn ghost" href="https://www.youtube.com/watch?v=q63nsvzlQtI">Who is M.I.K.I.D?</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>1987</strong><span>Strengthening families since</span></div>
+            <div class="stat"><strong>8</strong><span>Arizona locations</span></div>
+            <div class="stat"><strong>80%+</strong><span>Staff with lived experience</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="light-section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">About M.I.K.I.D.</span><h2>The largest family-run behavioral health organization in Arizona.</h2></div>
+          <p>M.I.K.I.D. is a non-profit, licensed outpatient clinic and family-run behavioral health organization serving children, youth, and families.</p>
+        </div>
+        <div class="panel about reveal delay-1">
+          <div class="about-media"><img src="assets/kids-bubbles.jpg" alt="Kids blowing bubbles"></div>
+          <div class="about-copy">
+            <p>Through eight locations in Arizona, M.I.K.I.D. supports families with behavioral health, wellness, support, navigation, and family-centered care.</p>
+            <p>Over 80% of staff have lived experience as family members, parents, or young adults with behavioral health issues, and 51% of the Board of Directors have lived experience.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="https://www.mikid.org/about-us">Learn Our History</a>
+              <a class="btn light" href="https://www.mikid.org/careers">Explore Careers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Three Key Components</span><h2>Prevention, navigation, and reunification.</h2></div>
+          <p>Services are organized around practical family support, youth programs, counseling, system navigation, and reunification assistance.</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal delay-1" style="--accent:var(--orange);--soft:rgba(247,148,29,.14)"><div class="icon">✦</div><h3>Prevention</h3><p>Helps strengthen families through interventions such as family support, counseling, and youth programs.</p></article>
+          <article class="card reveal delay-2" style="--accent:var(--green);--soft:rgba(67,182,74,.14)"><div class="icon">↗</div><h3>Navigation</h3><p>Assists families with navigating behavioral health systems, child-serving systems, and adult-serving systems, with support provided by individuals with lived experience.</p></article>
+          <article class="card reveal delay-3" style="--accent:var(--red);--soft:rgba(232,75,60,.14)"><div class="icon">●</div><h3>Reunification</h3><p>Provides reunification support through the ParentSupport Now program and helps families facing alternative dispositions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners" class="partner-section">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">Our Partners</span>
+          <h2>Connected care means a stronger safety net.</h2>
+          <p class="partner-copy">This mock-up now gives the partner logos their own cinematic trust section, including the visible partners from the original M.I.K.I.D. homepage: Mercy Care, UnitedHealthcare Community Plan, Care1st, Molina Healthcare, and additional community partner logos shown on the site.</p>
+        </div>
+      </div>
+      <div class="partner-track reveal delay-1" aria-label="Partner logos from original M.I.K.I.D. homepage">
+        <div class="partner-marquee">
+          <div class="partner-logo"><img src="assets/partner-community-1.png" alt="Community partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-mercy-care.png" alt="Mercy Care partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-united-healthcare.png" alt="UnitedHealthcare Community Plan logo"></div>
+          <div class="partner-logo"><img src="assets/partner-care1st.png" alt="Care1st partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-community-2.png" alt="Community partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-molina.png" alt="Molina Healthcare partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-community-3.png" alt="Community partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-community-1.png" alt="Community partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-mercy-care.png" alt="Mercy Care partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-united-healthcare.png" alt="UnitedHealthcare Community Plan logo"></div>
+          <div class="partner-logo"><img src="assets/partner-care1st.png" alt="Care1st partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-community-2.png" alt="Community partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-molina.png" alt="Molina Healthcare partner logo"></div>
+          <div class="partner-logo"><img src="assets/partner-community-3.png" alt="Community partner logo"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories">
+      <div class="wrap film-strip">
+        <div class="quote reveal">
+          <span class="pill">Stories of Hope</span>
+          <blockquote>“Hope sees the invisible, feels the intangible and achieves the impossible.”</blockquote>
+          <cite>– Anonymous</cite>
+        </div>
+        <div class="story reveal delay-1">
+          <h3>Millie J</h3>
+          <p>"I am the guardian of my grandson. Three years ago I was at a loss walking out of my grandson's therapy appointment after he ran away. I walked by M.I.K.I.D. and went in and stood in the lobby and cried. Not knowing anything about the agency and what they did, I just saw “Mentoring & Inspiring Kids In Development” and I just knew this is where i needed to be."</p>
+          <div class="cta-links"><a class="btn primary" href="mailto:info@mikid.org">Share Your Story</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap mental reveal">
+        <span class="pill">Children's Mental Health</span>
+        <h2>Children's mental disorders are an important public health issue in the United States.</h2>
+        <p>It is estimated that 13%–20% of children living in the United States experience a mental disorder in a given year. Because of the impact on children, families, and communities, children's mental disorders are an important public health issue.</p>
+      </div>
+    </section>
+
+    <section id="involved">
+      <div class="wrap involved">
+        <div class="cta reveal">
+          <span class="pill">Get Involved</span>
+          <h2>Support families in your community.</h2>
+          <p>Visitors are encouraged to support or engage with M.I.K.I.D. through volunteering, donations, events, careers, and shared stories.</p>
+          <div class="cta-links">
+            <a class="btn primary" href="https://www.mikid.org/volunteering">Volunteer</a>
+            <a class="btn ghost" href="https://www.mikid.org/give">Donate</a>
+            <a class="btn ghost" href="https://www.mikid.org/events">Events</a>
+          </div>
+        </div>
+        <div class="cta reveal delay-1">
+          <span class="pill">Newsletter</span>
+          <h2>Stay connected to the work.</h2>
+          <p>The original site invites visitors to receive M.I.K.I.D. updates and join the mailing list. This concept keeps that pathway visible while modernizing the presentation.</p>
+          <div class="cta-links"><a class="btn primary" href="https://www.mikid.org/contact">Sign Up Now</a><a class="btn ghost" href="mailto:info@mikid.org">info@mikid.org</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Cinematic redesign concept for M.I.K.I.D. — original content and partner visibility preserved for review.</span>
+      <a class="btn ghost" href="mailto:info@mikid.org">info@mikid.org</a>
+    </div>
+  </footer>
+
+  <script>
+    document.documentElement.classList.add('js');
+    const revealItems = document.querySelectorAll('.reveal');
+    const showIfNearViewport = (item) => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 1.15) item.classList.add('in-view');
+    };
+    const observer = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.04, rootMargin: '0px 0px 18% 0px' }) : null;
+    revealItems.forEach((item) => {
+      showIfNearViewport(item);
+      if (observer) observer.observe(item);
+      else item.classList.add('in-view');
+    });
+    window.addEventListener('scroll', () => revealItems.forEach(showIfNearViewport), { passive: true });
+  </script>
+</body>
+</html>
