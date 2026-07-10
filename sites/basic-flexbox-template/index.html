@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Basic Flexbox Template</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101827;
+      --panel: rgba(255,255,255,.08);
+      --panel-strong: rgba(255,255,255,.14);
+      --line: rgba(255,255,255,.18);
+      --ink: #f8fafc;
+      --muted: #bac7d9;
+      --accent: #7dd3fc;
+      --accent-2: #c084fc;
+      --radius: 24px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(125,211,252,.22), transparent 32rem),
+        radial-gradient(circle at 82% 14%, rgba(192,132,252,.24), transparent 30rem),
+        linear-gradient(135deg, #08111f 0%, #101827 48%, #172033 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .nav,
+    .hero,
+    .card,
+    .feature,
+    .footer {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: 0 24px 80px rgba(0,0,0,.28);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 16px;
+      border-radius: 999px;
+      position: sticky;
+      top: 16px;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+
+    .mark {
+      width: 36px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #07111f;
+      font-weight: 900;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .links a,
+    .button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: var(--muted);
+      background: rgba(255,255,255,.05);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #07111f;
+      border: 0;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 16px 40px rgba(125,211,252,.24);
+    }
+
+    .hero {
+      display: flex;
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 34px;
+      padding: clamp(24px, 5vw, 54px);
+      border-radius: var(--radius);
+    }
+
+    .hero-copy,
+    .hero-visual { flex: 1 1 0; }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .78rem;
+      font-weight: 800;
+      margin: 0 0 16px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 720px;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: .88;
+      letter-spacing: -.08em;
+    }
+
+    .lead {
+      margin: 22px 0 28px;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .ghost {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 12px 16px;
+      color: var(--ink);
+      background: rgba(255,255,255,.06);
+    }
+
+    .hero-visual {
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .visual-row {
+      display: flex;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .tile {
+      flex: 1;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.04));
+      min-height: 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tile::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -30% 20%;
+      height: 90%;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(125,211,252,.45), transparent 62%);
+    }
+
+    .tile.wide { flex: 1.65; }
+    .tile.purple::after { background: radial-gradient(circle, rgba(192,132,252,.48), transparent 62%); }
+    .tile.green::after { background: radial-gradient(circle, rgba(134,239,172,.34), transparent 62%); }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin: 48px 0 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: -.06em;
+    }
+
+    .section-head p {
+      max-width: 430px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .card {
+      flex: 1 1 240px;
+      min-height: 220px;
+      border-radius: var(--radius);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--panel-strong);
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .card h3 { margin: 24px 0 10px; font-size: 1.35rem; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+    .feature {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    .feature > div { flex: 1 1 0; }
+    .feature p { color: var(--muted); line-height: 1.6; }
+
+    .meter {
+      min-height: 160px;
+      border-radius: 20px;
+      background:
+        linear-gradient(90deg, rgba(125,211,252,.26) 0 24%, transparent 24% 28%, rgba(192,132,252,.30) 28% 58%, transparent 58% 62%, rgba(134,239,172,.28) 62% 100%),
+        rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+    }
+
+    .footer {
+      margin-top: 18px;
+      border-radius: var(--radius);
+      padding: 20px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    @media (max-width: 780px) {
+      .nav,
+      .hero,
+      .section-head,
+      .feature { flex-direction: column; align-items: stretch; }
+      .links { justify-content: flex-start; }
+      .hero-visual { min-height: 260px; }
+      .visual-row { min-height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Template navigation">
+      <a class="brand" href="#top" aria-label="Basic Flexbox Template home">
+        <span class="mark">F</span>
+        <span>Flexbox Template</span>
+      </a>
+      <div class="links">
+        <a href="#cards">Cards</a>
+        <a href="#feature">Feature</a>
+        <a href="../../">Demo Hub</a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Basic layout test</p>
+          <h1 id="hero-title">A simple flexbox page template.</h1>
+          <p class="lead">This lightweight demo proves the WebsitesDemo upload and hub-link flow still works. It uses pure HTML and CSS with flexible navigation, hero columns, cards, and responsive stacking.</p>
+          <div class="actions">
+            <a class="button" href="#cards">View flex cards</a>
+            <a class="ghost" href="../../">Back to hub</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-row">
+            <div class="tile wide"></div>
+            <div class="tile purple"></div>
+          </div>
+          <div class="visual-row">
+            <div class="tile green"></div>
+            <div class="tile wide purple"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cards" aria-labelledby="cards-title">
+        <div class="section-head">
+          <h2 id="cards-title">Flexible cards</h2>
+          <p>Each card uses <code>flex: 1 1 240px</code>, so the layout naturally fills rows and wraps on smaller screens without needing a framework.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">01</div>
+            <div>
+              <h3>Responsive by default</h3>
+              <p>Cards wrap from a multi-column desktop layout into tidy stacked mobile blocks.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="icon">02</div>
+            <div>
+              <h3>Reusable sections</h3>
+              <p>Hero, card groups, feature bands, and footers can be copied into quick mockups.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="icon">03</div>
+            <div>
+              <h3>No build step</h3>
+              <p>Static HTML/CSS only, so it works directly on GitHub Pages and local HTTP servers.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="feature" class="feature" aria-labelledby="feature-title">
+        <div>
+          <p class="eyebrow">Layout module</p>
+          <h2 id="feature-title">A two-column feature band.</h2>
+          <p>Use this block for product highlights, service explanations, announcements, or quick client proof-of-concept pages.</p>
+        </div>
+        <div class="meter" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Basic Flexbox Template</span>
+      <span>Uploaded to WebsitesDemo for hub-link testing.</span>
+    </footer>
+  </div>
+</body>
+</html>
