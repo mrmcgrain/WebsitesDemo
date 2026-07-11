@@ -1,133 +1,76 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0908">
-  <meta name="description" content="The Aetherworks No. 7 — a scroll-driven steampunk machine pushed beyond its limits.">
-  <title>Aetherworks No. 7</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='25' fill='%23bd7b34' stroke='%23080706' stroke-width='8'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%23080706'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rend // A Steam-Powered Reckoning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#090909; --iron:#1d1a18; --brass:#b77a32; --hot:#ffb342; --paper:#e5cf9c; --rust:#873b20; }
+    * { box-sizing:border-box; } html { background:var(--ink); scroll-behavior:smooth; }
+    body { margin:0; min-height:500vh; overflow-x:hidden; color:var(--paper); background:radial-gradient(ellipse at 50% 30%,#34271e 0%,#110f0e 45%,#050505 100%); font-family:'Special Elite',monospace; }
+    body::before { content:""; position:fixed; inset:0; opacity:.18; pointer-events:none; z-index:8; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); mix-blend-mode:screen; }
+    .mast { position:fixed; z-index:10; top:0; left:0; width:100%; display:flex; justify-content:space-between; padding:22px 30px; font-size:11px; letter-spacing:.16em; color:#d3a361; text-transform:uppercase; }
+    .mast span:last-child { color:#6f5a43; }
+    .stage { position:fixed; inset:0; display:grid; place-items:center; pointer-events:none; }
+    .aura { position:absolute; width:min(72vw,800px); aspect-ratio:1; border-radius:50%; background:radial-gradient(circle,rgba(242,164,63,.17),rgba(101,51,22,.08) 35%,transparent 67%); filter:blur(4px); transform:scale(calc(.75 + var(--p, 0) * .55)); opacity:calc(.4 + var(--p, 0) * .7); }
+    .machine { position:relative; width:min(62vw,620px); aspect-ratio:1; display:grid; place-items:center; transform:translateY(calc(var(--p,0) * -5vh)); }
+    .machine::after { content:""; position:absolute; inset:-7%; border:1px solid rgba(199,128,51,.15); border-radius:50%; box-shadow:0 0 0 18px rgba(71,41,23,.08),inset 0 0 65px #000; }
+    .gear { position:absolute; width:84%; aspect-ratio:1; filter:drop-shadow(0 20px 17px #000); transform:rotate(calc(var(--turn, 0) * 1turn)) scale(calc(1 - var(--p,0)*.10)); animation:rattle .13s steps(2) infinite paused; transition:opacity .12s,filter .12s; }
+    .gear path { fill:url(#metal); stroke:#5a2a18; stroke-width:2; }
+    .gear .inner { fill:#171411; stroke:#ce8c3e; stroke-width:5; } .gear .hub { fill:#8d5127; stroke:#e9ad52; stroke-width:4; }
+    .machine.breaking .gear { animation-play-state:running; } .machine.breaking .gear path { stroke:#e76024; }
+    .machine.shattered .gear { opacity:0; filter:blur(8px) brightness(2.2); }
+    @keyframes rattle { from { margin-left:-3px; margin-top:2px; } to { margin-left:3px; margin-top:-2px; } }
+    .ring { position:absolute; border:1px solid rgba(255,178,66,.45); width:18%; aspect-ratio:1; border-radius:50%; opacity:0; transform:scale(.2); }
+    .breaking .ring { animation:shock .8s ease-out infinite; } .breaking .ring:nth-of-type(2){animation-delay:.22s}.breaking .ring:nth-of-type(3){animation-delay:.45s}
+    .shattered .ring, .shattered .sparks { animation:none !important; opacity:0 !important; }
+    @keyframes shock { 0%{opacity:.9;transform:scale(.2)}100%{opacity:0;transform:scale(6)} }
+    .sparks { position:absolute; inset:0; opacity:calc(var(--p,0) * 1.4 - .55); transition:opacity .1s; }
+    .spark { position:absolute; left:50%; top:50%; width:3px; height:3px; border-radius:50%; background:#ffc15d; box-shadow:0 0 12px 3px #f57b2c; transform:rotate(var(--angle)) translateY(calc(-1 * var(--distance))) scale(calc(.5 + var(--p,0))); }
+    .fragment { position:absolute; left:50%; top:50%; width:24px; height:46px; background:linear-gradient(90deg,#3d2117,#c27e31,#482319); clip-path:polygon(30% 0,100% 12%,73% 100%,0 80%); opacity:0; transform:translate(-50%,-50%); }
+    .breaking .fragment { animation:fly 1.1s cubic-bezier(.1,.8,.25,1) both infinite; animation-delay:var(--delay); }
+    .shattered .fragment { animation:none; opacity:0; }
+    @keyframes fly { 0%{opacity:0;transform:translate(-50%,-50%) rotate(0)} 9%{opacity:1} 100%{opacity:0;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r));} }
+    .shard { position:absolute; left:50%; top:50%; z-index:3; width:var(--w); height:var(--h); opacity:0; background:linear-gradient(105deg,#22120d 0%,#d99b47 35%,#704022 65%,#130b09 100%); box-shadow:inset 0 0 0 2px #f1b45b,0 0 17px rgba(255,108,35,.5); clip-path:polygon(0 8%,100% 0,77% 70%,42% 100%,14% 62%); transform:translate(-50%,-50%) rotate(var(--base)); }
+    .shattered .shard { animation:detonate 1.55s cubic-bezier(.08,.75,.18,1) both; animation-delay:var(--delay); }
+    @keyframes detonate { 0%{opacity:0;transform:translate(-50%,-50%) scale(.1) rotate(var(--base))} 5%{opacity:1} 28%{opacity:1} 100%{opacity:0;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) scale(.62) rotate(calc(var(--base) + var(--spin)));} }
+    .shattered::before { content:""; position:absolute; width:95%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle,rgba(255,222,145,.95) 0 2%,rgba(255,127,28,.86) 4%,rgba(176,54,18,.45) 20%,transparent 63%); mix-blend-mode:screen; z-index:4; animation:burst .65s ease-out both; }
+    @keyframes burst { from{opacity:1;transform:scale(.1)}to{opacity:0;transform:scale(2.7)} }
+    .copy { position:fixed; z-index:3; left:clamp(20px,7vw,110px); top:50%; transform:translateY(-50%); width:min(420px,62vw); }
+    h1 { margin:0; font-family:'IM Fell English SC',serif; font-size:clamp(56px,10vw,145px); font-weight:400; letter-spacing:-.06em; line-height:.75; color:#ecd39a; text-shadow:2px 3px #5b2c1a,0 0 35px rgba(241,151,43,.28); }
+    .copy p { max-width:270px; margin:28px 0 0 7px; color:#ad9675; font-size:12px; line-height:1.7; letter-spacing:.04em; }
+    .chapter { position:fixed; z-index:4; right:30px; bottom:28px; width:180px; color:#a6825b; font-size:10px; text-align:right; text-transform:uppercase; letter-spacing:.13em; line-height:1.5; }
+    .rule { display:block; height:1px; margin:10px 0 0 auto; background:#ba7c34; width:calc(var(--p,0)*100%); transition:width .08s; }
+    .scroll { position:fixed; z-index:5; bottom:25px; left:30px; font-size:9px; letter-spacing:.15em; color:#8c7254; writing-mode:vertical-rl; }
+    @media(max-width:680px){ .copy{top:22%; transform:none; width:calc(100% - 40px)} h1{font-size:78px}.copy p{margin-top:22px}.machine{width:96vw; margin-top:17vh}.mast{padding:16px;font-size:8px}.chapter{right:16px;bottom:16px;width:135px}.scroll{left:16px;bottom:16px} }
+  </style>
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-
-  <header class="masthead">
-    <a class="brand" href="#top" aria-label="Aetherworks home">
-      <span class="brand-mark">A</span>
-      <span>Aetherworks<br><small>London · 1887</small></span>
-    </a>
-    <div class="status"><i></i> Engine engaged</div>
-  </header>
-
-  <main id="top">
-    <section class="machine-stage" aria-label="Aether engine demonstration">
-      <div class="stage-sticky">
-        <canvas id="sparkCanvas" aria-hidden="true"></canvas>
-
-        <div class="pipework pipework-left" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="pipework pipework-right" aria-hidden="true">
-          <span></span><span></span>
-        </div>
-
-        <div class="gauge gauge-left" aria-hidden="true">
-          <div class="gauge-face">
-            <span class="gauge-label">TORQUE</span>
-            <i class="needle"></i>
-            <b>0</b><b>12</b><b>24</b>
-          </div>
-        </div>
-        <div class="gauge gauge-right" aria-hidden="true">
-          <div class="gauge-face">
-            <span class="gauge-label">PRESSURE</span>
-            <i class="needle"></i>
-            <b>0</b><b>80</b><b>160</b>
-          </div>
-        </div>
-
-        <div class="smoke" aria-hidden="true"></div>
-
-        <div class="intro-copy">
-          <p class="eyebrow">Ministry patent № 0472</p>
-          <h1>POWER<br><em>HAS A PRICE.</em></h1>
-          <p class="lede">One revolution changed the empire.<br>One more may end it.</p>
-        </div>
-
-        <div class="gear-wrap" aria-hidden="true">
-          <svg class="gear" viewBox="0 0 600 600" role="img">
-            <defs>
-              <radialGradient id="metal" cx="38%" cy="32%">
-                <stop offset="0" stop-color="#f0c47d"/>
-                <stop offset=".25" stop-color="#a86a2b"/>
-                <stop offset=".58" stop-color="#563019"/>
-                <stop offset=".82" stop-color="#bd7b34"/>
-                <stop offset="1" stop-color="#2c170e"/>
-              </radialGradient>
-              <radialGradient id="hubMetal">
-                <stop offset="0" stop-color="#dfb268"/>
-                <stop offset=".42" stop-color="#75401f"/>
-                <stop offset="1" stop-color="#23120b"/>
-              </radialGradient>
-              <radialGradient id="outerSphere" cx="34%" cy="28%">
-                <stop offset="0" stop-color="#ffe0a0"/>
-                <stop offset=".18" stop-color="#e2a554"/>
-                <stop offset=".58" stop-color="#8b4c22"/>
-                <stop offset=".86" stop-color="#3b1d10"/>
-                <stop offset="1" stop-color="#180c08"/>
-              </radialGradient>
-              <filter id="roughness">
-                <feTurbulence baseFrequency=".8" numOctaves="2" seed="4" result="noise"/>
-                <feComposite in="noise" in2="SourceGraphic" operator="in" result="texture"/>
-                <feBlend in="SourceGraphic" in2="texture" mode="soft-light"/>
-              </filter>
-            </defs>
-            <g class="gear-body" filter="url(#roughness)">
-              <circle cx="300" cy="300" r="209" fill="url(#metal)" stroke="#160c08" stroke-width="12"/>
-              <circle cx="300" cy="300" r="181" fill="#0c0907" stroke="#d0934b" stroke-width="7"/>
-              <g class="spokes" fill="url(#metal)" stroke="#2a160d" stroke-width="7">
-                <path class="spoke" data-angle="0" d="M270 277 L269 132 L282 112 L318 112 L331 132 L330 277 Z"/>
-                <path class="spoke" data-angle="45" d="M270 277 L269 132 L282 112 L318 112 L331 132 L330 277 Z"/>
-                <path class="spoke" data-angle="90" d="M270 277 L269 132 L282 112 L318 112 L331 132 L330 277 Z"/>
-                <path class="spoke" data-angle="135" d="M270 277 L269 132 L282 112 L318 112 L331 132 L330 277 Z"/>
-                <path class="spoke" data-angle="180" d="M270 277 L269 132 L282 112 L318 112 L331 132 L330 277 Z"/>
-                <path class="spoke" data-angle="225" d="M270 277 L269 132 L282 112 L318 112 L331 132 L330 277 Z"/>
-                <path class="spoke" data-angle="270" d="M270 277 L269 132 L282 112 L318 112 L331 132 L330 277 Z"/>
-                <path class="spoke" data-angle="315" d="M270 277 L269 132 L282 112 L318 112 L331 132 L330 277 Z"/>
-              </g>
-              <circle cx="300" cy="300" r="73" fill="url(#hubMetal)" stroke="#170d08" stroke-width="11"/>
-              <circle cx="300" cy="300" r="36" fill="#0d0907" stroke="#c38943" stroke-width="8"/>
-              <circle cx="300" cy="300" r="14" fill="#050403" stroke="#70401f" stroke-width="5"/>
-              <g class="rivets" fill="#1a0f0a" stroke="#d29a56" stroke-width="3"></g>
-            </g>
-            <g class="teeth" fill="url(#metal)" stroke="#24130c" stroke-width="6"></g>
-          </svg>
-        </div>
-
-        <div class="warning-copy" aria-live="polite">
-          <p class="warning-code">⚠ CRITICAL OVERSPEED</p>
-          <h2>THE MACHINE<br>WILL NOT YIELD.</h2>
-        </div>
-
-        <div class="end-copy">
-          <p>Failure record № 0472</p>
-          <h2>NOTHING<br>LASTS FOREVER.</h2>
-          <span>— Aetherworks Experimental Division</span>
-        </div>
-
-        <div class="scroll-cue">
-          <span>Apply pressure</span>
-          <i></i>
-        </div>
-
-        <div class="progress" aria-hidden="true"><i></i></div>
-        <div class="chapter" aria-hidden="true">01 / IGNITION</div>
-      </div>
-    </section>
+  <div class="mast"><span>Rend / No. 04</span><span>Mechanical · Anomaly · Est. 1896</span></div>
+  <main class="stage" aria-label="A steampunk gear dismantles as the page scrolls">
+    <div class="aura"></div>
+    <div class="machine" id="machine">
+      <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+      <svg class="gear" viewBox="0 0 300 300" aria-hidden="true">
+        <defs><linearGradient id="metal" x1="0" x2="1"><stop stop-color="#43271d"/><stop offset=".38" stop-color="#d49441"/><stop offset=".58" stop-color="#714022"/><stop offset="1" stop-color="#241712"/></linearGradient></defs>
+        <path d="M132 14h36l6 28 24 8 22-19 31 31-19 22 10 24 29 5v44l-29 6-10 24 19 22-31 31-22-19-24 10-6 29h-44l-5-29-24-10-22 19-31-31 19-22-10-24-29-6v-44l29-5 10-24-19-22 31-31 22 19 24-8z"/>
+        <circle class="inner" cx="150" cy="150" r="73"/><circle class="hub" cx="150" cy="150" r="30"/><circle cx="150" cy="150" r="9" fill="#21150f"/>
+      </svg>
+      <div class="sparks" id="sparks"></div>
+      <div class="fragment" style="--x:-34vw;--y:-42vh;--r:-510deg;--delay:.08s"></div><div class="fragment" style="--x:38vw;--y:-28vh;--r:460deg;--delay:.22s"></div><div class="fragment" style="--x:29vw;--y:43vh;--r:620deg;--delay:.36s"></div><div class="fragment" style="--x:-42vw;--y:28vh;--r:-390deg;--delay:.15s"></div><div class="fragment" style="--x:-12vw;--y:-48vh;--r:720deg;--delay:.42s"></div><div class="fragment" style="--x:47vw;--y:3vh;--r:330deg;--delay:.56s"></div><div class="fragment" style="--x:7vw;--y:51vh;--r:-690deg;--delay:.64s"></div><div class="fragment" style="--x:-50vw;--y:-11vh;--r:590deg;--delay:.73s"></div><div class="fragment" style="--x:21vw;--y:-45vh;--r:-450deg;--delay:.88s"></div><div class="fragment" style="--x:-28vw;--y:44vh;--r:620deg;--delay:.97s"></div><div class="fragment" style="--x:49vw;--y:31vh;--r:-540deg;--delay:1.08s"></div><div class="fragment" style="--x:-46vw;--y:-34vh;--r:480deg;--delay:1.21s"></div>
+      <div class="shard" style="--w:135px;--h:115px;--base:22deg;--x:-52vw;--y:-43vh;--spin:-640deg;--delay:.02s"></div><div class="shard" style="--w:118px;--h:170px;--base:72deg;--x:48vw;--y:-39vh;--spin:790deg;--delay:.04s"></div><div class="shard" style="--w:155px;--h:72px;--base:142deg;--x:58vw;--y:16vh;--spin:560deg;--delay:.06s"></div><div class="shard" style="--w:120px;--h:150px;--base:206deg;--x:18vw;--y:50vh;--spin:-720deg;--delay:.08s"></div><div class="shard" style="--w:155px;--h:92px;--base:265deg;--x:-44vw;--y:40vh;--spin:680deg;--delay:.05s"></div><div class="shard" style="--w:94px;--h:145px;--base:315deg;--x:-57vw;--y:-4vh;--spin:-540deg;--delay:.1s"></div>
+    </div>
   </main>
-
-  <script src="script.js"></script>
+  <section class="copy"><h1 id="title">Resist<br>the pull.</h1><p id="description">An impossible mechanism waits beneath the city. It does not turn by steam alone.</p></section>
+  <div class="scroll">Scroll to apply force</div><div class="chapter"><span id="chapter">I. dormant machinery</span><i class="rule"></i></div>
+  <script>
+    const root=document.documentElement, machine=document.getElementById('machine'), title=document.getElementById('title'), desc=document.getElementById('description'), chapter=document.getElementById('chapter'), sparks=document.getElementById('sparks');
+    for(let i=0;i<46;i++){const s=document.createElement('i');s.className='spark';s.style.setProperty('--angle',`${Math.random()*360}deg`);s.style.setProperty('--distance',`${60+Math.random()*250}px`);s.style.transition=`transform ${.1+Math.random()*.35}s linear`;sparks.appendChild(s)}
+    function update(){const p=Math.min(1,scrollY/(document.body.scrollHeight-innerHeight)); root.style.setProperty('--p',p);root.style.setProperty('--turn',p<.3?p*.55:.165+(p-.3)*10.8); machine.classList.toggle('breaking',p>.57); machine.classList.toggle('shattered',p>.88); if(p<.22){title.innerHTML='Resist<br>the pull.';desc.textContent='An impossible mechanism waits beneath the city. It does not turn by steam alone.';chapter.textContent='I. dormant machinery'}else if(p<.57){title.innerHTML='Hear<br>it grind.';desc.textContent='Pressure gathers in the teeth. Brass groans. The unseen hand tightens.';chapter.textContent='II. torque rising'}else if(p<.84){title.innerHTML='Apply<br>force.';desc.textContent='The axle rejects its maker. Every turn tears another law apart.';chapter.textContent='III. violent disassembly'}else if(p<.88){title.innerHTML='Break<br>the teeth.';desc.textContent='The rim begins to fail. Brass flakes from the wheel in a white-hot frenzy.';chapter.textContent='IV. catastrophic failure'}else{title.innerHTML='Leave<br>nothing.';desc.textContent='The gear finally loses the fight. Its body shatters and flies apart into the dark.';chapter.textContent='V. mechanism undone'}}
+    addEventListener('scroll',update,{passive:true});update();
+  </script>
 </body>
 </html>
