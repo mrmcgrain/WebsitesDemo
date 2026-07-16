@@ -1,0 +1,7 @@
+Source note for 8001nail preview images
+
+Images in assets/social-* were collected from the public client-owned profiles supplied by the user for this preview:
+- Instagram: https://www.instagram.com/8001_nails_spa/
+- Facebook: https://www.facebook.com/8001nailsspa
+
+These files should only be used on a live client site if the client confirms they own the accounts/content or have permission from the photographer/creator. The webpage captions label them as client social profile images rather than stock photography.

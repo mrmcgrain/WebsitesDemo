@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="8001 Nails &amp; Spa in Phoenix, Arizona — salon information, hours, guest reviews, and directions." />
+  <title>8001 Nails &amp; Spa | Phoenix, AZ</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <style>
+    :root {
+      --ink: #231d25;
+      --muted: #6e6470;
+      --paper: #fdfaf8;
+      --surface: #f5efeb;
+      --line: #e6dad6;
+      --accent: #8f3a5a;
+      --accent-dark: #6e2643;
+      --star: #c67331;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.5; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid #176b82; outline-offset: 4px; border-radius: 3px; }
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 30; background: #fff; color: var(--ink); padding: .7rem 1rem; font-weight: 700; }
+    .skip:focus { top: 1rem; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .wrap { width: min(1120px, calc(100% - 3rem)); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(253,250,248,.95); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
+    .nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .brand { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; text-decoration: none; font-family: var(--serif); font-size: 1.27rem; font-weight: 700; letter-spacing: -.03em; }
+    .brand-logo { width: 42px; height: 42px; flex: 0 0 42px; display: block; object-fit: cover; border-radius: 50%; background: #111; box-shadow: 0 0 0 1px rgba(35,29,37,.12); }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; font-size: .91rem; font-weight: 650; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:not(.button) { color: var(--muted); }
+    .button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; padding: .65rem 1.05rem; border-radius: 3px; background: var(--accent); color: #fff; text-decoration: none; font-size: .92rem; font-weight: 750; letter-spacing: .01em; transition: background .16s ease, transform .16s ease; }
+    .button:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .button.secondary { background: transparent; color: var(--ink); border: 1px solid #bfaeb6; }
+    .button.secondary:hover { background: #fff; }
+    .hero { padding: 4.2rem 0 4.6rem; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(400px, 1.05fr); align-items: center; gap: clamp(2rem, 6vw, 6.5rem); }
+    .eyebrow { margin: 0 0 1rem; color: var(--accent); font-size: .74rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    h1, h2, h3 { font-family: var(--serif); letter-spacing: -.04em; line-height: 1.02; }
+    h1 { margin: 0; max-width: 9ch; font-size: clamp(3.25rem, 7vw, 5.9rem); font-weight: 500; }
+    .hero-copy { max-width: 33rem; margin: 1.5rem 0 0; color: var(--muted); font-size: 1.05rem; }
+    .rating { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem; margin: 1.55rem 0 1.8rem; }
+    .stars { color: var(--star); letter-spacing: .08em; font-size: 1rem; }
+    .rating strong { font-size: 1.06rem; }
+    .rating span { color: var(--muted); font-size: .92rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .hero-visual { position: relative; min-height: 560px; }
+    .hero-visual img { width: 100%; height: 560px; display: block; object-fit: cover; border-radius: 2px; box-shadow: 18px 18px 0 #eadbd5; }
+    .hero-reel { display: flex; min-height: 560px; align-items: center; justify-content: center; }
+    .hero-reel .video-card { width: min(100%, 350px); }
+    .photo-label { display: none; position: absolute; right: 1rem; bottom: 1rem; background: rgba(35,29,37,.86); color: #fff; padding: .45rem .65rem; font-size: .75rem; }
+    .quick { background: var(--ink); color: #fff; }
+    .quick-grid { display: grid; grid-template-columns: 1.1fr 1fr 1.1fr .9fr; }
+    .quick-item { min-height: 148px; display: flex; flex-direction: column; justify-content: center; padding: 1.75rem 1.5rem; border-right: 1px solid #554d55; }
+    .quick-item:last-child { border: 0; }
+    .quick-item small { color: #d3c6cf; font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .quick-item strong, .quick-item a { margin-top: .45rem; font-size: 1rem; font-weight: 650; }
+    .quick-item a { color: #fff; text-underline-offset: 3px; }
+    section { padding: 6rem 0; }
+    .section-intro { max-width: 40rem; }
+    .section-intro h2 { margin: 0; font-size: clamp(2.3rem, 4.3vw, 4rem); font-weight: 500; }
+    .section-intro p { color: var(--muted); margin: 1.1rem 0 0; }
+    .gallery { display: grid; grid-template-columns: 1.35fr .8fr .8fr; grid-template-rows: 228px 228px; gap: 1rem; margin-top: 2.7rem; }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 2px; }
+    .gallery .large { grid-row: span 2; }
+    .gallery img:nth-child(4) { grid-column: span 2; }
+    .social-strip { overflow: hidden; background: #fff7f3; border-block: 1px solid var(--line); }
+    .social-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.2rem; }
+    .social-head .section-intro { max-width: 43rem; }
+    .social-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .75rem; }
+    .social-link { display: inline-flex; min-height: 44px; align-items: center; gap: .55rem; padding: .7rem .9rem; border: 1px solid #d4c3bc; border-radius: 999px; background: rgba(255,255,255,.72); color: var(--ink); text-decoration: none; font-size: .88rem; font-weight: 750; }
+    .social-link:hover { background: #fff; border-color: #bfaeb6; }
+    .social-link svg { width: 18px; height: 18px; flex: 0 0 18px; fill: currentColor; }
+    .strip-viewport { width: 100%; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .strip-track { display: flex; width: max-content; gap: 1rem; animation: social-marquee 44s linear infinite; }
+    .strip-viewport:hover .strip-track, .strip-viewport:focus-within .strip-track { animation-play-state: paused; }
+    .social-card { flex: 0 0 clamp(180px, 18vw, 260px); margin: 0; border: 1px solid var(--line); background: var(--paper); border-radius: 2px; overflow: hidden; box-shadow: 0 18px 35px rgba(35,29,37,.08); }
+    .social-card img { width: 100%; aspect-ratio: 1 / 1; height: auto; display: block; object-fit: cover; background: var(--surface); }
+    .zoomable-image { cursor: zoom-in; }
+    .zoomable-image:hover { filter: saturate(1.04) contrast(1.02); }
+    .zoomable-image:focus-visible { outline: 3px solid #176b82; outline-offset: 4px; border-radius: 3px; }
+    .image-modal { position: fixed; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: min(980px, calc(100% - 2rem)); max-height: min(86vh, 860px); margin: 0; padding: 0; border: 0; border-radius: 4px; background: transparent; color: #fff; overflow: visible; }
+    .image-modal::backdrop { background: rgba(20, 15, 22, .82); backdrop-filter: blur(8px); }
+    .image-modal[open] { display: grid; gap: .9rem; }
+    .modal-frame { margin: 0; background: #130f15; border: 1px solid rgba(255,255,255,.18); box-shadow: 0 24px 70px rgba(0,0,0,.42); }
+    .modal-frame img { width: 100%; max-height: 78vh; display: block; object-fit: contain; background: #130f15; }
+    .modal-caption { padding: .8rem 1rem 1rem; color: #eadfe6; font-size: .9rem; }
+    .modal-close { justify-self: end; min-width: 44px; min-height: 44px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.94); color: var(--ink); font: inherit; font-weight: 800; cursor: pointer; }
+    .modal-close:hover { background: #fff; }
+    @keyframes social-marquee { to { transform: translateX(calc(-50% - .5rem)); } }
+    .feature-video { background: linear-gradient(180deg, var(--paper), #fff7f3); border-top: 1px solid var(--line); }
+    .video-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(260px, 420px); align-items: center; gap: clamp(2.5rem, 8vw, 7rem); }
+    .video-copy h2 { margin: 0; max-width: 10ch; font-size: clamp(2.5rem, 5vw, 4.7rem); font-weight: 500; }
+    .video-copy p { max-width: 34rem; color: var(--muted); margin: 1.15rem 0 0; }
+    .video-points { display: grid; gap: .85rem; margin: 1.7rem 0 0; padding: 0; list-style: none; }
+    .video-points li { display: flex; gap: .75rem; align-items: start; color: var(--muted); }
+    .video-points li::before { content: ""; width: .55rem; height: .55rem; margin-top: .47rem; border-radius: 999px; background: var(--accent); flex: 0 0 .55rem; }
+    .video-card { position: relative; width: min(100%, 360px); justify-self: center; padding: .85rem; border-radius: 34px; background: #171118; box-shadow: 22px 24px 0 #eadbd5, 0 30px 80px rgba(35,29,37,.18); }
+    .video-card video { width: 100%; aspect-ratio: 9 / 16; display: block; object-fit: cover; border-radius: 24px; background: #130f15; }
+    .services { background: #fff; }
+    .service-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin: 2.4rem 0 0; padding: 0; list-style: none; }
+    .service-list li { min-height: 72px; display: flex; align-items: center; padding: 1rem 1.05rem; border: 1px solid var(--line); border-radius: 2px; background: var(--paper); color: var(--ink); font-weight: 750; box-shadow: 0 14px 30px rgba(35,29,37,.05); }
+    .details { background: var(--surface); }
+    .details-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(3rem, 10vw, 9rem); }
+    .details h2 { margin: 0; font-size: clamp(2.25rem, 4vw, 3.7rem); font-weight: 500; }
+    .details p { color: var(--muted); }
+    .detail-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .detail-list li { display: grid; grid-template-columns: minmax(130px, .45fr) 1fr; gap: 1rem; padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
+    .detail-list span { color: var(--muted); font-size: .91rem; }
+    .detail-list strong { font-size: .94rem; font-weight: 650; }
+    .hours { margin-top: 2rem; }
+    .hours h3 { margin: 0 0 1rem; font-size: 1.5rem; font-weight: 500; }
+    .hours ul { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2rem; }
+    .hours li { break-inside: avoid; padding: .38rem 0; color: var(--muted); font-size: .91rem; }
+    .testimonials { background: #fff; }
+    .review-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2.7rem; }
+    blockquote { margin: 0; padding: 1.75rem; border: 1px solid var(--line); border-radius: 2px; background: var(--paper); }
+    blockquote .stars { font-size: .86rem; }
+    blockquote p { margin: 1rem 0 1.4rem; font-family: var(--serif); font-size: 1.24rem; line-height: 1.35; letter-spacing: -.02em; }
+    blockquote footer { color: var(--muted); font-size: .87rem; }
+    .visit { padding: 6rem 0; background: var(--accent); color: #fff; }
+    .visit-grid { display: flex; justify-content: space-between; align-items: end; gap: 3rem; }
+    .visit h2 { max-width: 12ch; margin: 0; font-size: clamp(2.7rem, 5vw, 4.7rem); font-weight: 500; }
+    .visit p { margin: 1rem 0 0; color: #f4dbe4; }
+    .visit .button { background: #fff; color: var(--accent-dark); white-space: nowrap; }
+    .mobile-actions { display: none; }
+    footer.site-footer { padding: 1.8rem 0; background: var(--ink); color: #f1e9ee; font-size: .82rem; }
+    footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .footer-meta { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: .85rem; }
+    .source { color: #c8bcc6; }
+    .footer-social { display: inline-flex; align-items: center; gap: .7rem; }
+    .footer-social a { color: #fff; text-decoration-color: rgba(255,255,255,.45); text-underline-offset: 3px; font-weight: 750; }
+    .footer-social a:hover { text-decoration-color: #fff; }
+    @media (max-width: 800px) {
+      .wrap { width: min(100% - 2rem, 620px); }
+      .nav-links a:not(.button) { display: none; }
+      .hero { padding: 2.8rem 0 3rem; }
+      .hero-grid, .details-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+      h1 { max-width: 11ch; }
+      .hero-visual { min-height: 390px; order: -1; }
+      .hero-visual img { height: 390px; }
+      .hero-reel { min-height: auto; }
+      .hero-reel .video-card { width: min(100%, 300px); justify-self: start; }
+      .quick-grid { grid-template-columns: 1fr 1fr; }
+      .quick-item { min-height: 120px; padding: 1.3rem 1rem; border-bottom: 1px solid #554d55; }
+      .quick-item:nth-child(2) { border-right: 0; }
+      .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 250px 170px 170px; }
+      .gallery .large { grid-column: span 2; grid-row: auto; }
+      .gallery img:nth-child(4) { grid-column: auto; }
+      .social-head { display: block; }
+      .social-links { justify-content: flex-start; margin-top: 1.2rem; }
+      .video-grid { grid-template-columns: 1fr; }
+      .video-card { justify-self: start; width: min(100%, 320px); }
+      .strip-track { gap: .75rem; animation-duration: 52s; }
+      .social-card { flex-basis: 190px; }
+      .service-list { grid-template-columns: 1fr 1fr; }
+      .review-grid { grid-template-columns: 1fr; }
+      .visit-grid { display: block; }
+      .visit .button { margin-top: 1.7rem; }
+      .mobile-actions { position: sticky; bottom: 0; z-index: 25; display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; padding: .65rem; background: rgba(253,250,248,.96); border-top: 1px solid var(--line); box-shadow: 0 -12px 30px rgba(35,29,37,.1); backdrop-filter: blur(10px); }
+      .mobile-actions a { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; border-radius: 3px; background: var(--ink); color: #fff; text-decoration: none; font-size: .86rem; font-weight: 800; }
+      .mobile-actions a:first-child { background: var(--accent); }
+      footer .wrap, .footer-meta { align-items: flex-start; flex-direction: column; }
+      .footer-meta { gap: .55rem; }
+      section { padding: 4rem 0; }
+      .hours ul { columns: 1; }
+    }
+    @media (max-width: 420px) { .quick-grid, .service-list { grid-template-columns: 1fr; } .quick-item, .quick-item:nth-child(2) { border-right: 0; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } .strip-track { animation: none !important; transform: none !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .5rem; } .social-card { scroll-snap-align: start; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="wrap nav" aria-label="Primary navigation">
+      <a class="brand" href="#top"><img class="brand-logo" src="assets/logo-header.jpg" alt="" width="42" height="42" decoding="async" /> <span>8001 Nails &amp; Spa</span></a>
+      <div class="nav-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#social">Social photos</a>
+        <a href="#services">Services</a>
+        <a href="#hours">Hours</a>
+        <a href="#reviews">Reviews</a>
+        <a class="button" href="tel:+14805974812">Call to book</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Nail salon · Phoenix, Arizona</p>
+          <h1>Fresh sets, clean details, salon care you can trust.</h1>
+          <p class="hero-copy">Visit 8001 Nails &amp; Spa on Chandler Boulevard for detailed nail work, friendly care, and fresh designs worth showing off.</p>
+          <div class="rating" aria-label="4.7 out of 5 stars from 159 guest reviews"><span class="stars" aria-hidden="true">★★★★★</span><strong>4.7</strong><span>from 159 guest reviews</span></div>
+          <div class="actions"><a class="button" href="tel:+14805974812">Call to book</a><a class="button secondary" href="sms:+14802400468">Text appointment</a><a class="button secondary" href="https://maps.google.com/?cid=8318990073623314932&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Get directions <span class="visually-hidden">(opens Google Maps)</span></a></div>
+        </div>
+        <div class="hero-visual hero-reel"><div class="video-card"><video src="assets/social-feature-video.mp4" poster="assets/social-feature-video-poster.jpg" controls autoplay muted loop playsinline preload="metadata" aria-label="Featured 8001 Nails &amp; Spa nail art video"></video></div></div>
+      </div>
+    </section>
+    <section class="quick" aria-label="At a glance"><div class="wrap quick-grid">
+      <div class="quick-item"><small>Location</small><strong>4025 E Chandler Blvd #8<br />Phoenix, AZ 85048</strong></div>
+      <div class="quick-item"><small>Call</small><a href="tel:+14805974812">(480) 597-4812</a></div>
+      <div class="quick-item"><small>Text to book</small><a href="sms:+14802400468">(480) 240-0468</a></div>
+      <div class="quick-item"><small>Hours</small><strong>Open daily<br /><span style="color:#d3c6cf;font-size:.83rem;font-weight:500">Full schedule below</span></strong></div>
+    </div></section>
+    <section id="gallery"><div class="wrap"><div class="section-intro"><p class="eyebrow">Inside the salon</p><h2>See the space before you visit.</h2><p>Start with a featured blue crystal set, then preview the salon, nail wall, and recent client looks before your appointment.</p></div><div class="gallery"><img class="large" src="assets/facebook-featured-image.jpg" alt="Blue crystal nail set by 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/salon-2.jpg" alt="Photo from 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/salon-3.jpg" alt="Photo from 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/salon-4.jpg" alt="Photo from 8001 Nails &amp; Spa" loading="lazy" /></div></div></section>
+    <section class="social-strip" id="social" aria-labelledby="social-heading">
+      <div class="wrap">
+        <div class="social-head">
+          <div class="section-intro"><p class="eyebrow">Fresh from social</p><h2 id="social-heading">A scrolling lookbook for nail inspiration.</h2><p>Browse recent nail work from 8001 Nails &amp; Spa, then follow along for new sets, seasonal designs, and appointment updates.</p></div>
+          <div class="social-links" aria-label="8001 Nails &amp; Spa social profiles">
+            <a class="social-link" href="https://www.instagram.com/8001_nails_spa/" target="_blank" rel="noopener" aria-label="Visit 8001 Nails &amp; Spa on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.7 2.7a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6ZM12 7.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Zm0 2a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z" /></svg><span>Instagram</span></a>
+            <a class="social-link" href="https://www.facebook.com/8001nailsspa" target="_blank" rel="noopener" aria-label="Visit 8001 Nails &amp; Spa on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.7c0-.8.6-1 1-1h2.3V2.2A31 31 0 0 0 14 2c-3.3 0-5.5 2-5.5 5.6v.9H5v4h3.5V22H13v-9.5h3.4l.6-4H13V8c0-1.1.3-1.8 1-1.8Z" /></svg><span>Facebook</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="strip-viewport" aria-label="Scrolling nail art photo strip; hover or focus to pause">
+        <div class="strip-track">
+          <figure class="social-card"><img src="assets/ig-01.jpg" decoding="async" loading="eager" alt="Nail art photo from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card"><img src="assets/ig-02.jpg" decoding="async" loading="eager" alt="Valentine-themed nail art photo from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card"><img src="assets/ig-03.jpg" decoding="async" loading="eager" alt="Acrylic nail design photo from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card"><img src="assets/ig-04.jpg" decoding="async" loading="eager" alt="Nail design photo from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card"><img src="assets/ig-05.jpg" decoding="async" loading="eager" alt="Nail design close-up from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card"><img src="assets/ig-06.jpg" decoding="async" loading="eager" alt="Nail art photo from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card"><img src="assets/ig-07.jpg" decoding="async" loading="eager" alt="Acrylic nail photo from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card"><img src="assets/ig-08.jpg" decoding="async" loading="eager" alt="Nail design photo from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card"><img src="assets/fb-02.jpg" decoding="async" loading="eager" alt="Nail photo from 8001 Nails &amp; Spa" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/ig-01.jpg" decoding="async" loading="eager" alt="" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/ig-02.jpg" decoding="async" loading="eager" alt="" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/ig-03.jpg" decoding="async" loading="eager" alt="" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/ig-04.jpg" decoding="async" loading="eager" alt="" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/ig-05.jpg" decoding="async" loading="eager" alt="" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/ig-06.jpg" decoding="async" loading="eager" alt="" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/ig-07.jpg" decoding="async" loading="eager" alt="" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/ig-08.jpg" decoding="async" loading="eager" alt="" /></figure>
+          <figure class="social-card" aria-hidden="true"><img src="assets/fb-02.jpg" decoding="async" loading="eager" alt="" /></figure>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="services" aria-labelledby="services-heading"><div class="wrap"><div class="section-intro"><p class="eyebrow">Services</p><h2 id="services-heading">Everything for your next set, refresh, or reset.</h2><p>Choose from classic nail care, spa treatments, long-wear enhancements, and detailed custom designs.</p></div><ul class="service-list"><li>Manicures</li><li>Spa pedicures</li><li>Acrylic full sets</li><li>Dipping powder</li><li>Gel-X extensions</li><li>Liquid gel</li><li>Nail art &amp; custom designs</li><li>Waxing</li></ul></div></section>
+    <section class="details" id="hours"><div class="wrap details-grid"><div><p class="eyebrow">Plan your visit</p><h2>Visit the Chandler Boulevard salon.</h2><p>Call or text ahead for appointment availability, then head to Suite 8 on East Chandler Boulevard.</p><a class="button secondary" href="https://maps.google.com/?cid=8318990073623314932&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Open in Google Maps</a></div><div><ul class="detail-list"><li><span>Category</span><strong>Nail salon</strong></li><li><span>Address</span><strong>4025 E Chandler Blvd #8, Phoenix, AZ 85048</strong></li><li><span>Call</span><strong><a href="tel:+14805974812">(480) 597-4812</a></strong></li><li><span>Text</span><strong><a href="sms:+14802400468">(480) 240-0468</a></strong></li></ul><div class="hours"><h3>Hours</h3><ul><li>Monday: 9:00 AM – 7:00 PM</li><li>Tuesday: 9:00 AM – 7:00 PM</li><li>Wednesday: 9:00 AM – 7:00 PM</li><li>Thursday: 9:00 AM – 7:00 PM</li><li>Friday: 9:00 AM – 7:00 PM</li><li>Saturday: 9:00 AM – 6:00 PM</li><li>Sunday: 10:00 AM – 5:00 PM</li></ul></div></div></div></section>
+    <section class="testimonials" id="reviews"><div class="wrap"><div class="section-intro"><p class="eyebrow">Guest feedback</p><h2>Kind words from regulars.</h2><p>Loved for friendly service, professional care, and sets that keep their finish.</p></div><div class="review-grid">
+      <blockquote><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><p>“My favorite nail salon ever! The team at this salon is fantastic.”</p><footer>Ashley Cayton · 5 months ago</footer></blockquote>
+      <blockquote><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><p>“The service is always great, quick, and super professional.”</p><footer>Celin R · 5 months ago</footer></blockquote>
+      <blockquote><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><p>“Everyone at 8001 Nails is very professional, perfectionists, helpful, and have great client care!”</p><footer>Diana A Lopez · 5 months ago</footer></blockquote>
+      <blockquote><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><p>“I always received the best quality with no lifting and zero issues with my nails.”</p><footer>Chloe Grant · 7 months ago</footer></blockquote>
+    </div></div></section>
+    <section class="visit"><div class="wrap visit-grid"><div><p class="eyebrow" style="color:#f4dbe4">Ready when you are</p><h2>Ready for your next set?</h2><p>Call or text 8001 Nails &amp; Spa to book your visit.</p></div><a class="button" href="tel:+14805974812">Call to book</a></div></section>
+  </main>
+  <nav class="mobile-actions" aria-label="Quick booking actions"><a href="tel:+14805974812">Call</a><a href="sms:+14802400468">Text</a><a href="https://maps.google.com/?cid=8318990073623314932&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Directions<span class="visually-hidden"> (opens Google Maps)</span></a></nav>
+  <footer class="site-footer"><div class="wrap"><span>8001 Nails &amp; Spa · Phoenix, AZ</span><div class="footer-meta"><span class="source">4025 E Chandler Blvd #8 · Call (480) 597-4812</span><span class="footer-social"><a href="https://www.instagram.com/8001_nails_spa/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/8001nailsspa" target="_blank" rel="noopener">Facebook</a></span></div></div></footer>
+  <dialog class="image-modal" id="image-modal" aria-labelledby="image-modal-title">
+    <button class="modal-close" type="button" aria-label="Close enlarged image">×</button>
+    <figure class="modal-frame">
+      <img id="image-modal-img" src="" alt="" />
+      <figcaption class="modal-caption" id="image-modal-title">8001 Nails &amp; Spa image preview</figcaption>
+    </figure>
+  </dialog>
+  <script>
+    (() => {
+
+      const featuredVideo = document.querySelector('.video-card video');
+      if (featuredVideo && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        featuredVideo.removeAttribute('autoplay');
+        featuredVideo.pause();
+      }
+      const modal = document.querySelector('#image-modal');
+      const modalImage = document.querySelector('#image-modal-img');
+      const caption = document.querySelector('#image-modal-title');
+      const closeButton = modal.querySelector('.modal-close');
+      const images = document.querySelectorAll('.hero-visual img, .gallery img, .social-card:not([aria-hidden="true"]) img');
+      let lastTrigger = null;
+
+      const openImage = (image) => {
+        lastTrigger = image;
+        modalImage.src = image.currentSrc || image.src;
+        modalImage.alt = image.alt || '8001 Nails & Spa image preview';
+        caption.textContent = image.alt || '8001 Nails & Spa image preview';
+        if (typeof modal.showModal === 'function') modal.showModal();
+        else modal.setAttribute('open', '');
+        closeButton.focus();
+      };
+
+      const closeImage = () => {
+        if (modal.open && typeof modal.close === 'function') modal.close();
+        else modal.removeAttribute('open');
+        modalImage.removeAttribute('src');
+        if (lastTrigger) lastTrigger.focus();
+      };
+
+      images.forEach((image) => {
+        image.classList.add('zoomable-image');
+        image.setAttribute('tabindex', '0');
+        image.setAttribute('role', 'button');
+        image.setAttribute('aria-label', `View larger image: ${image.alt || '8001 Nails & Spa image'}`);
+        image.addEventListener('click', () => openImage(image));
+        image.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openImage(image);
+          }
+        });
+      });
+
+      closeButton.addEventListener('click', closeImage);
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeImage();
+      });
+      modal.addEventListener('cancel', (event) => {
+        event.preventDefault();
+        closeImage();
+      });
+    })();
+  </script>
+</body>
+</html>
