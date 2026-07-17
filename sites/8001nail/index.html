@@ -67,10 +67,10 @@
     .section-intro { max-width: 40rem; }
     .section-intro h2 { margin: 0; font-size: clamp(2.3rem, 4.3vw, 4rem); font-weight: 500; }
     .section-intro p { color: var(--muted); margin: 1.1rem 0 0; }
-    .gallery { display: grid; grid-template-columns: 1.35fr .8fr .8fr; grid-template-rows: 228px 228px; gap: 1rem; margin-top: 2.7rem; }
+    .gallery { display: grid; grid-template-columns: 1.2fr .9fr .9fr; grid-template-rows: 228px 228px; gap: 1rem; margin-top: 2.7rem; }
     .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 2px; }
     .gallery .large { grid-row: span 2; }
-    .gallery img:nth-child(4) { grid-column: span 2; }
+
     .social-strip { overflow: hidden; background: #fff7f3; border-block: 1px solid var(--line); }
     .social-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.2rem; }
     .social-head .section-intro { max-width: 43rem; }
@@ -140,10 +140,13 @@
     .footer-social a:hover { text-decoration-color: #fff; }
     @media (max-width: 800px) {
       .wrap { width: min(100% - 2rem, 620px); }
-      .nav-links a:not(.button) { display: none; }
+      .nav { gap: 1rem; }
+      .nav-links { display: none; }
       .hero { padding: 2.8rem 0 3rem; }
       .hero-grid, .details-grid { grid-template-columns: 1fr; gap: 2.25rem; }
-      h1 { max-width: 11ch; }
+      h1 { max-width: 11ch; font-size: clamp(2.65rem, 14vw, 4rem); }
+      .actions { display: grid; grid-template-columns: 1fr; }
+      .actions .button { width: 100%; }
       .hero-visual { min-height: 390px; order: -1; }
       .hero-visual img { height: 390px; }
       .hero-reel { min-height: auto; }
@@ -153,7 +156,7 @@
       .quick-item:nth-child(2) { border-right: 0; }
       .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 250px 170px 170px; }
       .gallery .large { grid-column: span 2; grid-row: auto; }
-      .gallery img:nth-child(4) { grid-column: auto; }
+
       .social-head { display: block; }
       .social-links { justify-content: flex-start; margin-top: 1.2rem; }
       .video-grid { grid-template-columns: 1fr; }
@@ -209,7 +212,7 @@
       <div class="quick-item"><small>Text to book</small><a href="sms:+14802400468">(480) 240-0468</a></div>
       <div class="quick-item"><small>Hours</small><strong>Open daily<br /><span style="color:#d3c6cf;font-size:.83rem;font-weight:500">Full schedule below</span></strong></div>
     </div></section>
-    <section id="gallery"><div class="wrap"><div class="section-intro"><p class="eyebrow">Inside the salon</p><h2>See the space before you visit.</h2><p>Start with a featured blue crystal set, then preview the salon, nail wall, and recent client looks before your appointment.</p></div><div class="gallery"><img class="large" src="assets/facebook-featured-image.jpg" alt="Blue crystal nail set by 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/salon-2.jpg" alt="Photo from 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/salon-3.jpg" alt="Photo from 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/salon-4.jpg" alt="Photo from 8001 Nails &amp; Spa" loading="lazy" /></div></div></section>
+    <section id="gallery"><div class="wrap"><div class="section-intro"><p class="eyebrow">Inside the salon</p><h2>See the space before you visit.</h2><p>Preview the reception area, manicure stations, pedicure chairs, color wall, and salon seating so you know exactly what to expect before your appointment.</p></div><div class="gallery"><img class="large" src="assets/google-space-1.jpg" alt="Reception seating inside 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/google-space-2.jpg" alt="Manicure stations inside 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/google-space-3.jpg" alt="Salon pedicure chairs at 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/google-space-4.jpg" alt="Nail color wall inside 8001 Nails &amp; Spa" loading="lazy" /><img src="assets/google-space-5.jpg" alt="Salon seating and service area at 8001 Nails &amp; Spa" loading="lazy" /></div></div></section>
     <section class="social-strip" id="social" aria-labelledby="social-heading">
       <div class="wrap">
         <div class="social-head">
