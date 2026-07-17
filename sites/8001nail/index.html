@@ -161,8 +161,10 @@
       .social-links { justify-content: flex-start; margin-top: 1.2rem; }
       .video-grid { grid-template-columns: 1fr; }
       .video-card { justify-self: start; width: min(100%, 320px); }
+      .strip-viewport { overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; touch-action: pan-x; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
+      .strip-viewport::-webkit-scrollbar { display: none; }
       .strip-track { gap: .75rem; animation-duration: 52s; }
-      .social-card { flex-basis: 190px; }
+      .social-card { flex-basis: 190px; scroll-snap-align: start; }
       .service-list { grid-template-columns: 1fr 1fr; }
       .review-grid { grid-template-columns: 1fr; }
       .visit-grid { display: block; }
@@ -175,7 +177,7 @@
       .hours ul { columns: 1; }
     }
     @media (max-width: 420px) { .quick-grid, .service-list { grid-template-columns: 1fr; } .quick-item, .quick-item:nth-child(2) { border-right: 0; } }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } .strip-track { animation: none !important; transform: none !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .5rem; } .social-card { scroll-snap-align: start; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } .strip-viewport { overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; } .strip-track { animation: none !important; transform: none !important; flex-wrap: nowrap; padding-bottom: .5rem; } .social-card { scroll-snap-align: start; } }
   </style>
 </head>
 <body>
@@ -223,7 +225,7 @@
           </div>
         </div>
       </div>
-      <div class="strip-viewport" aria-label="Scrolling nail art photo strip; hover or focus to pause">
+      <div class="strip-viewport" aria-label="Scrolling nail art photo strip; swipe or drag to browse manually, hover or focus to pause">
         <div class="strip-track">
           <figure class="social-card"><img src="assets/ig-01.jpg" decoding="async" loading="eager" alt="Nail art photo from 8001 Nails &amp; Spa" /></figure>
           <figure class="social-card"><img src="assets/ig-02.jpg" decoding="async" loading="eager" alt="Valentine-themed nail art photo from 8001 Nails &amp; Spa" /></figure>
