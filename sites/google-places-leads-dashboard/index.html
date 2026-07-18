@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Client Leads Dashboard</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#lead-list">Skip to lead list</a>
+  <header class="shell hero">
+    <div>
+      <p class="eyebrow">Google Places lead review</p>
+      <h1>Client leads dashboard</h1>
+      <p class="hero-copy">Prioritize local businesses with no website, working phone numbers, Maps links, social signals, hours, and review proof from the JSON exports.</p>
+    </div>
+    <div class="source-card" aria-label="Data source">
+      <span>Source folder</span>
+      <code>G:/23/google-places-leads/output</code>
+      <p id="last-generated">Loading generated time…</p>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="stats-grid" aria-label="Lead summary">
+      <article><span id="stat-leads">—</span><p>unique leads</p></article>
+      <article><span id="stat-files">—</span><p>JSON files</p></article>
+      <article><span id="stat-rejected">—</span><p>rejected places</p></article>
+      <article><span id="stat-avg">—</span><p>avg rating</p></article>
+    </section>
+
+    <section class="toolbar" aria-label="Lead filters">
+      <label class="search-field">
+        <span>Search leads</span>
+        <input id="search" type="search" placeholder="Business, category, phone, address…" autocomplete="off" />
+      </label>
+      <label>
+        <span>Category</span>
+        <select id="category"></select>
+      </label>
+      <label>
+        <span>Source query</span>
+        <select id="query"></select>
+      </label>
+      <label>
+        <span>Minimum rating</span>
+        <select id="rating">
+          <option value="0">Any rating</option>
+          <option value="4">4.0+</option>
+          <option value="4.5">4.5+</option>
+          <option value="4.8">4.8+</option>
+        </select>
+      </label>
+      <label>
+        <span>Sort by</span>
+        <select id="sort">
+          <option value="score">Priority score</option>
+          <option value="reviews">Review count</option>
+          <option value="rating">Rating</option>
+          <option value="name">Name</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="layout">
+      <div class="list-panel">
+        <div class="list-heading">
+          <div>
+            <h2>Leads</h2>
+            <p id="result-count" aria-live="polite">Loading leads…</p>
+          </div>
+          <button id="export-csv" class="secondary" type="button">Copy CSV</button>
+        </div>
+        <div id="lead-list" class="lead-list" role="list" tabindex="-1"></div>
+      </div>
+
+      <aside class="detail-panel" aria-labelledby="detail-title">
+        <div id="detail-empty" class="empty-state">Select a lead to see contact details, Maps actions, hours, reviews, and source files.</div>
+        <div id="detail-content" hidden>
+          <div class="detail-topline">
+            <span id="detail-score" class="score-pill"></span>
+            <span id="detail-source" class="muted"></span>
+          </div>
+          <h2 id="detail-title"></h2>
+          <p id="detail-meta" class="detail-meta"></p>
+          <div class="action-row">
+            <a id="call-link" class="primary" href="#">Call</a>
+            <a id="maps-link" class="secondary" href="#" target="_blank" rel="noreferrer">Open Maps</a>
+          </div>
+          <dl class="facts" id="facts"></dl>
+          <section>
+            <h3>Weekly hours</h3>
+            <ul id="hours" class="plain-list"></ul>
+          </section>
+          <section>
+            <h3>Recent review proof</h3>
+            <div id="reviews" class="reviews"></div>
+          </section>
+        </div>
+      </aside>
+    </section>
+
+    <section class="batch-panel" aria-labelledby="batch-title">
+      <div>
+        <p class="eyebrow">Collection health</p>
+        <h2 id="batch-title">Source files and rejection reasons</h2>
+      </div>
+      <div id="batch-list" class="batch-list"></div>
+    </section>
+  </main>
+
+  <script src="./leads-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

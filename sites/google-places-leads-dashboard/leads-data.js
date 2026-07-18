@@ -1,0 +1,3937 @@
+window.LEADS_DASHBOARD_DATA = {
+  "summary": {
+    "generated_at": "2026-07-16T17:54:29.373826+00:00",
+    "source_dir": "G:\\23\\google-places-leads\\output",
+    "file_count": 8,
+    "lead_count": 16,
+    "raw_lead_count": 23,
+    "duplicate_count": 7,
+    "rejected_count": 209
+  },
+  "batches": [
+    {
+      "query": "dentists in 85048",
+      "target_leads": 3,
+      "collected_at": "2026-07-15T03:31:20.883798+00:00",
+      "live": true,
+      "api_calls_used_this_run": 63,
+      "max_api_calls_per_run": 250,
+      "monthly_request_limit": 5000,
+      "monthly_requests_used": 63,
+      "monthly_usage_month": "2026-07",
+      "rejected_count": 60,
+      "file": "leads-20260714-203120.json",
+      "lead_count": 0,
+      "rejected_count_actual": 60
+    },
+    {
+      "query": "nail salons near 85048",
+      "target_leads": 3,
+      "collected_at": "2026-07-15T03:43:21.484393+00:00",
+      "live": true,
+      "api_calls_used_this_run": 15,
+      "max_api_calls_per_run": 250,
+      "monthly_request_limit": 5000,
+      "monthly_requests_used": 78,
+      "monthly_usage_month": "2026-07",
+      "rejected_count": 11,
+      "file": "leads-20260714-204321.json",
+      "lead_count": 3,
+      "rejected_count_actual": 11
+    },
+    {
+      "query": "HVAC plumbing in Phoenix AZ",
+      "target_leads": 50,
+      "collected_at": "2026-07-15T04:12:50.531548+00:00",
+      "live": true,
+      "api_calls_used_this_run": 63,
+      "max_api_calls_per_run": 250,
+      "monthly_request_limit": 1000,
+      "monthly_requests_used": 141,
+      "monthly_usage_month": "2026-07",
+      "rejected_count": 60,
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json",
+      "lead_count": 0,
+      "rejected_count_actual": 60
+    },
+    {
+      "query": "massage in 85281",
+      "target_leads": 60,
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "live": true,
+      "api_calls_used_this_run": 13,
+      "max_api_calls_per_run": 250,
+      "monthly_request_limit": 1000,
+      "monthly_requests_used": 164,
+      "monthly_usage_month": "2026-07",
+      "prior_place_ids_loaded": 143,
+      "skipped_prior_place_ids": 1,
+      "rejected_count": 50,
+      "file": "leads-massage-in-85281-20260714-233335.json",
+      "lead_count": 10,
+      "rejected_count_actual": 50
+    },
+    {
+      "query": "massage near 85048",
+      "target_leads": 3,
+      "collected_at": "2026-07-15T05:20:04.554602+00:00",
+      "live": true,
+      "api_calls_used_this_run": 10,
+      "max_api_calls_per_run": 250,
+      "monthly_request_limit": 1000,
+      "monthly_requests_used": 151,
+      "monthly_usage_month": "2026-07",
+      "prior_place_ids_loaded": 134,
+      "skipped_prior_place_ids": 0,
+      "rejected_count": 6,
+      "file": "leads-massage-near-85048-20260714-222004.json",
+      "lead_count": 3,
+      "rejected_count_actual": 6
+    },
+    {
+      "query": "massage near 85048",
+      "target_leads": 1,
+      "collected_at": "2026-07-15T05:28:41.326103+00:00",
+      "live": true,
+      "api_calls_used_this_run": 0,
+      "max_api_calls_per_run": 250,
+      "monthly_request_limit": 1000,
+      "monthly_requests_used": 151,
+      "monthly_usage_month": "2026-07",
+      "prior_place_ids_loaded": 0,
+      "skipped_prior_place_ids": 0,
+      "rejected_count": 0,
+      "file": "leads-massage-near-85048-20260714-222841.json",
+      "lead_count": 1,
+      "rejected_count_actual": 0
+    },
+    {
+      "query": "nail salons near 85048",
+      "target_leads": 3,
+      "collected_at": "2026-07-15T03:49:35.715207+00:00",
+      "live": false,
+      "api_calls_used_this_run": 0,
+      "max_api_calls_per_run": 250,
+      "monthly_request_limit": 5000,
+      "monthly_requests_used": 78,
+      "monthly_usage_month": "2026-07",
+      "rejected_count": 11,
+      "file": "leads-nail-salons-near-85048-20260714-204935.json",
+      "lead_count": 3,
+      "rejected_count_actual": 11
+    },
+    {
+      "query": "nail salons near 85048",
+      "target_leads": 3,
+      "collected_at": "2026-07-15T03:50:16.724526+00:00",
+      "live": false,
+      "api_calls_used_this_run": 0,
+      "max_api_calls_per_run": 250,
+      "monthly_request_limit": 5000,
+      "monthly_requests_used": 78,
+      "monthly_usage_month": "2026-07",
+      "rejected_count": 11,
+      "file": "leads-nail-salons-near-85048-20260714-205016.json",
+      "lead_count": 3,
+      "rejected_count_actual": 11
+    }
+  ],
+  "leads": [
+    {
+      "place_id": "ChIJL8exVzYFK4cR9IFRZGX9cnM",
+      "name": "8001 Nails & Spa",
+      "phone": "(480) 597-4812",
+      "address": "4025 E Chandler Blvd #8, Phoenix, AZ 85048, USA",
+      "category": "Nail Salon",
+      "types": [
+        "nail_salon",
+        "beauty_salon",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "review_count": 159,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=8318990073623314932&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 10,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 17,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 18,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 7:00 PM",
+          "Tuesday: 9:00 AM – 7:00 PM",
+          "Wednesday: 9:00 AM – 7:00 PM",
+          "Thursday: 9:00 AM – 7:00 PM",
+          "Friday: 9:00 AM – 7:00 PM",
+          "Saturday: 9:00 AM – 6:00 PM",
+          "Sunday: 10:00 AM – 5:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T16:00:00Z"
+      },
+      "photo_count": 10,
+      "photo_names": [
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydhpmnj9A5SHhTDim_FLjeb69V0-88NNmVeyof94UMokaD5tEWRjLabjNADyuWRknW_qsN9PLafS4hyQsLK5KmG-yi8knd8SoIM-_OZ7PIRRwVDL6-iJ5ihLhhIE399ngmlHp0rrA-kIlW-e7kZcOL8v5w9UWV0KnTcu9ZlRU2vYdZiE98UQRggM3rmvlk59bE3XSE6efaJJ2vZL0KP7S9KT6QQSOfjO35h--ckRYKb9bkXlbHOkQeKT8KIYcU5KTxWK95Z1QG6Fj9BRcrQiRntsaiSUvTZT_Hr_w6N157jhsdRHCYPK-nbK8g1lwiEzN2OeAx9e8qeKZrM1SIaQeaViL-N1muOXYF2918sl7IpfgvrUhJDrwHmnYlLsAwnwIpnBYdpbMuz5Tqh29tuhOiPXz8IZp87j2ppAFcZBTADV35U2",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydjtLkpmrNOVKbkxLdmYduqP74wTvXSdU8P2a0WaeoDKbtI7ZaYyu_yCJpcaa2v590mV_hQiqYkYh6n2vKMIvmgCdum6O8E2IdewFFzBloa74_ehLxvGo-Y3YtYsQZtBo0H9peO13BoxLpDor2sJ3jm72kGdXsryepXCGNDZ3ACX0qTKTZ7bVLAzpCD9SX2q8GegLKr0dql2oet7YPwJpTNrhKW570yBxtLegtSLzBfaTuI02ClmHxBdZuEnDmgOYEZonmy79crI3Oucm9f4of9QSqtSwGk3s5QJwE9JUU6_KNP01hVjqtVPZRja4d9T6GSCT4vkSp3eelwR01Ehl35BLxGlzJu7NSIJZ-Y1mUaabja5x2kdn7J1v021xEsaaI1ViqL6YACzXmI_5FzHXnQ1GUrmOEk5zLcfcvmVS0Qm4ZEuiVpwvFg_fuTMWikg",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydiEhdsrzNO5fo3poLJ2Vti6Zp-00b2Q0RkcGqPEzslS6nrg_P4pNnkwS3I_BNQIJZd0rr64u6s13ldpUT61CqTedYPa1gseM0QU8wAEijy62sa7mcCUl99ivwOJDrwauYwGUBqPnnVoxQaCf_NzkZcXj6vf-3h7WBNh6ueAAmV-s0sM2APdgVJPpEJ1NdvLWj3T9WQl3eIA-XKjVwq6HS87Kapjm_A7rNoKvLzTMEE29Vxhw6bnAEErxFTyLFFWDIPgPg-M8hi2wuCQFchp-eBnbK_jisy06t5grS48b8iFvPSp-Ihs8FQw5KKV1NTgq5WFxlIgNythg8YgR-7BbY1_ea-oVvogXTdLgw5GZ6TPvXHJahG1_9GW6XDFOOPQgstPSP6cfbYDEC35Fk-3EUGOefMW1cy7oizbCSquHJQMjC3i",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydi7bVgXEdaRm2XHCUaiZy6bHSAYeU4yBeOHB4y9tJ-_UefbpOOf3vQvV5HFEg9Unc7_XfMaCugcHDZhmi3rBtnv8Tbzg-GrPw_KrJBQOq_QcKgoYIDmeN8NJu5gAHOW4yfvsH6QfVLnHZhxPRETD57rj8Kc5ooYHXJcMaVeFyx4z5jThHGsFS0qcl3kQKA_ImPv_63troncyxsst0AILXlvJKNMH4tDfh3oCEdtax09B9MfEVdLVYZLUpCzZHwOLY-pLkjw-Lg0U2PuLTxAaS3nQX7Dr0trIQRPRZpOGI1tmH3OJp43qT6DgBb8Ml340J8ye5ZJgECUP6t51RlUork6LYe01bvCLKrToAlwdJM5L_M8RADXz16OV4j-QcID-HSq22PPAstB8gRcoUc01JU55Phk4lLyMDNIe3hgiPRz68zXhb4-qpEwzcnKSrZ5",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydif7QXYpn57r6_sWG-PJqunU1CbhPM9DPgl3UqbFI-tAIYr5wTgA9aARBDoNw1iX9qnt94cUVmEG49YvE9arkcQCPn6x9zW23Uig7aNl3SIxZ0cAAVHhuTLrUYM-Gqa5KZgNiUV1t36gWregtQ5q50j3UfGj1CiKXspLyrF_rz3bJ_F9-MRhD_b_vbaN5tyYkXT1FF-G2Fa-AgGizmsyDhfy0j46vXmQJbg4S4B0dxLzkg51OhTpy0ndGE_wIGJ1GxpPZbBNuaQD5JmgUffQ9n55NHS9-6CKyEkuZRT7Fhhd69SLm5Efvyz26jVztE-FbBdX0IJU5Ix_BsTP6G9YVduRoDhwUocpNvkDVlajn5D-u2IxFNbgqgpFCVlMT1vRDvd9c9kzMWhesJyWtjv7x8lJHXWeY-JjFpOf7_8828cSrApRhr9dY349YJpyIY1",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydgdqm9rlbpIKmqKtgk8YgbWa_sPizUHwDStRqOsA7KG24wpyyhbLuDO8ZhVsvwvAC0FRb_jm6xxcXftr5m6Vrbj9TJADDX2PxpiBs8uJ94f8NSE9ZQy3uVrIxZqNhRRmolJ-JwLzC1neWb6VGqnoop623bIuY2acVxCcTmsvo_OEmVZiBckTSuic8mqh-XJUvjXPLTvDcXPT3yeWg46pEt14IEhqW_cVj88VKySOLqa0jFPeIUXsG54Fl8Wcsabyy111YEANdINGDoyZREivEDZ5rWQD4rJL2udwYf3RGYF9TMcfX6O6asDYyYFsWNMUJ2pYtB0S4LSNu8eaIAKFCoKZHHr591qFIREQxPhLlkFoja2ix-9b7ubhmefi6RF4Nv4ZaxlDXDSxAjUdjMCasAf2OOik7tHxUmS8w_z0nfyQ2KX",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydj8fNbgs6c_5NMvWtvGlyS0RbC87aQ5XNDrIxTcHhj9c9fY3FWw0y-jQaJs4pk9P4vqRaT5KnQolDLzCyeKD__eXViOagH2GfYrL4sFBjj4LbN_xcwasdLflzoqgo4CIbzCbuMKE4FsHEhfAdh0O7iU_TCaSe0MJBzdxLsHQGueUmqciVsyBkY8inOgwa1aa0a94WIFyTsQYmFVqrZYWxKNQWtokF6kEGRNs1JJtPPIs5DEzivzGXxsgn6lSc0rMkUYcOMFpbZ8ukfTWreWF3hrvjwpbI1Xmfaj45qrgHjvQP4ULYGrMUp25-Ln9IoiJGS305J-mD4CbSEofBU2R4czJZOLiiWCDsiekFGyZXO7prfAx6CoXnKUvCuIkxTCpgYk48icjHuTeL3sBvbWnomb-haVo7_uVJIl1WRxwmHi4ptcv5ys3-X0rT3vug",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydhWxEhORl7NeP92bhN4f0uGQ4xmDB6FdQ6N3vG-Ww7dew_pG92Pqb5wWy97w-2wJF8FhJKnGLTPv9wdoYBbvuxI9wP4xqFs61yCiUlpGeGjxL4vxcSRUdV3rNs3jiowxmVKuOxJ5X9fNBV-kDxogzhpVYbNXHjDVtPQZCj089dj2dJqPMBNTUcrCr1UY8-sRNQIouswjotGv-A1GZEhKVMB1MSa_RhKmZCOWPRT-ovD15WlsbtUZ2QmnWCfHNgYpyLaYAGQlyTa2PvcjTWR-yishqoZWRft64qTowmMHVHvEaAKDo2cJ1x2c3gArySwwDMWdVeMGpzL9gGjx1UqGEyBV9T5KOkL2yFJg8y3gNpnazbEySdo0wtYu5Ok0hOt6XOjKuUCOlxr90zLBFQBqIWVLSHL_AqfUyRX-dET76keVz8",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydiRfY9bQylkUz94RWpBiufAN3Qc4APtlxL9h50HP-_-cKdPenWiq_DAM7RMl7j1kppLEtdt4tb8cwhsrGdwdUGBA7b_thZLeKa6BCRpIBAaWveHpPN64UAt120G5qhhZ-yLTbxuwM3z0_GW3MlqTNVGWFTwYojBRqOQYsaWcjChj30gcj6j7f88JoHQtAmSQfdMFWPvgxAdpFygD5soI02_AM_hckwO5yjNwwvhoOema6uXrmWwKeKPz4SNRhjGiTaiZmWTLHzvqCyCaJg93nvKYXpSQzth4oXG-gfCg7VnPK_i51-xXWb5jk-EER8570-cihBMdF84SwWOJSe0sMMJfnzO5XDMJpVfiALCi2LqAQXAvcCSttiH-sqHcSQGq44-MJ9BQ8nB1m_Lz8MQ91CmoBjwEXsneHkTcpaMfa5EjPaO8tDK5oED4JLcmeNz",
+        "places/ChIJL8exVzYFK4cR9IFRZGX9cnM/photos/AWCwydjyctMK7nc40tgjOOqmQWKwdg1PDi0tsXYi-jRkgL_6nJ6DeCbZxr6c0Fq7PExgbIv5OOXqovNPA6SuB4EMFhvSjgSnNBIA2wqUbFWwnacYafS2qTaluML20hF-TdfFexzFt7HUcA-Zbwts-cWIwqdAuEzDO8X4FfL2i3ffXSqx6CvhMamkBQwFJNgIyfNr19qIio7US-RKgxC8OmqTcKO99CYPJpbZq00E0b3mX-GkUsqj6CPbCntfOS4ITcwet9FbIsXu6-whghcoJyclr-6_h4huC1g0YhB26cKTp_yNMYWy6NG3-ngLRQ8t_rri-4aUHmLVfZAKGNzO7K2_mY7B1AW-IL4dCEp-5okqdeG32qeYw9ITMSO3utKtQZn6aEoULIw-uEtUOD-og8EsB0vQSPZ3ZoGPYQeKYYxBrNODxg"
+      ],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "My favorite nail salon ever!!! Will literally drive across the valley just to come here. I have been going to Tracy for my nails for over 5 years now and always love how they look. The team at this salon is fantastic. 10/10 recommend",
+          "relative_time": "5 months ago",
+          "publish_time": "2026-02-01T16:54:46.016207589Z",
+          "author": "Ashley Cayton",
+          "author_uri": "https://www.google.com/maps/contrib/100977295122423750629/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Absolutely amazing nail salon! I drive 30 mins just to come here. Tracy is incredible, but honestly everyone here is so talented!! The service is always great, quick, and super professional. I never feel like I’m asking “too much” like some salons make you feel. I always leave happy with my nails and experience! Highly recommend!",
+          "relative_time": "5 months ago",
+          "publish_time": "2026-01-31T17:19:56.249491286Z",
+          "author": "Celin R",
+          "author_uri": "https://www.google.com/maps/contrib/102318862700169857042/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "After many years of searching for “my girl” I have finally found her! I always complimented friends at work until I found out they went to the same nail tech so I got ahold of her and After the first visit I was convinced that I would never go to anyone else! Thank you Tracey I love my nails each and every time! Everyone at 8001 Nails is very professional, perfectionists, helpful, and have great client care! Soon you’ll have all the girls at work going to you for their mani/pedis!! 👌🙏❤️",
+          "relative_time": "5 months ago",
+          "publish_time": "2026-01-31T00:15:39.873188368Z",
+          "author": "Diana A Lopez",
+          "author_uri": "https://www.google.com/maps/contrib/100233104576253888656/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I have been coming here for years. I have always loved it. I started with Tyson at my nail technician and I’m now currently with Tracy but I love everyone that works there. I always received the best quality with no lifting and zero issues with my nails. I added two photos one is with my nails after 4 weeks of growth and then with today’s new set as if 11/26. I love you guys! See you in another 4 weeks or less🤪🙊",
+          "relative_time": "7 months ago",
+          "publish_time": "2025-11-27T03:43:34.596431349Z",
+          "author": "Chloe Grant",
+          "author_uri": "https://www.google.com/maps/contrib/108110101445180641600/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I ADORE this nail salon so much that I go out of my way every appointment just to get my acrylic sets done here!! Every person here has welcomed me, given me fabulous service and never let me leave unsatisfied. The technician I have do my nails most every time is Alex, he is so patient, incredible at nail art and a genuinely hard working individual who stops at nothing to make sure his guests are happy and love his work. Attached are Alex’s sets he’s done for me!! Couldn’t recommended this salon enough!Everyone who works here beautiful people inside and out! You’ll enjoy your service no matter who does your nails! Shout out again to Alex for his amazing services, his ability to make you feel comfortable and his workmanship!!",
+          "relative_time": "a year ago",
+          "publish_time": "2024-07-25T22:05:57.886123Z",
+          "author": "Melissa AnnMarie",
+          "author_uri": "https://www.google.com/maps/contrib/117185594652529285142/reviews"
+        }
+      ],
+      "social_links": {
+        "facebook": "https://www.facebook.com/8001nailsspa",
+        "instagram": "https://www.instagram.com/8001_nails_spa"
+      },
+      "query": "nail salons near 85048",
+      "source_file": "leads-20260714-204321.json",
+      "source_files": [
+        "leads-20260714-204321.json",
+        "leads-nail-salons-near-85048-20260714-204935.json",
+        "leads-nail-salons-near-85048-20260714-205016.json"
+      ],
+      "collected_at": "2026-07-15T03:43:21.484393+00:00",
+      "priority_score": 93
+    },
+    {
+      "place_id": "ChIJCQSvhjEbK4cR6lXUk3K9-rA",
+      "name": "Desert Foothills Nails & Spa",
+      "phone": "(480) 283-9000",
+      "address": "1339 E Chandler Blvd Ste 102, Phoenix, AZ 85048, USA",
+      "category": "Nail Salon",
+      "types": [
+        "nail_salon",
+        "beauty_salon",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "review_count": 118,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=12752713594657068522&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 10,
+              "minute": 30
+            },
+            "close": {
+              "day": 0,
+              "hour": 17,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 1,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 2,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 3,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 4,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 5,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 18,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:30 AM – 7:00 PM",
+          "Tuesday: 9:30 AM – 7:00 PM",
+          "Wednesday: 9:30 AM – 7:00 PM",
+          "Thursday: 9:30 AM – 7:00 PM",
+          "Friday: 9:30 AM – 7:00 PM",
+          "Saturday: 9:00 AM – 6:00 PM",
+          "Sunday: 10:30 AM – 5:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T16:30:00Z"
+      },
+      "photo_count": 10,
+      "photo_names": [
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydiS8SLlTEsBSSK4CCt4cY10xRgjbUxXugQjPJufc5dbzox09usfG7af3Ky4EWkWV3LXPhhGmLJJ4gPzBS5pFhNNdUAJkJIJxAaK4DFIzhvEphYBgCOc-oVO3X6ocaFCzDi4sX5s1tmNoeBjdh0CSkCNKRUhMOsdwOGLICNwj-fziNGidq2GulCDxTa6t9_x6lMcF-NioBEMI6ca8yopBzmn6a6B5WCr3wsoJSOQ8c9cwibLtl0SDoPkpHav5f_7QtzvSr2IpL6ZdL0eTRk6WZ-AKIWwZYfIazUIZ74iaI_QnGj1ycxuuQTopvhjKEHCocidGZkCcNSFSgEK7rm-qwJptykIawie59R3NXAtazSr5t54tikpsPlo7PkXMao8r6J_OEorzRY9bOWTqfEa1HPwXtzm5MjTfwBB5zHGi4lw8dQ",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydiBWe8WIScOz93kkYm4zlTO4z32ZemhaXVNwfPWOcKgPkC1s5EjbfDrNURtrN335CtdfG7Ct9Cg7knkCU3sUOjSKvlN2fJZzn7t0yIllSFVJ2r-oq5jwaYMYU27a5SnBY61lbnvoZ2W2xYDRoDLzMaf4naciYUmbsJN3J6wt3lmwcttn9rSZKUCbQYMQi5UnT7JlfMYuzDQAjq-F3K6jA0vO1UYE1R9MdEvzyb1jWUP81JkypMZUaybr-IioGI3GqczzHMRQJHSO1MN79mn8vNXjKL6J3pzW60tINE9p1f0XcuSEohCGVxZkDgUvUc4BOFKDLLkUqRl179J9Zzh4iIXVTwAJiQ5904xHDz_8N-jc2Osf1txwhf3USGyKD_fExy73ZnQzPXgm6EvLlOzbBA58fS9c_7Wd_WzpaQ_cOCg0Q",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydhRP2sJqomiQbAoAqkJMkNECIuB1Xm_ldJFYYnT4GxP8ykRwoRUtyV0yv7iSNPY0784-394cjtqd3-Ua22IiV_x8OrYY8Fpgwe3bInwwtQX-wbFAtFE-ZdwQ0Q6GcYukS7WQphqvHuCP_lK8H1LmUiKmSwU9yV55oqPuqqkO1tHt_VsOe7grMc8ifLqBeSfBv1WaabRYuwINpabdE_jJeRn3hyp24rzPnIidYd13sAVlq-MJYjEc5ECWOTr_vnQ7LuBi5B4amRA8Li7AANtXjc4zHs_AM-iE4Ds6VhwbVX2DSYi3HD2Z-Ug7TgV2a7XVw4N8pJEsxBejh5vgcBEjl0Ad1YZZK19BbWs57wQYob4gz40dTNByWVnLT356QRNWW5u8IFcyPTZ8pw84LpjH2iWBgTG6Y-ugALWr_polXP-rQ",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydiTwk3Z183XBBctv4Y4QoZiyugdn31xbJPuqK4B-f9DXx31IemZl13jaP5Jk8KO-gRBXB-9cjH7pLh_iEpJHZQ6dWBBjKtNl2H76CJEDpYODCfl-Ti8m0_qWA08uNbv8xvPovXzC7i473-XRln49V2mSloQ13mmqtsbQ6C62HG37A3Qwps49cEZmezMJ1k__RM-56MnqDkiGHzeS6tnXDb7jKwudvAt_Uov9lrlb1VLim8Ml2yd6dtIGC_hykxjdyGK1DHmBxGGUSqph8xzAfA3qgl1m7huCoM4c8-Zr_VdlB_TOAUI5Y6C_fEUGWqxeWYb1XWPmxmU1b7bZVSqzRmlmK-A7fAGWFryoNhCKvylePIUc5Wo886RCEdykTCOxEcDWoyhWmOSIYwXllDRkKxEUcimsZ69WXNupWjLGIBK5Q",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydjrL_yZmfZeUEvCEPn82wAfS0iUtwolch8nuAYC7Bl0wA3D9aSm1HG5DUCwM2JALLh2OqhEddYC5oVKYqYujCBRmpIH3rkWxaPVBfziatbIZih5ZZkN77S-m1_XZvkBVJK4LbtnQwQ55qlUkRRFgW9Uh0NY9iaNs5-_XwdnPmN5WKUDrGmNHKXkiqaezeBo8SwR7PGqe6hmt37EHwnmT12cQmlT25lpNZ0oKwG2IuSHffy96q5rvFIjGc4X3lX5tdlIGSygvSFda9NSf8i-prAOT8H51OakSrsBf5lfrZurW8mIe-vQUOwRw4IkzMahjEbjiCsqjhj9Hqng01rWelh0A7yZ4J3InCvRYjWbAcQfULYOs7fKfSk_asvvYSxp0F-uj7hwBegaLu4U2d6s9mr4LlG3uu44DOjv8FgBbmNc8A",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydhK340HHjE_E4OP7njx7wXfVNN8TE7opfw9ueedJe2Xi0YjFKD17dqRIFowZn8CUzvmYvOVfzyS369WCqFVBd5jDwY0vJ4xUsoIzxJEJXkwKNtpCSh6wVaY4PoOcKwwC79ScqmxXqpODYtjs0WBIBDfSHkrgoF7caIIQob5ph_CIsR7H-4g2a5LCIqWVXRp3T4vuKTYsIerh3KEljN0jC3qUP1NZuxQmd9pBES85q71y5p59mE6QZqhHXHpei4fxCf7s-30zJ8dQOVDJN4ABGp_hjLmqrTdzJKeApjZTwZIzG7ujTHrZdCwld8MLrk66zEUwSoQEiXrR3fhkpWsG2YLgfnoDpLQ516o_HEh4fjsx5RO2eDSnkDImqFZ9k2YWaHj-47R3Loi59HC2PPf3cNFTstouJPbr5_AOTNwhrokhA",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydhSIHdIXT0PYaE4mVBhvY7M7PsoJ0YLN948vISS2Brvdu4encVD88viSiTwm1bYOcRLwH39U78rakYNn8tZ2afKfB2gHqKqEhXnkex3HCS4KTDAHlTJg6mPjyz5ta0fAZALkNKRdOpbRewQ5rKIOgvpNnPpAh3xDR4V8_kGXHvuu48qj_MfZuMCZckd7uDTz0Z58aynq5AMVNAJKjoFk1XfWMQSwIKtm5LVEWodEfpxCDIztHeCZRJ3Hby6iwPc5H2s5yW4ChIDgn9JPrr0d29_ss0EUsUb8-_kYT3638RLtklybdBp210AlpBCHuwCFNtOh309yN0HZhD0M1hq27YJ5efqeYJZpYaCcxWoqecTr7NSN20TNxXJDWwJC9HGTQGCbzKhDV6TbAsiafGYeASYAz1l3WpXlnjcn65Xj84",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydiZgyARCXYPydC8-upExvvH2fReLVKxRiMNSsbu0ZPQuNuJCSbTyi3EgvfSeI4zTtXIvhbtuuVPLt4dcrsESkZtwyXv65n-wcphWsSV8uHEmTYr2hfI71CyhAcihMbYmJRx1RDxZLvD8fS4U0ovYTP8IBBYED7Wuwsl26AU8yhP7kycWJgqKOO4l4jFczh_ZPUxvMP0g3w8vtIdzkONkrPwFEzCVytrotpbebBziPyinoJ09276tiEOt1GliesCVpGBujNPLU8_cy-E1xMjUAGRjjtZJI5d1uc1sDrnfO3dkwEiTtI-eZbZcW9_zt2wHEo-0kFpftj3fJ-giy9oE_Nm6z99e5UYaX0LBjiU-L5Tooogf9b8rbuYGmhy-mc7rnKZa0yHauXollvVrES7SlTWUUQyN6E6euwPBK-22SIdQG4",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydhCQvzXOea4UCJDLvrmYqxIXeJw_3KZWhr5g8lW6IUwhcRzqY93hIvgGHjtDOt5gYwedkaB_m6PCWhJ6HR824X5dl6SRyYfXXC_AePKdDGr3Mj1gsWiUoeUHnmwXfVYB1EwxUbZELl4WRYgndkVq-LHNXszPeojVdu5pb9v5gptNTHuq2KQu_LNWbIyQ9gFHPo9jnUUPFde2vtvjgJQHPE2n7E-4CRjR_PXZJbDy38WfYZZiHO2XjCo7Z5Ur2UQb8QtjDXzYaddk8_aLNamowniqNwVB07OqLtnHrFBF2wiSypU98WObxFtE_n2Td2kDqyLgL_OzlIpoejPVp_-vF2YJGV7O0tVMz0T9347o5CLKuOUGN1guZRBMBt3iDgk3kEJQYXzF_Ub6ROMeuEJBJIvXrXqrpDXYloKH-xqqlZNKucI",
+        "places/ChIJCQSvhjEbK4cR6lXUk3K9-rA/photos/AWCwydjEX0vN_WO4D6w52GcTE_AW82LEPXWLtZC4cjB0qsjWHzeruX5qbyecexUXdv8aFkSW9TZ4rNX_P2a13Qxt70XD6DZtrYJUtjALbuPXOHI5e07eZLm_bmgK06pbpEAC99xYDWP3M9yE9mUNOjsddQs06YAyHBjxPLPke0ECiPC4B3Xw72-XerijbWqpvkeo_3jOdGDomMnXjJqi00Kd2wjtDt8Rf3w2RLeySOMcdlce7vwH_cMrj3rBMRylqzWgD9sbAE0zhZHSwUkxpbD3HmAsMvF_hLBQE2cyrAaTFQqibK3Bst2dVnPOibRDkRUhMy4qWZk3TTvmnrt5UHKmzuJvurtLhOcKPEm1CNqraTDIA6LUS8vxdfqKKFX21m6HkiY21nFK-B13sgLR4rENKomdFSwo_Y8WRzZ8x2wwTpLTPQAR"
+      ],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "I have been going to the stylist for over 20 years. She went from a technician at another nail place to owning her own salon. She does a fantastic job (every time), friendly and the place is very clean. I highly recommend. ( I am an ex beautician )",
+          "relative_time": "a month ago",
+          "publish_time": "2026-06-07T16:43:16.803008155Z",
+          "author": "Allyson Wood",
+          "author_uri": "https://www.google.com/maps/contrib/116694881900637211986/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I’ve been coming here for the past 9 years, and I’m always happy with the service. Lynn and her crew are consistently kind, professional, and pay attention to every detail. The salon is clean, welcoming, and they always make sure I leave satisfied. I truly appreciate their hard work and highly recommend them.",
+          "relative_time": "2 months ago",
+          "publish_time": "2026-04-21T19:29:14.096114871Z",
+          "author": "Rima el-rabaa",
+          "author_uri": "https://www.google.com/maps/contrib/110251991143674172170/reviews"
+        },
+        {
+          "rating": 1,
+          "text": "Spent 3 long hours here. I don’t mind waiting when they are busy, but my service was rushed to accommodate others even though I had an appointment. Got a full set acrylic manicure and their pedicure. The lady who did my manicure was nice but the job and the nail polish was runny and terrible the first time she did them because she was rushing. I kindly said that I didn’t liked them and she said she would re do them after I get my pedicure .\n\nThe lady that did my pedicure kept getting annoyed because I kept clarifying what I wanted. She kept saying, ”Oh I thought you wanted this” “ I thought you said that.” When she asked if I liked the color on the first few nails she did I said no because it looks different on the actual nail and if she could get me a white that was not milky/light so that my nail looks fully colored. She then said “well I’m going to use what you bring me” which is fine, but if you’re asking if I like something and I say no, then it needs to be fixed! She then got super snappy and short like she was annoyed that she kept being corrected or asked to fix something. Since she got an attitude, she ended up doing a poor job because she just wanted to be done. 3 of my toe nails look terrible, bulky, and 1 is clearly damaged and she didn’t fix it.\n\nOnce the other lady continued to fix my manicure, the firs polish I had on was still noticeable. How does a nail tech miss that?? I felt so rushed and uncomfortable even though I was kind and respectful. They only do a good job with their regulars and rushed with me to take better care of them. TAKE YOUR BUSINESS SOMEWHERE ELSE. I was hoping to be a regular here, but after this experience, certainly not.\n\nI am so upset that I decided to come here. Not worth the $113.",
+          "relative_time": "3 years ago",
+          "publish_time": "2023-01-09T00:27:16.898694Z",
+          "author": "Minerva Redwine",
+          "author_uri": "https://www.google.com/maps/contrib/103512158205371624960/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Very friendly staff, clean set up, and they gave no weird vibes at all when I came in (Im male). There was even an older couple there together. It was obvious they knew their regulars. They asked if I wanted color without batting an eye and I've been at places that don't even ask.\n\nMy favorite part was they weren't pushy for upsells. If I lived here, I would definitely go back!",
+          "relative_time": "5 months ago",
+          "publish_time": "2026-02-05T00:54:53.436414560Z",
+          "author": "William Zephyr",
+          "author_uri": "https://www.google.com/maps/contrib/102497311226154626922/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Wonderful job! My nails turned out so amazing and they were so kind and thorough. They go the extra mile— which is rare at so many nail salons now a days. The lovely woman who did my acrylics even went as far as cutting my cuticles before starting— I was so impressed. I was so grateful for their excellent service 😊",
+          "relative_time": "3 years ago",
+          "publish_time": "2022-11-05T00:50:11.229219Z",
+          "author": "Ashley Alteman",
+          "author_uri": "https://www.google.com/maps/contrib/104433960857323401355/reviews"
+        }
+      ],
+      "query": "nail salons near 85048",
+      "source_file": "leads-20260714-204321.json",
+      "source_files": [
+        "leads-20260714-204321.json",
+        "leads-nail-salons-near-85048-20260714-204935.json",
+        "leads-nail-salons-near-85048-20260714-205016.json"
+      ],
+      "collected_at": "2026-07-15T03:43:21.484393+00:00",
+      "priority_score": 87
+    },
+    {
+      "place_id": "ChIJp8xJUGEEK4cRmXiAVPFkKvE",
+      "name": "Chic Nail & Spa",
+      "phone": "(480) 274-2867",
+      "address": "3936 E Chandler Blvd Ste 213, Phoenix, AZ 85048, USA",
+      "category": "Nail Salon",
+      "types": [
+        "nail_salon",
+        "beauty_salon",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "review_count": 55,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=17377813099830081689&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 1,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 2,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 3,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 4,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 30
+            },
+            "close": {
+              "day": 5,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 18,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:30 AM – 7:00 PM",
+          "Tuesday: 9:30 AM – 7:00 PM",
+          "Wednesday: 9:30 AM – 7:00 PM",
+          "Thursday: 9:30 AM – 7:00 PM",
+          "Friday: 9:30 AM – 7:00 PM",
+          "Saturday: 9:00 AM – 6:00 PM",
+          "Sunday: Closed"
+        ],
+        "nextOpenTime": "2026-07-15T16:30:00Z"
+      },
+      "photo_count": 10,
+      "photo_names": [
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydheTA62gg_zmiNns3hc29DzNV_TFGw-zrhXFjuOlBTBtHFaD09A6gkO6x3QCgNAIb9zJaBxxwv2-RiSDNb8HDEMeAMYVDsrg94d0X3H3g5uWpSPjXBXg82oal3IQDpHMzAanHNzBw3dAzXzFpuxXbWgZKduofw6RPMWLh7EhDNkubhNdE3aT33aUEJWrcZ_zx8Tgq6jUUwufhraJQdNqnfuyHTCLJRVFGEjINkZJBpopVfpnA2_X4VDP0Il1U3C9LgGIkbuKXmyWEdMKG_T6TqVg9oJixcJYo4gSGZXSh_AvFWxPQ3OKVPTj4gAn3aSz2b3ayACW6qtxhVUuVDzb2T67JUTfpfhMTdL7o_sr_EfH33hcbNbVhk6PMjju9YVfY_jEUrr51vEq3j_pAQZxcW0pm3KMt4gYQbfl2C6wrdNdsy0",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydjJLjLQ0c7mmvnmISATo4fwgIMPVeTmekgvoaULuFm3PP9aygVMGOs6xByE798U3KHSH1cEyuFg_qaq7t2WVmdxyktQgZENWdVxqu6W01EORr6buvf-KHVLtKQMG40H-hu98JK8IZ1kj9TL2dKRjkpClfTKcY22TLk3WAuX0bWx_9mTxTLVagoGsJK2BPFH1QlabHk5Qrhlg8YLjWLv5DlZVj8Jcr6wM1P7HFLdFAP3ZPFzxZOh6glI5COC9LX1C8jMIvutgXf3_WeKvkfHeceAFf87utkff66ruVOuj4JnTb6Lmzpr90OIh7VDFwKNf8nwAycPK-OKQtKSaAZ8xKHnOQ-XaeUH_G9QCNQVbUesaWp0MYTs_7fvvUMfu0KHZnuy5c2majO2e9EqBYCmpxFTd4pgZ5tbEBVgQm9ojiDIZqOi",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydgDoaFdG1xTDuhhdMoeAlUmir2VxCnJloEmw13W8j-9qbFUDEXL-rY5KvDN5DTCmR1gj57Xwoj0J6xi3cVQ4awW9xMVtFHDgmFquOuD7I_LOyZAU4TUnbRDquFdR4ERmrii4vodV7CQbzcKEJrEqU-N7Tiy3CxuPRogwuGawsMQGg7-smwNsjEP0hxosZdu2SnHl9YD3xyKePtb0zObOzai1uKhyQDRw58Z35b4-YmdBhuniQUVNYfcRVZgjm3kVtR0RoOjdT220mM7j8wvZ3e2Uo9RfPbED2kxPbH5TaY2d0-G4B0fJGkjb2FL46ckZEbkE61s_aJfh_nK4gvXYPP-78IQ4A91QEfRWG2u5rp60BxcmfirBa4poW4VJ0vW3KgGM8Uej5XGzLHq8tNI9N7V7CCoH84IUWGF_cYMGlNuwg",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydheXzoW4y0rT34ixmTp-c5YvwYTbLg44-p2S326LZBBIHwdhp5wxTUUwVaeJU74u7hNH_9X9mlgXwNhTdTZQdTIMtbHvQ2gd8z4ymx5HJUfjvWx-8vNDlY184W_y7WTUbyojzvz5DbnNBLXPSBrF2zGyr1BFftrGWXa8YWBW16G-2D3L7qbjqGNpe24SMtmdoO7Rm59bvWGTv0aeubcLM2ExQ427VTLn5WPTzr6Ad9zgv5LIJpioO8l51-b7QvTD6orq-V8pPGEFZiqSHUaK2Q7q-PtjjukfNgu0m-00UUN1inlLBZ3yq6K04EKqKQtyHaQzt9tfIcwmbmdYSW-OIkbRrvmk0ONXRj06MB4vZ28NyC1mCbMJRJNLp7S3oDtQS2ef-vsSP0lGmQV0zt0Ohy1vqE407fR6uJd-GQZ92E",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydgeWE-J-3Q_KB42wAwSoAqz67g-yrfnINzcxTX8Ecp7OexzfPDq0zuheAkBTywup5Y57k_0v8uzPfK8fTalysZdXdQWd1M0I1QbRSGPDpeVSerkUO7_1wiMoQvb3REeLb-kyniWVpCXylq3tdh9WjQg4hQ0V4r_BCdBi43a0gErsOEwDh_mnrso2NQXeRU-I5Msiw0hLiC92KSgnWVnXCpH_n_TsfOyuOm2lCebM-ki1eQ0_7sRdSuBf0dOyNpFYSYmLA8f5jEW8NbjQHP3FDno_5i9Dg7NqWfmc9b5XqCaTwnq5cCsOX413v6zKA3JJdt9tfWV8rGfdlFFoAiVuSaevZ2LpZ3nqOSR9SxdLjL3D_4S0kF96JJwecYuxptd_6f4THaHshIPxC22v2GbyPx_Bf3Emq3eErcrD-Imvf7eTQ",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydjhNFT11S7QekcFqtav659aN2QSVppcHkrTYeDZt7rPC8Ln9zTDla9flTyIU0dCtdH3EtCe0TpStjHj2FiEcbJjjeDpnUqDG50x1IqpQ6xH4imy7ViPf_uMYJl1X_qa9p7GH3s3VpRIOkfhrG8s3MQsEGQBQSGW8rISmQ71X18gAVE-LpgoSCCs44NfVkCVl9n5ouRtslYTgFy_9-tHLbjI4-yR8lFZ2_jofA0ct4rge-eIOaFzrePNqaRwIQlG9GNq7Y0fgAoW53NO2DPTDVhyz8yqMqeTfjRQUNZN0cqBs6aSndLDRdSlv5PuHO8KfeqarccMQlilnQWV1TF9A1fM4CCRoFbIRLa_5RjeJrY9rTRJDfpvagf7DojeiuNXl_tza_yFVZu1tjfqbMMry4aR77BzZluwkCCVrOu6CMxEKC4u",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydghNHsy8vipDv1GpIq0exeeFEQNs-Pt9SKZfllo5VSKF6qGpTjBoGNeb18YUUWU8NzzrT5K9cqhrN1Q1OTyQ_p9275WzcFP0Y1N0A-0LOsp0y7r6ZD48jm4BuWqZBHPOATfVmgTe4wapg8Y-00LbUjJ-k3VYG7yk55QCqv_x4bYcfrgBHk1Er79pXgf3Ky6rPjSdi0LT_wiUVS_SR3P12rJ07GpVN5z2SqD9v7-JYujX-0M-jo402bLvCukfS2sPX62sIG-x4igOAFHnE0fQ0RtzJHp6wd-qinY2ojSa3T63mWvgLqOm48d1GyN_FUjxHo7MkJlXQPHAFVdx5tzBQtPzAZW9Fma6Bax5kbdlhZ14_8JWb5nMFI_J_oNY2NqofciTQ5-bJQQbNVG15aJVHeySAyCIxn-Jr4M4UM_t1nO7Q",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydhSbvOiX3qQve5eLjbESmBNQAlBnL7FoPebIhsSqU2GYbC33KkxnLWKIBafo5b6rwQwCgot0ENyWtB0F8oYWo4WSSRf19JUwTjuzN9kGb6Iab-YEN6VESCodtefh7y8ppkQJGWuIquLIYyybVcnPfRlMJscrH68aejSEE8mJTiniv3mYrV8miPWIcNxNSBY0tar2xJNJK0CSAA4uEd6Ad1WZzYz1w5-rUDneA-b6k8SIWg6i4MybCJWdWGhBEZUKRaasNVWn792GshUjTouBKVUh6P79Yc_O3jDwhrTewzPR-8L0ofVEYW9g6QzyIkgHXwGZLOe2V4brfZGC3Q_Nhw1MAQiuYVFRCIHviBrAuaM0CMnY4QekCOfH9OMIbtSmHHILab5PfTBWFfh7lzrui2ikDdoqjce6xwD84ZZ3pEgtg",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydir23We9QP7yOb1p1j0fYqH3sCl-kl2hrlF_uEL4LU3dJRBLIp9TPyrbrAarRSjE7YfPTM9ratIl-VKDK6t7jGJ1a73EbSuTdV8NlxVLm5k42ImgW5BKJvQnAgRYreLJJr_CQJrZaGLp08KV3iYyZaDdlqLsgrJBMir6nWf_P8rfw6htapeU1dXE68FSIK3ENxmraaF_3rd6R4KASd3NbxN-58a-swGFEu3NRw7I1G-cy85wevgHXLs4RtQe8YHQ0O8fCfXZiwjFAtp6NtgIyZatE6Rcq-X37c8H90KF22hvv6S_YDSqkN4Emi427GR3x2TScYxTohmqyUAfmY2Ib8_sU1lLthubXyQDovy9wgtZz-Mmwhc-tJErNulzU8JXXie8aidcA-lsNQtURFO2fFGoTIKKgvPOlIMllQHjGzK9w",
+        "places/ChIJp8xJUGEEK4cRmXiAVPFkKvE/photos/AWCwydj35JPQ-hFGE0oFVJaQNSliTjcnrw1s4zppRocA6RkUKabIyKjG0okmrC3AHvPqbTo9XCyMXydQ522QXf0-TjMfRNx_QFYzbRs7PNMujxO6PMf408c_SatOlTDpUWiqspTDtv6Fqh6s-MUrlxrq0rUbAU2lL_-Ap9hYqsbW1Q3rJFkEwKx4E1dqtQmbT-njDnOC92mUOtUT6TJ1Q3C1UfEDGltHriCkupG9ZnNhtIYVQe1C-NuJuJADVWM-LgRk7UgP8D1kB1Eoidh-GtjupiKg4AQm7OCKH-xi_leeQv6KbvAxVbAA_f2da21FOixzh6Y_SLSv3izdZnFYkfJKlKRxv-NC9Y0B_OQ_us_ffOZ4AEMbaBttF2NZdJoSJmuf85Od0Er6l4UwT6Mvb1NKMo0KeYIJYd1EM_n9nRjSS6kUI3x-"
+      ],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "I've been going to Chic Nails for a little over two years now and I have never been disappointed. Mai is who I usually see and she has always done an outstanding job with my nails. I always get a gel manicure and the quality of the gel is phenomenal. I have referred friends here as well and they have also had positive experiences. Definitely would recommend to anyone, especially for the price you're paying for the quality service you are receiving. :) (Attached are some photos of manicures I’ve had done.)",
+          "relative_time": "5 years ago",
+          "publish_time": "2021-01-03T05:21:14.144889Z",
+          "author": "Autumn Symes",
+          "author_uri": "https://www.google.com/maps/contrib/113804532463497022769/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "The quality of work is excellent,  Mai is an artist. I feel like family whenever I go there. Natalie also does wonderful work thru are a talented duo!",
+          "relative_time": "5 years ago",
+          "publish_time": "2021-05-07T02:08:05.189956Z",
+          "author": "Lynnette Houston-Volden",
+          "author_uri": "https://www.google.com/maps/contrib/110727084405935848181/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I'm from Chicago and was having a difficult time finding someone to do my nails in Arizona. This is the best place, hands down.  Always outstanding service. 💙",
+          "relative_time": "5 years ago",
+          "publish_time": "2021-04-20T04:58:36.333492Z",
+          "author": "Dionne Oliver",
+          "author_uri": "https://www.google.com/maps/contrib/106116735643228293295/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I have been going to chic nails for 3 years. It's a cute chic boutique style nail salon. Everyone is so great and friendly. You will always receive great service. Mai is one of the nail technician I always go to. What I love is she always willing to take the time to do different nail styles and designs. She is always learning all of the new trends for every season. which is what I love most about chic nails because not many nail salons do the latest styles.",
+          "relative_time": "9 years ago",
+          "publish_time": "2017-07-11T23:53:59.234Z",
+          "author": "It’s Alyssa G",
+          "author_uri": "https://www.google.com/maps/contrib/108789186111109025248/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I'm definitely picky. CHIC Nail Salon is the best nail salon around here.\nI drive from Chandler just because I'm very specific about my design and colors and I want my pedicure to last. Staff is very friendly and their prices are very reasonable. I been coming here for years and I recommend them for being the most quality persistent nail salon I found in the 17 years of living in Arizona.",
+          "relative_time": "9 years ago",
+          "publish_time": "2017-07-09T00:52:39.913Z",
+          "author": "Y K",
+          "author_uri": "https://www.google.com/maps/contrib/111490946436018253606/reviews"
+        }
+      ],
+      "query": "nail salons near 85048",
+      "source_file": "leads-20260714-204321.json",
+      "source_files": [
+        "leads-20260714-204321.json",
+        "leads-nail-salons-near-85048-20260714-204935.json",
+        "leads-nail-salons-near-85048-20260714-205016.json"
+      ],
+      "collected_at": "2026-07-15T03:43:21.484393+00:00",
+      "priority_score": 87
+    },
+    {
+      "place_id": "ChIJh0z-cgYHK4cRl0UVnj5YtBM",
+      "name": "W SPA",
+      "phone": "(480) 730-3304",
+      "address": "1730 E Elliot Rd #16, Tempe, AZ 85284, USA",
+      "category": "Massage spa",
+      "types": [
+        "massage_spa",
+        "massage",
+        "spa",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 5,
+      "review_count": 2,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=1419856808491959703&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 10,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 20,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 22,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 10:00 PM",
+          "Tuesday: 9:00 AM – 10:00 PM",
+          "Wednesday: 9:00 AM – 10:00 PM",
+          "Thursday: 9:00 AM – 10:00 PM",
+          "Friday: 9:00 AM – 10:00 PM",
+          "Saturday: 9:00 AM – 10:00 PM",
+          "Sunday: 10:00 AM – 8:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T16:00:00Z"
+      },
+      "photo_count": 0,
+      "photo_names": [],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "What happened to a girl named Brenda? I never saw her again, she was an excellent therapist.",
+          "relative_time": "2 months ago",
+          "publish_time": "2026-05-12T02:16:00.771036316Z",
+          "author": "Abb Basblas",
+          "author_uri": "https://www.google.com/maps/contrib/107746705498989536865/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "",
+          "relative_time": "7 months ago",
+          "publish_time": "2025-11-30T15:35:20.423102802Z",
+          "author": "David Carpenter",
+          "author_uri": "https://www.google.com/maps/contrib/102166907855860808234/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 85
+    },
+    {
+      "place_id": "ChIJu--QNVsJK4cRd9np4I_47vY",
+      "name": "PadmaGold LLC",
+      "phone": "(602) 561-8711",
+      "address": "1801 S Jentilly Ln c16, Tempe, AZ 85281, USA",
+      "category": "Massage spa",
+      "types": [
+        "massage_spa",
+        "massage",
+        "spa",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 5,
+      "review_count": 6,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=17793432474624842103&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 6,
+              "hour": 10,
+              "minute": 30
+            },
+            "close": {
+              "day": 6,
+              "hour": 17,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Closed",
+          "Tuesday: Closed",
+          "Wednesday: Closed",
+          "Thursday: Closed",
+          "Friday: Closed",
+          "Saturday: 10:30 AM – 5:00 PM",
+          "Sunday: Closed"
+        ],
+        "nextOpenTime": "2026-07-18T17:30:00Z"
+      },
+      "photo_count": 10,
+      "photo_names": [
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydjUcoLFvGnTI79rMtuMyaGL1M5o9_NGQnMk7zW-3Kameyvx07Eqsxy5AxpYTfspF0qqc5Eu5uBK32iozpdPmaijzVVw6DY4L83gUsWbD8fHjwdOt_fwaBfbkAbFT2NwDfZuNy7CYE2cSMvIUhJied5B97o3D77OW7XlUZICr7JcAC-s5ZWdZ-xpiCxGkZJLLv4hOIIOz08dsYqGbQBj2JLRJzd_9lwaiUGw0spF8HRflUwk341NTLinwSfq9WCZ-PUN68wbS5y3hidaCMqAOgvmbm_jRYHR2dyUoQNyRVpn-te6BrMCFrWv5LtZBCuaWofsJTMVZHD0AHFhItOEtE_XshQWb1Ub3k66qTgg8IMQxe4NIUveEALQe5SQ6uFI-ILFAl0uXZyEl734WTcvCkIq3n61RTuEFv6PhGrQvrQ",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydhiX_QmBz2AXa-QeRNhvcCh-UMw8zM2CW9OihNMdVOnyQ-MGw9jiivDGxA3pbxZVHnqBoV_MqdGogSUo6L5HFFgV1YiW43LB-V8JBmGXYeSunr_RtYCPj4hSLI2bDUh0PMQwIZqixD4RcVlSVCRheWSKjqKaJOf5z1bEymujApk2aOGjYx98jXaQtA8nWWwy3dKSE0qUbatSYP-jc3zdhLtwhe7uKHyJp8DpNuw2iM9jGsq1BVEU5z0QatBt7XaE5IpG81hE9Tz1ube6JWj6fxByGK9BmvgfFRUKQC-7bTmWuoSge2ojsQ305D5SjmgUzrwSgoOE5ube5WUW4H7TwJBYcZXMiYAi4urBhKTqToQt_N4Og359q6QGPJo5WyarcliYEYnIoGMjZeCtwloDKdjBmq9tNQA5wWp5elcNASPxSU",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydiEOvH0oQcuHWRsn3juo42fiO-14XqoEJo1vXANgxG3i6SZ67QA7RKK37iSXbJ3_jF1cPS14y2am92qHqqpm5DQVlpBUoWiqEz4Z0MCQ4sT-lSbJIf1ZM-BIz9ZeLtmn9d-8TfIQQKhgXL3zB3FZhsU0IOKQwkDjhAACeliT0iCPWZlXBleiIdgf_1ZNeZuDOPh5PVv4LORRrzr-GCNe-lfVlE3p-TQ25rxqOIxMj-6RmZCrUq9ke9q7r7XLmsnTKH3gisBe33JPklSSXYMQUHDWPoBEzHxaq7DjlS6oYZeywsQoQDRq3VUldIUI5Yc_oNEi9gmpBSviJtHEc2YcO2Em3DoNh4nsp18q6J_gGN00kZDbUkhoXA0hekOQvN_7RNtgVJa5FXR_cphTO9NovAuM3vUxERigfOqWGQzWRXQbQ",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydhqkJG8qJ3f4jVXDvlzpLgN2lfapgni5nrdkC8Z8jgGXaVy2nxvZKZ2qUnCN7_A1FaadpveJkzpQSl2zYh8EMad-id0pRE9HociOgE0TonR6uqya474HJjMIasKGX87PxpGt66vmxZfrPhhdgBn8d5Iu4VEik85tv4fqVnVYEv27Zggk2l4qciO8pl0QBmZBK1DZ0ecZUSjZDTxfAXHAqOsLV9atxWgrUNg99DjhVuVaE2XnXxbF-Po-2swSfnkBCjR2WWbUAxSbu5SlC644-qNSv4-ejYoPql4duw7oSn7mYed3yPNMUNnAnkolMGH1N_NZbyp4OAjumLcr7OY3y0uPy5cVxcB-dsBQreL2J0fhKk5HscnHD0V1vLiGxIoYDqfOrI1AmWaYdhU8ZlztaUQVlZttQpAkwbsdk30j4U",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydgJatrGyTKvOLJxNFVfeSgPLhLW1Fp7xbVUt8wka7-FUrPTIcyjFBn81qwea6bKRlUWqmQ_2IV_r3Z9lWy0hyc3RxH0OON9L2oGw_RBi1ntrZwMDM_7qNln-KaRYdpvtXBDhwWkylaWPkefnr910DphHWHoNcQkplKcVL5uNQYZck3N4RQ9Tlk8yMpdl80FLduiGOhqyDpPPzo289BxW5nMwPb2MRyxVzwYD2g61eQ88r0wHDXFzHXQEWopDbPT3tDtsIu44VA7hUg5Gz2PQH6Z61SNIwVQIm-lC2WUcwL1aFuZJuBaxMm93HqmTrlg4dDi9qAH8qHPYFK6gOX7PlZpIDPUcxznPpYL5AzSFRLEyc_H7Zm1kL-J-IeNQnhhfg6iXjEwzg5dMXnDS7CMHCUGPJtAEE6v_ksE2Ap3j1nKhg",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydg56YRHe3wYarc1dFLsC6j5RCd__drZhnpug56FZgfPBdYDiYcSBbgTqBI3VyY-FiCbsFKsuT_qCezRg2bcKXSPwsZVQS0GbatnM2kg8_6TRojQeFS6qgPxQJHxq1Gc9yKl_xjyiCHc8VLcVlWuC9DGBqC5dAq5pRasbR1WxHLbkzIijLU1BNTdpP1IxliLn93Nlo2xErxXhMvWQm-CTdwJnAq0-6A8r6WE5lVoRb496V9sWJoioRoChM8lTkIjp8rKd2fg-syPTCO17EAR7YuPMfQEpP2FQdjtXoAbg06-AB-FwoTx8gamVBHO14k-CyLXS8_fA4qyw1PBAoQr5BS5WtlcVX9KeegGnoG2eor5AU0LzW79dGt3f1-TBLlpuUuo4Ssz-nf2BxPvINCZ-Prrpr3MZrhjhJ3HN0_r471UCg",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydjlOYxJP5p8GBJqFV7-pvtoYSf_WRrbj4fXxUfssDkkXekERNsBIOnX5mk8KTwZmbv0T1rKkh7Dg3BmytIb-pzZhi-XBCczDAFbagn9O6VEQamDiZKbVt5ULKFFAXaP3IeecshV8lVLTPbPacrAnwtItpudtOxwBr17LbddJBeGE_EJgAQjBnPL2kz0SRbso5S5nO_kpUfIKNA1OAVX7gypDRFoHaIhvpSjHu2g2B84PoCxnhTiAYqclOKWKKrdHFeu5aQX-HRi8ebkaEViEREaBwUx5qbh3FlEhUra2BrVBaa3zBSX8K7hm_kPyWeVcSFJaypk9WIqVuljm3sNuKEnN4VjzO9yhGeKIwMxX4H8Hf1gdjOovROv9jmppM-hUuJlc8KVu6Nvdr2c4JCgNXIy7BNTNyGwPDROGYyVhnmXjYg",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydi5A2X3Fb4wtakr5iGzwhou6vf1vOjVc-87E7x0FNz8KAx6-0zKzfiNZqO57xRyXS3QCTiLdZkRNR16Xm3iYPRjYpbfIYKQkfWR3tCzpHhgsUuaUdQzUfiGSck6qdJNOUhQOrGWcr4RrXlQ0wKbC7PYBp0s6puCpsUSUBbLOsURMBQ-9SDEfLc71puNnlBEQI1-SWhFya2ID3dk2KwJzyWcXSss4UepANwA_IToSr4ejORN-TxjvxXMF796tKEpSx6PSB6qp2inWyWxaw4U6BukM00DlmMZkuZY5WYix5vBWnMb2MoB2tJWhJ6GXiIG2LjjUArqMzLJuP8pnAIsX1SGaoS9Oi2wVCTG8gYUd20035U9xVlFbKoztQ39gIPBzqKN5Wld8OBb8ITVhL3PaHPcVLLKbO2GY8WN4tume3wC8Q",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydjOPNjK7HqMpHCo78zU8_mc35tTyqV8WaqDYEiJMbN61ucJujGcv5YtHJEdB-qnSmjenYTbCFZpyM91MgqRsT2HOVDAT3RKRd9Jw31JRAswmm8Pg8t4_AfPduBWVkReTJLOmw_cPoPw6Hl5YlvuOy23o_Bu_H2MQy0Kzm6NtrgfweTGnJ8zgjf9J7l2Vf7XZE8c4NdtB3zoT6WvZJ8D3GvGZGIYaNzYpnMPrqDeHhoSmBxGWGBvwOm3uYufumou5uQwFyCFj5o8mCFClJJ8Etrk-ZnLOjzCAJtiUfrwNKKmL55I7oEpkn8BI37bZY9YAi9EliDI2_sj5D56cWdPRfO0qVcEGnLZ4XFqjsfISttGMcaPxNfJx2as1tL7me9eLZFIFYtcLKjDMMlgEbEvifYervYouFLLAkYkvV_t8a1K1cpf",
+        "places/ChIJu--QNVsJK4cRd9np4I_47vY/photos/AWCwydjbLy8HPqrgBU6VJ7Fj4Q7dqEXZeO342wT7OYyeEuo7Fw0C72DXW20JN3aSVUKUXBuALek7JvcuqZKZHAzD7-gQa3F7DWms0I65DeG1aitm1IFE7OAVeLCYy4y2P5v-lmdsD5n_VhiMqEpsFdQUpY5gmhQMvc63UZfCrrqu762nuK55QRHPAonaLnVBYvN0ckBslZ-OPU9pU_kAmqLcsvgO-c6a1nuwq3ZuZFxYwGzLH6a7O6wgFTzmFClKZc7nssB9hbOEnFxigXmMeOxha39pbX5Zq6PTw6WqemDzEKdK0xxJ4DdRmli6KEx3PB5ytQ4RosXwmf88kPtkmYnZeTpGiCT-djDI5GdOYZCAPrcR3zupcfniwpLM6eAhO1KcCwn8EypqLNuZolTNzTaqNYDx0LaiNSHG8FJEjkwVTpY"
+      ],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "It's quite beautiful how Elisa is able to incorporate so many different modalities into her session.\nThe mix of energy work and massage really has a whole and integrative feeling to it.\nElisa can really tap into the body and work with it.\nBecause of her work, I was really able to experience a deep awareness of my body. I would recommend her work if you really want a whole an integrative body and mind experience.\nElisa is also just an enjoyable person to chat with and our session was not only eye opening, but fun.",
+          "relative_time": "7 years ago",
+          "publish_time": "2019-02-07T16:01:21.660186660Z",
+          "author": "Ingrid",
+          "author_uri": "https://www.google.com/maps/contrib/103328334880143245397/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Elisa is an ACCEPTIONAL Therapist. Being 10 years as an LMT, I am very selective who gets to work on me. On top of her amazingly thorough massage, I feel held, nurtured and unconditionally loved with Elisa's work. Her knowledge base is extensive and experience working with and on people shows in just how comfortable and trusting you will feel in her presence. I would recommend Elisa to anyone. She has a gift to provide profound healing. I've looked into her training, including being \"trauma informed\" and it is no wonder she will not be anyone's average Massage Therapist. Elisa does not watch a clock unless one needs her to. Her presence during the therapy is truly felt. This is my impression as a Massage Therapist of 10 years. Elisa is a diamond in the rough and worth traveling miles to have your unique, integrative and customized session with her.",
+          "relative_time": "7 years ago",
+          "publish_time": "2018-12-09T00:04:29.486828627Z",
+          "author": "Angels Surround",
+          "author_uri": "https://www.google.com/maps/contrib/107773791236221513027/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I have chronic pain from an accident and receiving integrative treatment helped tremendously! A lot of stagnant energy was released and the massage was very relaxing. Elisa has great touch and intuitively knows where work may be needed to help with healing. Great experience!",
+          "relative_time": "7 years ago",
+          "publish_time": "2018-12-15T02:29:01.030728355Z",
+          "author": "Leslie1895# Earth",
+          "author_uri": "https://www.google.com/maps/contrib/115124700925741892732/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Just wow. Divine is the best way to describe the work that is done here. Elisa is helping me truly feel like I WANT to be in this vehicle that we call a body. Highly recommend for any and all circumstances or situations. If you want to feel good this is the place to go.",
+          "relative_time": "7 years ago",
+          "publish_time": "2019-02-25T19:34:17.278647Z",
+          "author": "Maya Johnson",
+          "author_uri": "https://www.google.com/maps/contrib/117410597967725890163/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "What a great massage given by someone who really cares about her work",
+          "relative_time": "6 years ago",
+          "publish_time": "2020-01-22T23:02:24.077939Z",
+          "author": "T G",
+          "author_uri": "https://www.google.com/maps/contrib/111645029073746536981/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 85
+    },
+    {
+      "place_id": "ChIJm8Ozu5oHK4cRfAW6RZ0eQ4M",
+      "name": "Su Massage",
+      "phone": "(480) 306-6641",
+      "address": "1853 E Baseline Rd, Tempe, AZ 85283, USA",
+      "category": "Massage spa",
+      "types": [
+        "massage_spa",
+        "massage",
+        "spa",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 3.8,
+      "review_count": 12,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=9458437303236691324&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 10,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 20,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 21,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 9:00 PM",
+          "Tuesday: 9:00 AM – 9:00 PM",
+          "Wednesday: 9:00 AM – 9:00 PM",
+          "Thursday: 9:00 AM – 9:00 PM",
+          "Friday: 9:00 AM – 9:00 PM",
+          "Saturday: 9:00 AM – 9:00 PM",
+          "Sunday: 10:00 AM – 8:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T16:00:00Z"
+      },
+      "photo_count": 0,
+      "photo_names": [],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "Stopped in today, very good service! Nice friendly staff and shower available. Very clean rooms. I’ll see you tomorrow tomorrow. 케빈",
+          "relative_time": "a year ago",
+          "publish_time": "2025-04-23T00:03:12.651822Z",
+          "author": "Kev W",
+          "author_uri": "https://www.google.com/maps/contrib/103707880393212015230/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Been going to Su massage for years.  Always  nice. Lately it’s Jessica. Wonderful. I’ll be going back..",
+          "relative_time": "a year ago",
+          "publish_time": "2025-03-24T04:20:43.260474Z",
+          "author": "Bill Bliss",
+          "author_uri": "https://www.google.com/maps/contrib/111405057408649885525/reviews"
+        },
+        {
+          "rating": 1,
+          "text": "I like this place but the prices are way too expensive.",
+          "relative_time": "3 years ago",
+          "publish_time": "2022-09-01T11:28:43.135965Z",
+          "author": "Max Bauer",
+          "author_uri": "https://www.google.com/maps/contrib/101556611701777419117/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Ruby gave fantastic massage and service",
+          "relative_time": "2 years ago",
+          "publish_time": "2024-03-15T13:12:03.479316Z",
+          "author": "Will S.",
+          "author_uri": "https://www.google.com/maps/contrib/118354446518527413807/reviews"
+        },
+        {
+          "rating": 3,
+          "text": "Massage was good just to expensive",
+          "relative_time": "2 years ago",
+          "publish_time": "2024-04-21T23:15:33.354256Z",
+          "author": "Tony",
+          "author_uri": "https://www.google.com/maps/contrib/107155785146410729332/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 80
+    },
+    {
+      "place_id": "ChIJbRoMmmoGK4cRoNUljlC2KBk",
+      "name": "Grace Reflexology",
+      "phone": "(480) 500-5462",
+      "address": "6456 S Rural Rd, Tempe, AZ 85283, USA",
+      "category": "Massage",
+      "types": [
+        "massage",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "review_count": 90,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=1812899307115107744&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 22,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 10:00 PM",
+          "Tuesday: 9:00 AM – 10:00 PM",
+          "Wednesday: 9:00 AM – 10:00 PM",
+          "Thursday: 9:00 AM – 10:00 PM",
+          "Friday: 9:00 AM – 10:00 PM",
+          "Saturday: 9:00 AM – 10:00 PM",
+          "Sunday: 9:00 AM – 10:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T16:00:00Z"
+      },
+      "photo_count": 4,
+      "photo_names": [
+        "places/ChIJbRoMmmoGK4cRoNUljlC2KBk/photos/AWCwydhbKJ8OBGRqgCpndGeDJUfsxBqx1n6_JVx4ujK4lrNuKakc0r1zwu_bKjU8laTPgRHsth3vDlktf_6rTn0O2qf8cxU-n1A5EyKtZ1ruVEt0R8a-CMCqQthiNPD9Ft6y41EWHpS3tv-Rw-ogQv7Tc6T4XzCiWCO54BXaCbsZjwzUjCU9cjUCAAHQDrI3Ggdg06Tcv584rJj5JmNu7QuewH7dUIMc_2BZO4uNJTtsFMtKwtVN85v1l8hLNwjaAULUl0SoGYSLakOl-v3mEakxb259uTb3SyBx0vs0f_TnfnK6HaQl5fwlUMWAxoEiuM5YjD7_aW_HmuqG_W_XmDMSes4_ODRbGnWhMLwezThhStoa05r8ZRn4E8WZT77xgTnPGdeQWqGTjBp_rLWS7nAUxvIYO_UCN5XHXaRTHAgYw8QMQg",
+        "places/ChIJbRoMmmoGK4cRoNUljlC2KBk/photos/AWCwydg2uhO0_mkby72CBF7BCH71jIvFTzfdQAUPpw24n6mw2IyYWQlGgXZkfPDBdcWATWxhjpLkE5GAoQ9X8KZdMuRPcXSf4K4hIWpIgJz2gjISwmX1hMaTA8W1MLuaBKj2JH9NalhZ_v9BWNFLUMVSMK9auI0jJDDIis_x3n51JJPy4145WkJ23-vg2TMpaNmUBIVlB1zzNj3OpoBICekk0-mgZ9Ni7VBBWtS1Ar1Xs0rHLZ6VKTWn0NIFA6nnsUzNGTCY1Bbnu7eS9Ceunr7eMCzUZX0dwkOyiZjmMZ3xFl7JOhjjlovqOZx65aFH-rUAyxv1Tiw8Z4ZFBoQKS07cLv6wS02GBsoaaCiL6NqhMfHwFdYORIi3KbkxZzfOILlHmfvG5xt8Ko702063JTnBFK8QaTMmzT4kVsZwSHxqVeoENw",
+        "places/ChIJbRoMmmoGK4cRoNUljlC2KBk/photos/AWCwydh7jO4oXAKjbZ9yZnb5AFZL1yleGrzC2rQ6L7LEWv7EyzbMoRMvbUx9k9BdINGq6NKY0tsQjTIFCKFHGnFHG1DdBFNM9ukA8us0kEBUzioxoqc6VgKVuw_upjmmH0WKCBZWnMoyNnZGX6G_bp0CwHryYNCVAqrlaTWv2rlyiekqncn4999hGIgDu-voHiaYPrp8U37NdOqZh92acrr6_6ZDoEP7OqxZcv2qmWgV_LSaFbNsCrfi5YvbQUdO1lTdAyHseA0iEV7QRC99cyckEY-LDRSVAl6yYrHVGXqfbjgbq3gDOmTABLGmMIOR3eQETz3jPtXi6Ee0YITO8NDvtMRVmMHwvlzq0XJ7A59ZYtx8fHHar6eIhJ4SarsYzU8d2RxwbRG0oakbpqAfiC0xAapNjMIhr9CPu6BnVpZQK4yfKWam",
+        "places/ChIJbRoMmmoGK4cRoNUljlC2KBk/photos/AWCwydgbvrtiEDj0n1Ku4eD3RWTgQGqRAM6x8tdpv5eK13w_3t3I4fb0fF4xvTHRNwy8IM6qhMVXBNu1Cvz5ZZ6nYloyRj_gWGFXy6kQblvlJALsDySXw_xGvn-c5uxLHaf_FL9f_FEfNfwaaFZ8CJvHyUuxytZVyunZLYA2FkuX4KBEaaXpZFK6-lTj1Xqv_DUaRrD0qVP1y-joIY5bx7jy_tgTE_N4YUaDXwsmmyOEc6JWwbZRD6_ovM0vsSVugBO9Fx-K26UFgSK3aAZil2rHJvLvelsNI8rrd0n2kkW9tQLN3qj0oTt-y5uGz6pk94sh2lbpIqjWjfz0PriGpFe8_SEbzrab9HRGf2HhSNfWUrCrwHybeSJzgB6_u_ccIR7ftSlz9vAhIuVQl2hzVu-9p8R6B-y2tclvW3ZFq-5M7ESFbLlwDkE0gDXreKl6yw"
+      ],
+      "reviews": [
+        {
+          "rating": 1,
+          "text": "If u wanna be robbed without a gun come here. Online the price was $30 when It came time to pay it was $40 I still gave a $10 tip she said it was not enough for the work they did. I laughed because the man WWF me and they lady wasn't strong enough for my best friend. I gave her $15 & she still said more. Never again this was a zero star.",
+          "relative_time": "5 months ago",
+          "publish_time": "2026-02-14T21:07:56.497134765Z",
+          "author": "KeKe Lacy",
+          "author_uri": "https://www.google.com/maps/contrib/111666815485888267945/reviews"
+        },
+        {
+          "rating": 1,
+          "text": "Three years ago, I gave this place a 5-star review with a very positive comment. Today, I changed it to 1 star — and if I could give 0, I would.\nOver three years ago, the masseuse was amazing. But this past year, they keep changing staff every 2–3 months, and the quality has dropped terribly. The last time I went, I honestly don’t think the lady was even a real masseuse — the massage was horrible.\nStill, I wanted to give them another chance. I called yesterday to make an appointment and, as always, I requested a female masseuse. This has never been an issue before. But this time, the man on the phone, who barely speaks or understands English, booked me an appointment even though no female masseuse was available.\nI left everything behind and went there ready to enjoy my 1-hour massage, only to be sent back home with zero apology.\nYou just lost a client, and I’ll make sure no one in my circle ever goes there again. Zero professionalism.",
+          "relative_time": "7 months ago",
+          "publish_time": "2025-11-19T23:46:22.382181847Z",
+          "author": "meriem assas",
+          "author_uri": "https://www.google.com/maps/contrib/117017226967179472719/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I called ahead to make an appointment, and the process was smooth and professional. I scheduled a 90-minute massage, and from start to finish, the experience exceeded my expectations. The environment was peaceful and clean, and the massage person ensured I was comfortable throughout the entire session. He checked in regularly to make sure the pressure was just right, which I really appreciated.\n\nThis was by far the best massage I have ever had. The tension I walked in with was completely gone by the time I left. I felt deeply relaxed, refreshed, and almost like a new person. If you are looking for a truly therapeutic and relaxing experience, I highly recommend Grace Reflexology. I will definitely be returning!",
+          "relative_time": "a year ago",
+          "publish_time": "2025-05-10T22:07:02.662856Z",
+          "author": "T N",
+          "author_uri": "https://www.google.com/maps/contrib/110281959198516410319/reviews"
+        },
+        {
+          "rating": 1,
+          "text": "Ive been coming here for about 8 years. This last time I went. I left there MORE stressed and tense than what I felt when walking in!!!! HATED it this time (first time I had a male). Even tho I asked for female. The male still did my massage. Massages should be relaxing, soothing, calming, and by all means very tranquil time while getting your work done.\nThis guy was wiggling his fingers super fast on one side, uneven massage from one side to the other. Literally left finger welts on my back from how hard he hit my back.\nWhen I told the ONLY LADY there, she laughed and said \"sorry, next time you come in ill do your massage\" like next time??? What next time? There won't be a next time!!!!",
+          "relative_time": "a year ago",
+          "publish_time": "2025-07-04T04:48:19.558195008Z",
+          "author": "MONICA DOMINGUEZ",
+          "author_uri": "https://www.google.com/maps/contrib/118438940137539880418/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Very nice, accommodating and hardworking people. Worth every penny, I would definitely return.",
+          "relative_time": "2 months ago",
+          "publish_time": "2026-05-05T04:00:35.185544988Z",
+          "author": "tong chen",
+          "author_uri": "https://www.google.com/maps/contrib/107509778403207704293/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 86
+    },
+    {
+      "place_id": "ChIJ535ZUOsIK4cRnCl-9gBoSxU",
+      "name": "Desert Dragonfly Holistic Healthcare and Massage",
+      "phone": "(480) 788-5644",
+      "address": "1801 S Jentilly Ln a18, Tempe, AZ 85281, USA",
+      "category": "Massage",
+      "types": [
+        "massage",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 5,
+      "review_count": 2,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=1534434451394537884&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 18,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 14,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 18,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 14,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 18,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 6:00 PM",
+          "Tuesday: 9:00 AM – 2:00 PM",
+          "Wednesday: 9:00 AM – 6:00 PM",
+          "Thursday: 9:00 AM – 2:00 PM",
+          "Friday: 9:00 AM – 6:00 PM",
+          "Saturday: Closed",
+          "Sunday: Closed"
+        ],
+        "nextOpenTime": "2026-07-15T16:00:00Z"
+      },
+      "photo_count": 1,
+      "photo_names": [
+        "places/ChIJ535ZUOsIK4cRnCl-9gBoSxU/photos/AWCwydgGNOCAnqKvzYAR7euJ8RaknzKyqKTaCJ4sScxGgz4cqgWkbACOTyurf9vTuA7r3Gwm7-HV_ISxOl6x5KzPN9PZmFZk1k6zBRxMVywz-JL7Q6KTmd51Au2s48ahqV0nz1du19d2cYCeYL0RcHuJdSaYS6xGbVB51DkUvoxze2ELIZXoHGN7eDaCJLhfpRjAKZ6iJWiAIyWWEYATUqe06bk0K1Wq0jk2k-UmLYPLJsoBryClNn_CSkYkF5GgeCNaccULbKDL6dSPf4FgsIfpBuSZHfxCmW-nNHZApyWriFPO0nl17OLnI_1jAkd5kyXAWKkbthbGtW5AEH0aXCNqHkwIV8XBp3LNzCNQVL4vkVzOdHRJjjutDNONoWAh_pYTyzQhnPCerano3TDl7CIzOvaJH_rA6C_SBHlDqXd790exCmY"
+      ],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "I have seen Megan a few times now. I have always felt at ease with her and know I’m in very capable hands. I will definitely continue going to Megan.",
+          "relative_time": "4 years ago",
+          "publish_time": "2021-07-18T15:15:23.836392Z",
+          "author": "Dawn Reda",
+          "author_uri": "https://www.google.com/maps/contrib/106759029454068279388/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "",
+          "relative_time": "10 years ago",
+          "publish_time": "2015-10-15T03:55:06.057Z",
+          "author": "Socially Vocal",
+          "author_uri": "https://www.google.com/maps/contrib/114806346063020569729/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 85
+    },
+    {
+      "place_id": "ChIJYdKPgZgGK4cRjP6DXxlIN2o",
+      "name": "Asian Spa Massage",
+      "phone": "(480) 705-0995",
+      "address": "5865 W Ray Rd, Chandler, AZ 85226, USA",
+      "category": "Massage spa",
+      "types": [
+        "massage_spa",
+        "massage",
+        "spa",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 3.6,
+      "review_count": 53,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=7653665365553315468&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 21,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 21,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 8:00 AM – 9:00 PM",
+          "Tuesday: 8:00 AM – 9:00 PM",
+          "Wednesday: 8:00 AM – 9:00 PM",
+          "Thursday: 8:00 AM – 9:00 PM",
+          "Friday: 8:00 AM – 9:00 PM",
+          "Saturday: 8:00 AM – 9:00 PM",
+          "Sunday: 8:00 AM – 9:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T15:00:00Z"
+      },
+      "photo_count": 2,
+      "photo_names": [
+        "places/ChIJYdKPgZgGK4cRjP6DXxlIN2o/photos/AWCwydihF2GH9o-g4AM1hCUfTP-RS1Jr_phdcuvTbKMmP2hCRVYOPUalwELqeogV1AnXB4VZTgXAJSjVTCxoLuRpes31cQef8nk7xKutISdKFXALTjXeL7jhY_7uwCLheHFVgnYq3xVLM_rowufesoXGb4_XD16t7OMidKMpiwxL8jDdXDClSIZbRfMWIbgLwIDBNCSJ2PzQRdOWmVEyaAWVbwj1Tf8L0qCaCuOiiNmPsh9oI-BdW3yuo7hk1v7rLTioMpGsCSO1rdvfcBrTSYy8E7CCRzgO1AKfABPO9-4i45aHd0dbczgWLZBNFP23WwwYU2MDaXwRpf3d9Xuix6snZxhhpZxgPOr83xp8mErToqjrzsDxF_GVilIVCtSdOZZ5GNE71dJAaslJbAulK_L2fNs3Md4lYdCJGy0gU4YoFPtHokyq",
+        "places/ChIJYdKPgZgGK4cRjP6DXxlIN2o/photos/AWCwydjggLy2wwmtkOVNdQzNcvgDevxFSjsScfKhWFB3ye2FCVA0uDy4x5eFEU4Wt1v72Uf2m18mhoLoT3XDxzAcaNQDal_D7kczoWgprgqew-Y3EE0Woc_3tRKMrrSigb3nH2PxoZcez-rxW595lA4tirUc4_wfB251R0NISit2wl75XLFgnLWXCZuHfZNh9tEk7kFSeo-KyVyf9fCbDUJU-_kor1s3eXaNC7_buIj2ygF6--4AIooU07di_4wXxN7jshcdZXr3hP1U4G5Oim6KppV5j2sR43wjRCIcsMNZpzGJtXLzgFFpgvrd6xf30V_Lg6pUAt4E3pt_0XH4T_zixNTMoIJ32pAKgtYlj3HmawDrOnxJNNvAQ4iD703H_-3SocPIPk3mSuu4swUxxZHplecVI38IEr-BsWzwvS9Xalp8Yj5ilMEuEGkB6tXK9A"
+      ],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "I am familiar with the spa and the family for probably more than five years. My experience has been they work hard and always trying to improve. They hope you will let them know what you like and what you don't like. I am familiar with spas that follow the AZ rules for spas. Most established spas require payment in advance. A number of times I have observed customers saying their wallets were in their cars and then driving away without paying. Tipping at a spa is a higher percentage than at a restaurant. Five or so minutes spent with  you in a restaurant but much longer in a spa. Tipping is totally your choice. Therapists see far fewer people. I have not had the problems at Asian Spa Massage I have had at many other spas. Parking is easy. The sign is visable from the street. Easy to drive in or out of the lot. Pricing is the same or less than most spas. Prices have not increased a lot in forty years. The spa is very clean. I get the time I paid for. The massages have been good. I have not observed talking in the hall. My massages were not interrupted with incoming phone calls. If a spa knows you, you can pay after massage therapy. If you need something, such as more time on neck consider saying it more than once and also pointing to the area.\nIf you don't think the massage is going well feel free to advise your therapist. I offer all the above with the idea it is a very good spa and the area would lose a quality business if the spa shut down. I am selfish. I appreciate having very good places to go to.",
+          "relative_time": "7 months ago",
+          "publish_time": "2025-11-24T01:21:36.306636965Z",
+          "author": "PERSOP",
+          "author_uri": "https://www.google.com/maps/contrib/110835043362910068596/reviews"
+        },
+        {
+          "rating": 2,
+          "text": "I've been here a bunch of times in the last couple times I haven't been satisfied. I haven't been in a while and decided to give it one more chance. I asked the woman to spend more time on my neck and shoulders in the back of my head because I get headaches. When the one hour massage was over it just dawned on me that she didn't even touch my neck or my skull! She said okay finished bye. I mentioned that she did not touch my neck or my scalp, she said time was up. I understand I paid for an hour but I specifically asked for her to pay extra attention to certain areas.  I had to prepay for the massage and since the rest of the massage was decent I decided I was going to give a $10 tip. After signing for the $10 tip she insisted I give her more tip. In the past year they have gone up $20 for the massage and I wouldn't mind give me an extra tip for paying the extra $20 if I received the massages in the service that I received in the past. I won't be going back here anytime soon.",
+          "relative_time": "2 years ago",
+          "publish_time": "2024-06-24T03:12:16.793275Z",
+          "author": "Henry Ward",
+          "author_uri": "https://www.google.com/maps/contrib/108750005589519745297/reviews"
+        },
+        {
+          "rating": 1,
+          "text": "If only I could a negative 5 stars to this place. Do not get swayed by the fake positive reviews. This place is filthy and the masseuse and receptionist are the same. She was constantly on the phone for the one hour long massage that lasted for only 40 mins. And the lady wanted a 30% tip for something I would barely call a massage that cost me $82. Forget about relaxing, your muscles are going to be more tensed after you walk out this place then before you walked in.",
+          "relative_time": "2 years ago",
+          "publish_time": "2023-07-20T01:38:23.612467Z",
+          "author": "Khal Drogo",
+          "author_uri": "https://www.google.com/maps/contrib/110716562540669664919/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Best massage I've found in the east valley. Sofia for the win!\n\n12/2021 UPDATE:  This spa is just as great as it was when I first reviewed 3 years ago. Recently however, Google had the phone number incorrect so I suggested an edit, using the correct #.  The owner changed the hours to 0930-2100, 7 days a week. The hours listed on the front of the spa are incorrect.\n\nI also explained that an edit would be faster if they logged into their account as the owner and made the changes themselves.\n\nEven with a busy phone or many walk-ins, I've never been shorted on time for my massage.  Sofia has always given the allotted time paid for.",
+          "relative_time": "4 years ago",
+          "publish_time": "2021-12-04T23:10:28.267112Z",
+          "author": "M5Guy",
+          "author_uri": "https://www.google.com/maps/contrib/114725413040789878682/reviews"
+        },
+        {
+          "rating": 1,
+          "text": "How in the world is this place legal? I got ripped off. I was charged $100 tip on my credit card on top of the $80 I already paid for a 45 min massage. I have had lots of massages and what they do here is definitely not a massage. Stay away from this place.",
+          "relative_time": "2 years ago",
+          "publish_time": "2023-07-20T01:43:31.327576Z",
+          "author": "Tony Soprano",
+          "author_uri": "https://www.google.com/maps/contrib/108394473614701467528/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 82
+    },
+    {
+      "place_id": "ChIJ70kI21YGK4cRE9XiyOnQAZw",
+      "name": "Your Health Station",
+      "phone": "(480) 897-9495",
+      "address": "1700 E Elliot Rd #1, Tempe, AZ 85284, USA",
+      "category": "Massage",
+      "types": [
+        "massage",
+        "doctor",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "review_count": 19,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=11241495847409734931&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 22,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 10:00 PM",
+          "Tuesday: 9:00 AM – 10:00 PM",
+          "Wednesday: 9:00 AM – 10:00 PM",
+          "Thursday: 9:00 AM – 10:00 PM",
+          "Friday: 9:00 AM – 10:00 PM",
+          "Saturday: 9:00 AM – 10:00 PM",
+          "Sunday: 9:00 AM – 10:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T16:00:00Z"
+      },
+      "photo_count": 4,
+      "photo_names": [
+        "places/ChIJ70kI21YGK4cRE9XiyOnQAZw/photos/AWCwydhrvEtaAEXGwwhB9q9D7CWkjl3eS_20CieOcXacRbZ4ctf0fEu6Kw74u_1vVgaUA7Ry1KnUiku03OoUNvAqB1W3EuCPYMAXWFp3O_VTaP7DrVLZJB5n0VXdFY3HY-1YubE0xfwER1ZNYe3iTP5vrqe_46EHVY3qIyQPqEkfWgszq-PRWfzf-HaV2E4t43HoNEgPQ_DsG9MY2aV3kX4XNfj3ahGPpPTcErK-Xj5jBDkghXzU9NQOB8PQMCIN-xbh8Ii2Hnnu_CYEqxyg00sN51VNS0mmkITP9ERhJQRdvlXs3is_Evbva5LdjTXqsZHPm2T86NgTKS-pGOsIxQYRr3VHoZh9KZkDYSn_WhQy9JRZl6RbRN69N9eDcvRQipLN3cyZ2P3I8Ko2BG3_j3kzJrgOZSZQPNB1_I94kG_BiERnXBeU",
+        "places/ChIJ70kI21YGK4cRE9XiyOnQAZw/photos/AWCwydj-NhZ8KuCo9cXqAK0Z2PLUITbpUFQccR0Juz2e-51X9sv222oPjrgTJvTdCSRyrJTeH2RDdvphRUxpqQkHtwDE8CL_FdLjLJdxmeFAq830oDxpGTnYBZlVJ8OEbrt815hcfc5MWxuQjkkMuOu14ub4u_5mvKcxBC3mjhwEm0ivtiEhoxmKvk3e7FP7PvAtayaBjcciBg7mEH2wqOat9e6oUyAAi941Xn_1AhyXyg1xorNFX7q5vTQu68DsOf-Yd2WLTgFP63BvQluJuOdZxdIEt2wbi-KuLI48_uHHHW_CKxc-8WpDZXGUfwjscAanJowqSej7w6z1O_gonHvaIkNuSKn6qJB9PfZ91ZBPuzrvafPsj3agv0tpQKx6qnY3BEmffRYnHd4ewW6rX1HZPcTOm-L_xukovuuIKbWcs9xAHw",
+        "places/ChIJ70kI21YGK4cRE9XiyOnQAZw/photos/AWCwydi4ya7ZRZC1YDTKXVjbhh8039b2Ek5p1RsVnWm4870ZD-wETimi5t6Ot7FhvlRznLr3uQfg2ynTXouFTQuxCnrcFqhwq4Dp6vHyZvneRwOHODAyA7iGxPr3KhLKobzKnftz54UL-sbw03PD_MGhjrQKXvhErtwG1ITMyXhXwvPCbH6jBES04FelM18ZnNb4oAPuKjzzSOtRzlpFrgAWCjlceaHq_hR2Hwc1e9L0Y3M2YGr_KxTbxai-eGrr5XZNPsfe0r0s9wXSsOz-SwtYrskS6poqivEjBCFbllLcF2cXLlMVy0-CGX_stqEgZ218dyUfdXgYS5qdkwbU0ZGefYWZsmnllPsE_5PTmhwdXo5HBe3bMXAB13oPL4y8fBZlTx8fkgjqD2AUfbg-77gNipI3VdagUq7T9dhiklyZ9UwYE9-m",
+        "places/ChIJ70kI21YGK4cRE9XiyOnQAZw/photos/AWCwydgZpxWruc5mdkdddD5Wd0P2mYTU7rk1JMbZ5cmbUb-adCOHEyvfI4c2X-VkHSRjaT7PxwKUBGafMWbISEOPySOYvr5-6hNQNzz9NWpG904ivBx50Tzb65aMMoJn1yEZXo3NAiaiwvlDGEjf1DKbco1_voZUjNtt1TCPYWgCJimpfmGenpL2wNIfAEpkByI2trIjEG8fgiEd2hE04fzUZhMSkXdvsnH4bnmI5dfsSi8MYJopmGX_0yVO2ocsB44SUw1Cm8WgJ5s_BvuNQiZyZaGDj7k8dTg-iTru5_qMsT7KTo35J8nnfuIiX0nKEngmJPlunm2iK-HvZ18w4IiC_-r8-x6xVAx1rjTF9eaPeLjz1joBv0lbtj0TtSESOtIWC2W2G4XWp92RXz3dLz15SGYud8Sz0rovfGClIOBrEuxdSg"
+      ],
+      "reviews": [
+        {
+          "rating": 1,
+          "text": "I went here a few months ago and they asked if I wanted two girls massaging me. I said \"sure, why not\".\n\nAfter they finished, they all surrounded me and told me that I needed to pay double for that. They trapped me on purpose knowing that even if they actually did mention that it would result in a double charge (which I'm not sure they even did), I wouldn't have known because they mumble in a very strong Chinese accent that nobody would understand even if you ask them to repeat it five times – had no clue what they were saying and eventually just had to say \"okay, sure\" (I have nothing against Chinese accents but if you are running a business in America you must be able to properly communicate with customers that don't speak Chinese).\n\nAnd you'd be able to tell my the sly smirks on all of their faces that they weaponized their strong accents to subject me to a hidden term and that this is a common practice that they are used to.\n\nOn top of that, they had the audacity to drop their jaws when I didn't tip for the second charge as if I didn't tip good for the first charge.\n\nOverall, it's a grimy business.",
+          "relative_time": "7 months ago",
+          "publish_time": "2025-11-28T20:05:24.368319298Z",
+          "author": "CHRIS V",
+          "author_uri": "https://www.google.com/maps/contrib/102044328294325204351/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "We were walk ins and were able to get a couples massage right away. We received excellent service in here! The massage was amazing 5 star, deep tissue and she focused on the areas that were sore! I definitely recommend and will be back!",
+          "relative_time": "a year ago",
+          "publish_time": "2024-10-24T02:13:18.888165Z",
+          "author": "Edugie Idehen",
+          "author_uri": "https://www.google.com/maps/contrib/112187877401742161511/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Have been going here for about 2 years. I always get a 4 hand, 2 hour massage. Rita & Annie are fabulous. I like a deep tissue & they are very intuitive as to how deep to go. I leave there feeling younger every time I go. Highly recommend. Just tell them up front what you wish from the massage.",
+          "relative_time": "2 years ago",
+          "publish_time": "2024-03-18T21:06:07.861750Z",
+          "author": "Bill Bliss",
+          "author_uri": "https://www.google.com/maps/contrib/111405057408649885525/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Best massage I have ever had. I have been to many places including chiropractors offices and Dr.s offices.\nI habe had several back surgeries and now the staff know me. Of course I have my favorites, you will too if you give it a try.",
+          "relative_time": "7 years ago",
+          "publish_time": "2019-06-03T06:26:13.196628Z",
+          "author": "Dennis Lorance",
+          "author_uri": "https://www.google.com/maps/contrib/103705381600382210436/reviews"
+        },
+        {
+          "rating": 2,
+          "text": "Nice people but massage was meh. Got deep tissue and spent about 55 minutes on back and 5 on legs and arms and didn't even apply any pressure on legs or arms. Basically put oil on and wiped it off. Tipped out of kindness but won't go back.",
+          "relative_time": "7 years ago",
+          "publish_time": "2019-04-22T04:04:59.197038Z",
+          "author": "K A",
+          "author_uri": "https://www.google.com/maps/contrib/117323099437371521314/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 83
+    },
+    {
+      "place_id": "ChIJtRvkdmcGK4cREj4gYcAaQY8",
+      "name": "Massage Hall",
+      "phone": "(480) 737-1257",
+      "address": "7420 S Rural Rd B6, Tempe, AZ 85283, USA",
+      "category": "Massage",
+      "types": [
+        "massage",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "review_count": 88,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=10322561234475433490&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 22,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 10:00 PM",
+          "Tuesday: 9:00 AM – 10:00 PM",
+          "Wednesday: 9:00 AM – 10:00 PM",
+          "Thursday: 9:00 AM – 10:00 PM",
+          "Friday: 9:00 AM – 10:00 PM",
+          "Saturday: 9:00 AM – 10:00 PM",
+          "Sunday: 9:00 AM – 10:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T16:00:00Z"
+      },
+      "photo_count": 4,
+      "photo_names": [
+        "places/ChIJtRvkdmcGK4cREj4gYcAaQY8/photos/AWCwydhD1FM7wmcMfvZ0_Hq1T-nUtUPKmhi_jLw1_mo34hgITvrTOsvtDRWtGgorqSCovMXtxvGRBzczozrraSwd5f6JlxbR9QBbN6LyqK01DkN5AcMHU9TWzeERfgQeymSGOZG8anucJd0zBqFT8uTEc8QQ0eEHpHrSQBoN7ratl29pv_ruADje96QxPoeNk-F7yAX-90pnYgyhapWJ_okewLpCT9Y8o5wpP1EfZ7RS_9F2E9IVqRyIHgPN_0XIIpONJfjtNwdbD8-dZFuGlppGXw0WyKLiKlz0EpfkA_N2PzXUTOXwXFXQLtxOs70bXR0gJxeLRp91qt7b3Kz6eWg0_q11DfDNQtdrZzelV4CFCJphKDJp_7Lc_hp7NMbtDhQpOyQIXb6XDKEy_zm0RyIbGd8zzejmcL_rC4BMvckuO93o5vwE",
+        "places/ChIJtRvkdmcGK4cREj4gYcAaQY8/photos/AWCwydg-5vkJVTJRG7YknohHKeTfLPr0wDt84sHJg4XemLz7Nl77FL18abHLdDeagEhoQMyEtmn7vhXxws3MON2-iP_UxFcgZ1Ea8BNy5rdInComNM3kKaFoqZKRDCYuht76-0g_r_7BpngLMNzbyTHs-dKsvKvmo4v4arSAmUWfocDU2NzkpCV2FFwsv_iPYcg5b2W4mUg-wFxwM4gneVUIoQQgMKRkxVtLsricu8yXi682MW3YuOjbVr9-gYrzkSLy3fTHxFtlWaqls59SkeceusSA-yJBvUF2TgoPvaqHilz2c-XaJp_LQ03srDhrz9CTn_8UPKHZKjB3M2W8T3loF4sBgWARoJRzaZE_zIU58AHHIXwX4syXR0is6SjQE-JLCAvQPZCdBygaoAju5uwGlOmta9BmOe4_QqM1Zl21YATC8A",
+        "places/ChIJtRvkdmcGK4cREj4gYcAaQY8/photos/AWCwydjAq2FxDmEXgtx4LeUng115WauqoSF5QUT9wRkw8orea6FNYxkWoQaSA0Q680mi6QLAZj4-9YzN09MPDhQDfyc01meitKdLbR8mSvXtOXL2VwtCHFTmqEJg8fMGCaXJV64ZwxAs9Qd_fZX7855agqXEHk5sy8u1qlmYyOpPdQ9XqCTRtqbHbXQtltZzumke8gXXTE54vOPao1tcyfewUEKq2hJkIzEa3IeYoSTwPLLhMeEu9vNmHcz1ERUhB99kmeQwVduRDiBgiDfZqGaDzlJWPtBxl5gPKODslMozrgkJz3monsCxbjDRo2HHum_QbpfYTD2eqQxYjazQsLiD_Z8nmSi2aSosbFboXNg-UestL9OehJTRdhVsXb5x5D23Z71LnF9I8LgFP4Sep8Cyu81eils34rojU8yDcDuEoc8",
+        "places/ChIJtRvkdmcGK4cREj4gYcAaQY8/photos/AWCwydgm9qXUXUkQTx3frSX3TfLZCuCiFAEcF3mRMCsDS4f1XmZeBvOdlsDuIthip9jjcBF-Sd1lkBSnui5l2_S8ApCiH5zyYOpsBophBF5V5njHRH3RPJHvQBdImBl0ZVxD3ifrhADdmXbYVk0vo9kQ5PCEfRpZshZrb_YXmnmXWzx-ndZzYimztuGKANdwfH1B7UibDn_1IvGCq7_u4te1b6egkTsyoga041Iybzoedlj3P_3LI5ixmpnhgeV9bsckAji7FDkpUL5FedkN1RFgcKxzG_x5XaNWELP3rFxoCuqIjQA2JyVuzDn2f0QdU1CcXnUg4iY4FOjk-n1ktjFU58t7NZ67cGjitQ2BFbF9tFJaiMVNGKcn4bZqiHvvbHcrYb81wpMUVKODD5W6jt4VmGkSl2yKofSnluELppkR_WP1ocoggfljyJCSh5oKvmHA"
+      ],
+      "reviews": [
+        {
+          "rating": 4,
+          "text": "I signed up for a two hour body massage, which was extremely pleasant overall.\nThey use their hands, elbows, and even feet! It was a different experience.\n\nI do have a bad taste in my mouth about their pricing. I understood $160 for full body massage for 2 hours… which to them DOES NOT INCLUDE FEET. So my feet are out cold for 2 hours and near the end, she asks if I want to add feet for 30 minutes. Which, I was pissed  because no one told me feet were not included so it seems like a sales tactic to get you to say yes after your entire body is relaxed but feet are left.\n\nI saw the foot reflexology price was $60 and she said total would be $220. Come to find out - that’s $60 just to add 30 minutes.\nNot the reflexology. The 30 minutes included her rubbing lotion on my feet while being on the phone with her other hand.\n\nTo make note, the phone was vibrating and being answered throughout my entire time. I think that’s unprofessional, but who knows what the circumstances are.",
+          "relative_time": "8 months ago",
+          "publish_time": "2025-11-06T19:48:58.062871377Z",
+          "author": "Yana",
+          "author_uri": "https://www.google.com/maps/contrib/113079156730567684018/reviews"
+        },
+        {
+          "rating": 1,
+          "text": "They were only interested in their money. I told them 3 times about pressure etc cause I’ve had 7 surgeries don’t listen sitting there talking too each other whole time",
+          "relative_time": "6 months ago",
+          "publish_time": "2026-01-15T13:05:17.034820300Z",
+          "author": "Matthew Morrow",
+          "author_uri": "https://www.google.com/maps/contrib/102710031637478126735/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Very professional friendly staff and what a awesome massage if I lived here this is where I'd go everytime. A big thanks from David from Australia",
+          "relative_time": "9 months ago",
+          "publish_time": "2025-10-16T04:51:19.544486522Z",
+          "author": "David Stanton",
+          "author_uri": "https://www.google.com/maps/contrib/104831455316967955435/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I had a 60 min deep tissue massage with Jo y (jo-yi)  I travel extensively for work and it was the best massage I've ever had she worked really hard to get out the many knots I had in my shoulder I was very appreciative of her dedication to her craft!",
+          "relative_time": "11 months ago",
+          "publish_time": "2025-07-29T00:52:40.207745789Z",
+          "author": "Ashley Allen",
+          "author_uri": "https://www.google.com/maps/contrib/114689774163955321357/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Mia had the strongest hands so far and I’ve been coming here for years. But I don’t have the knot in my shoulders and neck anymore! Thank you, Mia.",
+          "relative_time": "a year ago",
+          "publish_time": "2025-06-30T19:23:16.402173957Z",
+          "author": "Are You Done With That",
+          "author_uri": "https://www.google.com/maps/contrib/114956109629881736529/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 86
+    },
+    {
+      "place_id": "ChIJ7_NNUOsIK4cRWkGqRvnZG_8",
+      "name": "Water Lily Massage and Holistic Wellness Studio",
+      "phone": "(480) 636-9168",
+      "address": "1801 S Jentilly Ln, Tempe, AZ 85281, USA",
+      "category": "Massage",
+      "types": [
+        "massage",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": null,
+      "review_count": null,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=18382525968698458458&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 14,
+              "minute": 30
+            },
+            "close": {
+              "day": 0,
+              "hour": 16,
+              "minute": 30
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 19,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 19,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 8:00 AM – 7:00 PM",
+          "Tuesday: 8:00 AM – 7:00 PM",
+          "Wednesday: 8:00 AM – 7:00 PM",
+          "Thursday: 8:00 AM – 7:00 PM",
+          "Friday: 8:00 AM – 7:00 PM",
+          "Saturday: Closed",
+          "Sunday: 2:30 – 4:30 PM"
+        ],
+        "nextOpenTime": "2026-07-15T15:00:00Z"
+      },
+      "photo_count": 0,
+      "photo_names": [],
+      "reviews": [],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 80
+    },
+    {
+      "place_id": "ChIJM8Pg9D0GK4cRgQ1zqrHZiF8",
+      "name": "Awakening Nu Energy",
+      "phone": "(480) 228-4333",
+      "address": "Tempe, Chandler and, Tempe, AZ 85281, USA",
+      "category": "Massage spa",
+      "types": [
+        "massage_spa",
+        "massage",
+        "spa",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 5,
+      "review_count": 6,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=6883991387527908737&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 17,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 5:00 PM",
+          "Tuesday: Closed",
+          "Wednesday: Closed",
+          "Thursday: Closed",
+          "Friday: Closed",
+          "Saturday: Closed",
+          "Sunday: Closed"
+        ],
+        "nextOpenTime": "2026-07-20T16:00:00Z"
+      },
+      "photo_count": 1,
+      "photo_names": [
+        "places/ChIJM8Pg9D0GK4cRgQ1zqrHZiF8/photos/AWCwydjOlOBdSxeQ4WEuM4IykWf320-mxlNUasIbzKSvFy4G2mWq90_rp7dn4H1uAIVk7yHhKoTeTqcS_6yb9W5RgRuJD9bboShKrf9IwZl16PM31fSnY7o3SgSFr0fdDlKIpDXOKeHJTRDY0okUQEcEBf6TXbNqEDf5OaF8iKK3822GSAHmsCUIl_QY4F8lme1ch5IhEVu_jk1TQQxhsEmha9KetCigVFWgY7Vh08BxDuW63x5AJXIkLhf3pptoLql9l26BOGAPBUIVrvHfw9UkKzAtbLov94sDLklv9a7dg8XB1wtrDRTczuP0bzmDDsayLndYMnUnUVut52lCBLIyhACXrI1Pku-z3R7VeY-flpPBIbxv01DpTmnVy3Yk75O2mclDBFIWFsF50cxIlDaS7VHqsgkK3FGWgjaxg-KRJp8"
+      ],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "I found Pamela at Awakening Nu Energy as a result of looking for a scalp massage. It was an amazing massage, and she has a very calming energy. A major draw to her is that she specializes in a variety of massages that are hard to find elsewhere. I would highly recommend her!",
+          "relative_time": "3 years ago",
+          "publish_time": "2023-01-24T05:17:07.665554Z",
+          "author": "Stephanie Salisbury",
+          "author_uri": "https://www.google.com/maps/contrib/108738290461847072369/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Awakening Nu Energy (Pamela) is amazing. I have had massages at various centers but I would rate this higher than all of them. The neuro muscular massage is really beneficial for not only relaxing but taking out knots aswell. She knows the sore spots and works on them well to clear it for you. I would recommend to start with 90 minutes as then there will be enough time to work on the entire body. Right from booking the appointment to after appointment follow-up everything was seamless. Her studio room is clean and very nicely setup aswell.",
+          "relative_time": "3 years ago",
+          "publish_time": "2022-11-09T17:01:59.857080Z",
+          "author": "Apurva P",
+          "author_uri": "https://www.google.com/maps/contrib/115778179954803828957/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I've been getting massages for years, as well as studied at massage school, so I tend to be pretty picky about my therapists. I've had quite a few therapists over the years, but Pamela is so far the one I keep going back to. She's very sweet and she is always  in-tune with my body and where I need work. She's taught me about neuromuscular massage and her massages are definitely incredible. By the end of the session I feel like she stripped every fibre of muscle on my body with intention and awareness. 60 minutes with her is just not enough. Not every therapist is going to be a perfect fit for every client out there, but I believe Pamela is worth giving a shot. I tend to roll my shoulders a lot, she always does releases on my upper back and neck. One time after a session I was walking around the grocery store and didn't even realize how naturally my back and shoulders felt, I was in perfect posture and I felt so free, open, and amazing. Pamela is one of the few therapists I've found that manages to maintain presence throughout the entire session. I can't recommend her enough!",
+          "relative_time": "12 years ago",
+          "publish_time": "2013-12-28T14:43:03.415904Z",
+          "author": "Terry Drengson",
+          "author_uri": "https://www.google.com/maps/contrib/107170116931316526750/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I have been going to Pamela a few months now for massage therapy. I have fibromyalgia and also have really awful headaches. She is very knowledgable about the body and mind. Her massages really helped with the headaches and my body pain. She is the only masseusse that could give me relief in my shoulders. They were extremely tight but she worked on them until they loosened up and they have felt so much better!\nPamela's personality is so calm and warm, she makes you feel very relaxed. She is just a wonderful masseusse and a great energy to be around.\nI am also excited to start hypnotherapy with Pamela this week. I will report back how it helps me and the results I have.\nI highly recommend Pamela.",
+          "relative_time": "12 years ago",
+          "publish_time": "2013-10-07T05:15:55.725424Z",
+          "author": "mhargedon",
+          "author_uri": "https://www.google.com/maps/contrib/115930231212891945256/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I have had severe neck and back pain and was unable to sleep at night.  I found Pamela through Groupon and decided to go see her.  I was amazed at what she has done for me; For the first time in a long time, I slept comfortably through the night. I  can not wait for my next appointment!\nPamela's technique works out all the kinks, knots, and muscle spasms without painful pressure.  She has a spiritually beautiful soul that helps relax you in both mind and body.  I plan on staying on a regimen of regular theapeutic massages.\nI will be recommending Pamela to co-workers, friends and family!\nGo see her today!!",
+          "relative_time": "11 years ago",
+          "publish_time": "2014-08-05T18:01:17.432827Z",
+          "author": "Karen R",
+          "author_uri": "https://www.google.com/maps/contrib/110383341211620610351/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage in 85281",
+      "source_file": "leads-massage-in-85281-20260714-233335.json",
+      "source_files": [
+        "leads-massage-in-85281-20260714-233335.json"
+      ],
+      "collected_at": "2026-07-15T06:33:35.869234+00:00",
+      "priority_score": 85
+    },
+    {
+      "place_id": "ChIJdQkB9xoDK4cRjK62UzqeMh8",
+      "name": "Shawna massage and spa wellness",
+      "phone": "(651) 279-6468",
+      "address": "5040 Wild Horse Pass Blvd, Chandler, AZ 85226, USA",
+      "category": "Massage spa",
+      "types": [
+        "massage_spa",
+        "massage",
+        "spa",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": null,
+      "review_count": null,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=2248033137361071756&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 0,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "photo_count": 3,
+      "photo_names": [
+        "places/ChIJdQkB9xoDK4cRjK62UzqeMh8/photos/AWCwydiCOYRc0uVxxQfbnbhdeSTanFe6pfznrmkVBkt-mLc6H8d5M0yV-1wF9FJMFEKpHYQQio0Hxp4p1Qka3AO2CTnm52qYmiwkSiTXQNiV93-T7y-kLXiN5OCmYpOCBRvRllg4pgvUxDJ8PaxKzK02qj3Go8Yx4JFKcEZaGSAPrxTNjMi-WdRV4YZfzvN8zUVEcK29vW-mj3Lh4fsDttrcwjnqxhReOZ__9K2EP665nE6kc7tJaOjJj0MV6vUng3Uklk4fCLe-TRACAZ9QI-V017u8CAXvqOEgby97VkpV7rFh-gpnPQ92FbcvZ_uVs0phFpNycWBZPjI-YzopYWWBEa4Kv_-8zw4Ny4BZ2qUgLo8MzOftXgfDSXoYP2lFnM4nquWezKEOF5XDe1ehz3vgb_TrITed68lMqeqJfmWXe1-BkTtNZdA41UY4w2xmlpcl",
+        "places/ChIJdQkB9xoDK4cRjK62UzqeMh8/photos/AWCwydi3GUoaiqkf7qeCgBMB5T881EOGNqKV1HMUeFANokt1IUyks_bsxY9Z37hBa8jZNSfiLOyxPFQxc7Tck3suvITYN9q9DjPPkqKOIeoIUIz7AUMVa236k78JGS7WedcqUK9NgucSZy2t9NjgDV_hAFsjtn_vZ6fcwyuYfOlzl7f_IZK1jwTmxmKlRCWu74yd31fHy1doVxfgvSBTTLpBzu2Klyn-byG_sccTENdT79MRbR4280DzzabNZWLffX3IlQOvIvZJkP-uFVzO2rQeYvf-lKpy9dOW5e8Vqq40VQriBDcc_cg1BqmVRsozh2f5ZFLFZHMiijD7MiSNCOR2GL_rHhxlnRtZJHq7YMn6Yjek2tD6xsJn46FOb_YwcHaGflkf-zyYIIIhYAlYq4o6Bl4rIvPGl6ifZUm3FdwtQXO86TntiB77iowm0yQLOu1h",
+        "places/ChIJdQkB9xoDK4cRjK62UzqeMh8/photos/AWCwydj01r8W2xHGg97T446TbbegAfSicFHcJ7tqOjoYlgp803QEZU6NnntBHuhJMKphoHXLSJR4AP5_d06dIOlFDDUij5eDkCa4ZnM2_trQ4_B2EQ5YL5NaINWmib25RaZGSMyzkJhjU86xPymTo7LsuuLl_vAOxSiWIGIFx3gh7cEruEnJNivpWbfdbckftXpZJ9RXGOoIui8Y1OIdZDmlaYrtohQNVLq6E9A36PGSGhdH6HgkEMZfhnBbqHOs2ucuvQTsfEcQM5lZwdpn7HE6rgZBhy_8qHJoVbFr_m92nxXA0Th-rvKe4ICX3hxYUXLA0lBclWsSuGY95QMgEJ3EEUAkLTSZMJilJGCnTT_G4abdk6JWsC4Khtxdn9_m_DHQmf6btklVMxfYP6nDTgF484L9up59iX6EwPl-_KjX0lzJKtJlIv_Ctw"
+      ],
+      "reviews": [],
+      "social_links": {},
+      "query": "massage near 85048",
+      "source_file": "leads-massage-near-85048-20260714-222004.json",
+      "source_files": [
+        "leads-massage-near-85048-20260714-222004.json",
+        "leads-massage-near-85048-20260714-222841.json"
+      ],
+      "collected_at": "2026-07-15T05:20:04.554602+00:00",
+      "priority_score": 80
+    },
+    {
+      "place_id": "ChIJ5-Z8UooHK4cRBWnk3Txlovs",
+      "name": "Deluxe Massage",
+      "phone": "(480) 821-0994",
+      "address": "3875 W Ray Rd Ste13, Chandler, AZ 85226, USA",
+      "category": "Massage spa",
+      "types": [
+        "massage_spa",
+        "massage",
+        "spa",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 4,
+      "review_count": 97,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=18132166361842215173&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 22,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 9,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 22,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 9:00 AM – 10:00 PM",
+          "Tuesday: 9:00 AM – 10:00 PM",
+          "Wednesday: 9:00 AM – 10:00 PM",
+          "Thursday: 9:00 AM – 10:00 PM",
+          "Friday: 9:00 AM – 10:00 PM",
+          "Saturday: 9:00 AM – 10:00 PM",
+          "Sunday: 9:00 AM – 10:00 PM"
+        ],
+        "nextOpenTime": "2026-07-15T16:00:00Z"
+      },
+      "photo_count": 10,
+      "photo_names": [
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydjwJ0jlbzq4ymWQSEgbBPzC4Oc9aVecLnwCHHuxqqhoavylPYNFCqsT5X-0Hw6D6YFKPfr0mhcvIx5hB_3Au9Uzd-dMQv5D60LfasdGM4LO8UayMqSQTeuF9-wvILjycH_8TuVbARJXKhLIhd3DMvqdq4CIspXKy1YIUFrPVIjuNgqs6SXGcbLWf6hvWdRFiifByMesvDIaV28dUs-4X_TmUV9aAZUCdzHGauHPw4iIvPXrMZpqIU2rM_pM6qmBwlqQJ-JNxvOMngDk18xqPpghW0SWrsISkcLq8jxAGXCAfwhO5nParEFylPV2Jfnj6MVchLkyQb2dpZoiyCwXlLuw7P-ag--96niXa6Ej2qQ9V0uljx70AHiUhvc5l1Df-_QB101LYBKQ869l_18VLnM7yM8BP3HaQ0ePf0RsgyMx0f3U2rNV1322xDGLyhpx",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydi-k0aQAyNiWfUg6ugFjfgVjklsmE0d8iLI0vVjgPhQZPvxvFL5P_VQZ0khNh2OeAVaakKKfY-I_-EAbeELPXwoT6ZRjPTihBuJnl2o6_LDY0ZJ8UyptXn_-V8divjT-6M2aX2bmsVhgfu-9iOo4ysSkpu4sngrnT_OFvd7RGKKorWs8FZZbRs8d7d6_dZsZUaeOYEjufuVfihaECtcj4PM0_YGqgnw9KXjrtVoP7XkzruA3Wdy7JFQ1EWfIAPlGXyOcihB65fxAPEKGGjQtqrvjeDKAMaZpmmvV_n5Ds48SGx3gRj9tbNcoSw1Da3ycQTsaY7OWfYwajaoKboUtdHsFwUVHM5jnVrh6hOxUwEt78dliE8etfZ_4-btIzVAkw19Ce0YAA4t_EgN4JERY-p8Zs5EQnfEUOhBVRuwdRzGN8DLCa62C4Q0mLmzOQ",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydhTuzSpChuZ3xIYWZ7y3tq258fTsQSDOn9YwxG-XzEwMKs7ujEGekXDNQKMvLRGqIqozmXZchUxIqesrrlALgdJsLqTD71dr8N3t8d7ATpwKMokS_MSeb2nU3Hfb4zN-ZmhyhnVPyKfzcA6bz3ZWAiAzAD_1JtcYVzB2OZWm8nmKkXawyoFOGsZoRckvrfjPmxy6QDUwUETpqZdpQq4Je5GE8jxVL8iyS1CD_4k12q7OQkkz165yvRDrBVvdkeDQBpLKpZu6EDvsNtuTXHNMsXNmmMavd2ow6XSFZiz2XtJVk_2bAkSV3OgWzo9seJufiP1-Nl5ewMJBWg8_bOhAASbBSNLjCAufCmmpy8oASDD-tHR0nltVDT1iPDqyBeLoizRl_r_v09tYvX0VTweYiqB6HdQ8KinP-HCmJGP5I7pnvG2_haJXtDldnB4zSD2",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydhil3GTH_u4Ziq23Cut1OEswOLPOjopxjc431H4o293sWr0-tPGlAgObkPX6bvQcLx2Ym76MA8BqX2pVbKN3g5va2UcpNV6BOd8V6mWl4uA6IodxC5h0mRVPfNxtdKqPRHj01GTrwUhJixU2lh3Va-ZZ6ZuEcZwNGHPTzCjRqT0KuqbrwdAy1jsnJ3EDFRPXMW1UVC4kmDcn6ANNXTkxuypmxV5cSGQLkx_UR1I9hXWgi4RkICxvfnktI8NyX_hU8UMDX5LQVHeLNerlhBo8agtrR5AYYZo_7H8Mi4jV8sSIXDPQCmpbvQ_6BYvdX4WPhCqBk7DTpgpBC4zBdeQC_nmO4YeT-k4zP5IUXhNHC5uR1ZNCkx5fSJNl9T5L_sVX1Kp9TAgg2WqjqmLfs6kHhowO2mqXgG0TVBaHr-pXIUUzJXS5nVadFsjhhTvVQ",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydir1bQZb1_FZQTNrxe6aWA35nauHdcABAQmYJF3VIx_sZFdAda_2czWTX91YxMsQOu-x8_6WfBJ2Q9cpFdy5vDrbPJFhHFhyg2VRMvoW-zxRGjcTVWlBSlC7UVBDodG30svPCBfXAHXSMM3l7_PVEfhWKtFxMCtgJym9zNxdSvwrmP_J82JcmHmKmuizRfBaexIp81wpDZeVwPU-RpEQwkuArv3a1hgrpGuW27t4wcvT7jmucIjXthuK4MAzCe0RunyqjKq3LIMC69keD9uq0ma8ecD6bPCmM9Narhc_gvY0O5pIQqCZYMY_tkP9f5sW2nHUcPAo5Iav87_QS4E2LHMMYEG1WmUv49JaESDolfLvfCqOpzO3i3W6OLcMRjXxNiohZuFFdPCG9jV4tgHZORPAKu9V21nEiXLh5qBpItBeeNf6p-ldZ-ckC-HJA",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydiy2zl2zXHy-An2hyBmrPxSLObSkjs5w2VJXYHzYtNmd0CSsOFP4ZNysJGMMiabQ3t6YP6h1lNgU42G1ey9yVUzJwWINQeHvWi_XkjSB_KXz1-LgtVc6d6jqZlNt41SN4CBRx0X7NKPwOCNE7-oblMtoAd593XBizdWZlWNruQ4VFUsbLAHnKCkRbnC8zj6hCTzqtPyZpMXQbWK8YMr51dd83XsqEVPHmpHNfrDebooMfHIGZUrkmhYeUqYMqkKEWz5oMnoZCc9OfXqI-ZVnRvR8Ra3fiBIcPopYNfEP69QXM1c2PoQ7HQK-Go1679aiubhWJ9VJqk4dEBSyzTQQ2reFdLSEK43-I93el8h92ZmbyocZbB3Ii0frsA-S7SJ49Iykj6mltlZxh1HVT0FAU5WUYpK3r4FRs1R5n8oZ7pQv535Ge8h6utKsu8wWg",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydjEh0-Uc1ExZkSGLE6IreNh5-4VJz_zTWGuUD-4a6YsUAP7__Zpnh2-F8ErKPw7E9V9AGsF_RdhGy--VRwaTLDhwQxG_Az9NtomYPdItncrvm7VrHLPdu0Mwk4Es0ITAmVMlmNzzNKJTRlgIJ0XBHg1qDywvNzciN989zfGzkCuydAyK3nU922Nx0gdRohu3uQJF9VRZBC5t4YqBvsxfwNN9KxHNssRt2pjNkBUw5mxxLMtWko2Q2yIBj3IgMKlsiLjDEPJUgLSJhVETSqb-JuGPHl4mVD1zMiugbV1hjDrNTY2xn9yoUCoEesTFSj_Epivp-rPCIvesz0MZxDbOzujLt4pMU0fyjITfBcz0rVRl8mK4rVYhRx-nyYxS0KJVAmenrUtj11wwboTiyJ8mzQzL-CIy_wBR6yLoKazwPlukwvvE6jp8T8Bo6Zw4nRx",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydhQUHoRo-Fifqx6EoGelXobBOG7qyfb0kPzre6jEP5ZiNpE8mUG2vJ0uowqlyBGcwmYq_yOgJtStP-sgPyop5mwSsPpUZ6IiIElLxk12VfywKnKd-H1IccU6tbu0bpbFoDVF5GwTB8_YquVdusZH2EmjmQS_KWInVbd_fkqWKWg55Xw-KQ8qWQaa9x9pDL8IrQ_p8M3c65nocyXHha-etBOrYW-gkLESUASNqFIXOHzckyWgSiS2WOOVN8t4OUGp0G0fJPbsFnWEbnh-2W-DYP9FrWWSzCmOd7I-szUfBmhlJL5JNEvtxu7Esw-xp7Qq4nE1S_VwuvdWa65CV4Td3xttLXKV-751YAx7l9eVo07GkdwVJp3wx4Msp_0JVS-gbh9kho9or-wkOHq1CubcrqlZ29PwPWk2qwryX8js7eY6eaUPuC6z5GPn0RulQ",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydhes-d7oasnDNEk_5NxkiIdollWgU3bPkHXPhLkR26Xo-LLdwQDdb-kRLKfb8jxy64rCPkx2vswr-r055pCe8qA7T-KQn2AklsR0KlXUUKViLKOKJH4NSdF9xQVYPzLAsXJu7_TlWSx3Y1MY1jXkpCHrF_lVTxt5I4zwXtoK9Zw5oo74v3F32sX_GrtLUgvQmhB2NoRiC524w9WV8h38-yUR78imAfeUbJQnk-d6rt5yHwfmV4bJKW7BLJ2MEyMekHQj1spcKGycTgX8iDLTXNndqumNVC3xFFauAqWOwA-24gcFhJmDThDZzOd-E3PwiWU_6mUOITS3NVVW7-WJ5G58K6LrqEHgSJBAIzXUUhD-EsqKnPJCZ8wWKA9lbbb0KMV-YleX82VRTrwTT68AN9te9rVyg3a_8MkJjZDTl3eQv8l8_PERLZzek46GgN4",
+        "places/ChIJ5-Z8UooHK4cRBWnk3Txlovs/photos/AWCwydhLxWU94uh7gsBVseR6zF14OdeuxByLoGZxkjTgYfC1ew80bhdMeSEKxTlN3BUeA1bDLHATF-ZO_2Bzgp7Z8g1Dm-R39v7OE50iC4jQ3GXlmtROkJ4b0qUZypKohnvNBOhmpnuik1LsbQpZPr1axBB66nyjXy8gkgtb28hxIAXd-spPlkpeON-BqQeQkZXLLPzxMY0pV4b_oK41cHGqoRpgTJpFUuFB8eHGGjGtTqPYRn8feKt471wXNvasla0GyDA-KoO5bKh1TMoE2PpOxWN-6JZZDPdkgcI1BEvVcGc04mIanmGHE8NaME2hm_wNh1J8-5sACWApVZLp3iiAJoa0yBcWm4jBtzfPgN-Z7I9F6EohkF3AaqzjHt9hdh2vcfUG876lC7ypTQFY4bAesl_LCrJ6vz264JrncyELCN0o1KKki3PCdPHJaFzLfg"
+      ],
+      "reviews": [
+        {
+          "rating": 5,
+          "text": "I went to the plaza that it’s at for car wash after the car wash I were very tired and I just stepped in the store I didn’t have any appointments or anything but they just served me right away , i did 1 hour payed 20 tip good deal! , Linda were my masseur literally the best experience I’ve ever had. Definitely will com back again and I definitely recommend !",
+          "relative_time": "10 months ago",
+          "publish_time": "2025-08-31T03:44:27.868006740Z",
+          "author": "Baobing Wang",
+          "author_uri": "https://www.google.com/maps/contrib/115820134835324067628/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Great service, fair price. Overall a great experience for anyone looking for a cozy and relaxed experience.",
+          "relative_time": "a month ago",
+          "publish_time": "2026-05-22T22:18:43.158090322Z",
+          "author": "Subtronics",
+          "author_uri": "https://www.google.com/maps/contrib/105751588348514210084/reviews"
+        },
+        {
+          "rating": 1,
+          "text": "My experience here was extremely disappointing and uncomfortable. From the moment my wife and I arrived, the treatment we received felt very different from other customers. We were asked to pay before our services even started, while we watched other customers pay afterward once their services were completed. It honestly made me feel stereotyped and singled out.\nOn top of that, we waited a long time past our appointment time to even begin, the staff was rude throughout the experience, and the constant pressure and demands for tips made everything even more uncomfortable. A massage is supposed to be relaxing, but this experience felt tense and disrespectful from start to finish. I would not return or recommend this place.",
+          "relative_time": "2 months ago",
+          "publish_time": "2026-05-07T06:35:08.350548227Z",
+          "author": "Duane Qualls jr",
+          "author_uri": "https://www.google.com/maps/contrib/102568867060107450941/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I have been to Deluxe Massage many times and they are the best! Always a soothing spa experience. They are always very nice and friendly and adjust my massage as I ask. Amy is my preferred therapist, but everyone has been great. No need to keep searching, this is your new massage place!",
+          "relative_time": "8 months ago",
+          "publish_time": "2025-10-27T01:17:41.292140134Z",
+          "author": "Shawn Christopherson",
+          "author_uri": "https://www.google.com/maps/contrib/116937057448267574397/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Amy was amazing. I’ve had massages all over the country and she is by far the best.  Very professional I told her where I was having pain in my lower and upper back and she removed all of the knots.  She worked them out and now I am pain free.  I come once a week to get a tune up.  This is the only place I will come to for massages.  I had called several other massage stores but no one could get me in when I called Deluxe Amy said come now and I’m so glad that I did.  This place has changed my life I feel so healthy now.",
+          "relative_time": "8 months ago",
+          "publish_time": "2025-11-03T22:36:33.335915633Z",
+          "author": "Terry E",
+          "author_uri": "https://www.google.com/maps/contrib/113643677084092885059/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage near 85048",
+      "source_file": "leads-massage-near-85048-20260714-222004.json",
+      "source_files": [
+        "leads-massage-near-85048-20260714-222004.json"
+      ],
+      "collected_at": "2026-07-15T05:20:04.554602+00:00",
+      "priority_score": 86
+    },
+    {
+      "place_id": "ChIJ3zzZiGYEK4cREc5olOpYo7U",
+      "name": "Sedona Wellness Spa - Massage & Acupuncture",
+      "phone": "(480) 759-4887",
+      "address": "4232 E Chandler Blvd #14, Phoenix, AZ 85048, USA",
+      "category": "Massage spa",
+      "types": [
+        "massage_spa",
+        "massage",
+        "spa",
+        "medical_clinic",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "review_count": 70,
+      "website": "",
+      "google_maps_url": "https://maps.google.com/?cid=13088402706604281361&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "business_status": "OPERATIONAL",
+      "hours": {},
+      "photo_count": 10,
+      "photo_names": [
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydjvFWUJ9mZu3iv3MGeXQ871XkGJMZNKGz3aRtzz_pr3bP6wukwqarHBxvCLSQsBw5Dn2j6zXt0cAEwyK4t_K_ly9PkIspQlOOje8lUB0JyI8OiIw3UDvConAEnuidLoGRyG0JgK5PR9ENLBsZ71srMp80OjLewx1e3VLqlDmbXnxZa_ShQRSX5L2A3OTA714Yvmd1TqQkKqBklRm_T_ALmnhyPfT0b7omSIaaHphuQiD-vmyHNB3Cn9jsc9JA-UmJjKunWUbOrWmgHUNSt7LHM4rUT8O0qeeMnXjZX1vlg6LuWtpUjI1VYNtwQq9RQZlmLTNNCoBiIkERFSpsO7aagPLy3Nx2nvnWY_Crs3yjEjruKX2nJWIQq8p7mLGI2-E_RDuGKeQQI7JCyWZ8R-qCXwz9TQWiS80410eRPCUco00M8GpQ7iBidJpQRXrn23",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydjJXCg2vW0I_5lLKOh4AdRUBPKQBLqpQasg6EVxLRZdwj6BXQJU-ioUZXRDVgHLAxJbxdfjPxbuo7J4RrgJ7WFTF-SIyuVOrb_YoqQUmfxCZNU51blyTDDzanacIs5OUQW2cPRZHIk8uIPe1xIvaZWwb_qXarQP1dplO6mrzGM_QpkR_tWz2iTVRdQRIm6GJKpizIkkqPOHeLSar5mdjOu2GZtFEX_LNbwSdfVrTKOrq20heocybfLRXS70Kba1FEGrGOWqIULG78YfCsxgqPy9pvE9wc9MvnWozDxqXNk_v0ZCRQp-7c74u7YL-DSgHapoEDt0BsvbDXaqfeZqQkxZc5qBUWL7CA3PjVZCRLlrivXK_3pmBNjNPGwOYbYjgiVeuR-ASVZ60XrEpYbhPSsG55PYqZYPJPAn_YGF3-pH0iHimKxJFlRP_BrlRGN2",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydiY8hmLlKf_haxlyRbLyZNNX5d3rQljv_FzqH86z0cDv0HZg-p4aNqX2td8y7ydjeh3t-J8LHpUwFA2JXJFvc0AgnnPrtuRB8PKOLT4gGEk2rcGFcqkMMxLd3IWhKQZoGV-PNGjItYJxyxNeQqGgNsj4I0kCyLX2lCCqoQZOsQFG8I0AOGaeM3FcuyE9q7pW6BBhBpSCG0GAmD-jKAuE2lrThOh5cJ9lPBUvsM70z0erGFlfYeHb5fwk3x-mnt8YmdkIhjSQcEFqn5vhrH5-ufZX0BDabaFo-qCImFRIMtS0LMeSVX6_opDFdpfYr5_hVAb5D3Oe3AdAeeOASxrVugmI7lVzd1Ks7oVCA9wMxYB0p9t65zlwx3mkKLbSkKgieUCrI14Zvm7sQ1jApeGDjws7bkK1KbY-XFX5ENTQURP9BHu4KyQhTxjbN1D7QDy",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydgUcO65ywRwHDJhNtvWJ2_raeVBjdtLFElGXdX6gOLRaYwpvOqPkLmyml8qP-ftxuH4ONYu-vYWIdnyJSL2JIpWgjB_omUs6h1_YKvW-v6SUil3f0f1KXxSD7xUCpsVhu82YZtQc26U5r29xXMLsjAvBrhHEZRwm1efDHbRm3H903uL3T_mOLlLOfAqKbeMK7WxCdNHDj5FOKenfdcuSbJxIZBHNvjeRRUzA6iH0pE0uB_NWICXdY8gsQ7hNS1QWCcCbV9JiUZLiqOWOzBF8N_3hVZKA3OLJ37Xv8QuX7u_trO8uSCBjznxO_IRMgBbcB4by8recQo_9GPlhB8vh5xD8v4r6g8nAe75-AQIWiWlTiuYApciUTFrjRwITiZiZvB_Rtj5MpzPMyzsQFx6VpPiSTC8h88_Z3Gnn11LcFbrw7sDAcYUiymnuZ18HA",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydhRpYZnw7wSOxkwB_2LHooVuO2b85fAe2utgzAvW2NYdcgFv8LU9OkIBsRujYJTalLq468M97h5WQpuSELYkOUGGnv4ZeU7N71PyCKIys7eD3oqUi5dF4FGwboqQ4eJhrc_EwawvOFPT8IhM_y6aQpoBKqWjjT31_ZZr11AEfDcTIfule-hdLC53NrUX0BI-ruFWeX38yDPR7kNnAY7cUZrUOPT6GuwInquQwyQpU9IBhb0rxTaTNRcPkeL-rkd5rmzIl9vK1AX7l3A9yK6JMIOIARXrNXK9OkogcM-Qa_8y54DYEbQCW7wtKl3NaBZy5LKg37F3YtCyOe4DmRp5dX9wCoa7z_Ys2w340kvWqiJQ6JhuMebowCIqHkre6LQ83A6TMg7ckFIOVWvMZycY3PiPqoJ3rY3zed2gK79RY-4vQOw6h6krNKjloKnfCOx",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydiPHhaKDR9GNyNo_chXk_4f8OiHh_HycCLCXG5Ig9BAY3KIjKjeEpkYCq3y6s53mAx1Q2vQUErX8ldXMVWc3fGRTTBecxTqz6aUPf6LjDN0xJRrgztLck4LNsfDyQaqZ2zADudIxlCShJ-6ldW5TdEmkxkUU79hfZ0-xRh6M71gFUftkCzJ7VbtDyKRjuFxxsKxo-BZ6IPhP2Rxyh7gf6q9YePXK_gZWDgTNTrg-UHOdkdzuxSfgJB_nll4C3s6sIv8r59Q1wjE2wno7e0D1w1UNw7JvwXSpUSxRyh1orLvUCfCsoVKI1g0ochu_FzcgDAISUp8Jj_QCFDx9wLES6Iif_0mxcFwihVKOemJyd-qgFxTz-yk8y-kUQlVM42ey62_Vj80F9Dl511DK3iiICSnfHwu4C0QGCBZpNSS2UUlTBmsm6DOuSZyAxmBmbux",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydh63ahEbnyr5ck1eZ-7mUnVop8imGWmZW1hWS4plKVuOJQDba9WIr_D3l8L2pgN7GPrvjKYtySfL7sYwgRRm2yENdveclSxxYjVUIK9aSNRnl9UNXjorwdxwoVtn7PcJYJ3ckZoNmKqDZXcQMfkx7yJMGQzd5T6wymWmPgMjxcpvfGI57m-oFhI-w82jRmyyaDHxb_LukgIrIwHP6qC8-oCn4J4FR-ZD3EWPTLU_QUWGXRISlrnET-NDhLsBuHd_wrNh2gYvD705gIXhQ2co7Fsh2k9aqG8IUi_LRnNNmWSV5nRtUqMBpylQXYOyzFoKg0hNROvssyeBK2-u_4eCqdSGSr70c2KutxNHzuv0yV7FXw47iyZTqGhrxgPgJ7ioNqwSrci3ja7Q5steu1NPb7eTXC9jOXpSr8rjeQnC2xPAqXFqIkpkqWj0NryO7_d",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydg62tsDXXD7BcEEduGokan4YydJLED5kDp1fnMw-JG3c-wC2dhFI0xIigYi2zyOIgDMK6ptVOkfP7KuMhJJtikdu0vLpeRPXIIC-h0qV3Kj_55dWIEdecysRrX8UbZ0Wxxeo6XQqDDNVHqbDDg9aKnV3A2JEzC7CWRt84WEOJ4aIIruvAuXIuZJREW8YNtVQko7C0pzk7BkrDcIOHd5eLU2FiYY2JHhkbamGC1EplfUYD10rVHu2RN-pRgSD3y3kmsCgejQdrBXxAMOp4ZrKuy_z_t0XUVA_VN5GII4KaEqMSmc4uCUsZnDQJ7Si74nl2V3cRVNLF7CtL_jzTF7D5HFmAsdvTmIv9FPiElg2-OK6Wu2gpX0b2VmAZB7aUlencf_Qx-lSSpNdN34TOf4ME7B-fDf9KaES1fZiMbqT10Dow",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydh-Xxz4SRqNIRobu3dEPLPEVdy8rsQguuQhtMVe5uOp5sWFggQd7DtTaOvKeX72USaRIpJ__VVpXCGJPoJp_gI4Vk4Oobv0Kb_43q1qUntbvpfRMIMftpqO7BfAY0b-VoZkJVUsEcyYaDc-iLMYM1hNMptLF9uZ_b7SbbMK6JHwrEEypdeaq0IWQRI1Gy7DbVc0HYWsFlacHI86yuoLWLk-InT8--wAfdhOSfjaRRBGLcwYhyoOvR1JVpFV7mzvMpY-DLtijfM7FCdBZo9jRVvpIXyBhndEglqrICq15hEGQjn8lDlflqfjQEBgcZu0g0jkdW3XBc6pqoXLN0YlvzY2wHyIH3CQl4fPgRh15188I4rNUPHzx5Q7CAEEqXMMAxISn5QaoFMaYOKGT3Pj2UxFBAW3JEu0fhkz1ysL2elQSAFVxef4CVW-v36JTw",
+        "places/ChIJ3zzZiGYEK4cREc5olOpYo7U/photos/AWCwydgMd_K88MVklqKr_3_RGNLGUGl2b2Vq3s_ptUUfPntigaw7agyKNOi_A99YlBeI8sPTlzd8xkaXroSGJ5kMGjwHwX3eW1omHTjIgBnMPX2nhdBreEaj8iCuWWtRgp6jlrh6XBhw1MEGqPNd3XjrtQZ6DIb9hrxmwbh5dZ58vKjbjVNTVsZ14Yw35mp4_5kUEKZRYPm80_jF0_1BP-fsjYXW3dGw6AZ1bH7NVm1dOMRQltwRqXswKV9USVmMZceO_hLYiuiQf4wO8tER_dfGgshqdTLHQ4L0xrO8o4q_CAkIGP_REzRZi0VY7HL6eyq6G0QkY6DNEyRma4GfKXrck6sAFtisqP76pYqj8xSv5stOuXoD-tBH2HJtffgO3dlRraJT8Y-aKzUySwQW0BWBhFjRpwSKsA-iziwyZnFlSiPNDrucnnUw6Gy4ijBJVA"
+      ],
+      "reviews": [
+        {
+          "rating": 1,
+          "text": "I really wanted to give this place a fair chance because a client of mine highly recommended it. As a braider, I get massages every two weeks to keep my body right, and my normal therapist has been booked — so I decided to try this spa again after a disappointing first visit.\n\nUnfortunately, today confirmed that this is not the place for me.\n\nFrom the moment I got on the table, the service felt unprofessional and uncomfortable. The therapist didn’t useany lotion, her hands felt unclean, and she didn’t seem trained in proper massage techniques. She was pressing directly into my bones — even after I told her multiple times that it hurt — and the massage itself felt more like random pressure than an actual therapeutic session.\n\nThe environment also did not feel private or relaxing. You can hear every person who walks in and out, doors slamming, voices in the hallway — not ideal when you’re naked on a table expecting a peaceful experience.\n\nBetween the lack of skill, the discomfort, and the overall unprofessional setting, I decided to leave early rather than spend an hour in pain. The therapist kept questioning why I was leaving, but I simply did not feel safe, comfortable, or confident in the service.\n\nOne lady tried to make me leave out the back door even though I was parked in the front. I just stood there looking confused and then she said OK go ahead and go to the front and they unlock the door.\n\nI don’t leave negative reviews lightly, but I do want to warn others who value professionalism, training, cleanliness, and privacy in their massage experience. Sadly, this spa missed the mark on all of those.",
+          "relative_time": "8 months ago",
+          "publish_time": "2025-11-15T00:30:56.859771767Z",
+          "author": "Tight Eyed Bestie",
+          "author_uri": "https://www.google.com/maps/contrib/105501063600692285217/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "I've been struggling with bloating and sluggish metabolism. After three sessions, I feel lighter and even my jeans fit better. It's not magic, but there's something real going on with the heat and the sweating.",
+          "relative_time": "10 months ago",
+          "publish_time": "2025-09-07T04:21:28.730463243Z",
+          "author": "Tony",
+          "author_uri": "https://www.google.com/maps/contrib/105767593016010152530/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "18 years of business.\n~ They have an amazing variety of deep therapeutic work ... by a variety of Great, Authentic Therapists !\n(Plus \"Chinese Medicine\" and other Health Option available !)",
+          "relative_time": "7 months ago",
+          "publish_time": "2025-12-05T04:37:27.293091723Z",
+          "author": "RP H.",
+          "author_uri": "https://www.google.com/maps/contrib/105800450573774725454/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "Clean space, calming music, and service that feels genuine. The massage therapist was skilled and checked in often about pressure and comfort. I walked out feeling refreshed, with less pain and a clearer mind.",
+          "relative_time": "10 months ago",
+          "publish_time": "2025-09-13T08:40:47.776118021Z",
+          "author": "jaime hernandez",
+          "author_uri": "https://www.google.com/maps/contrib/102640423079766104841/reviews"
+        },
+        {
+          "rating": 5,
+          "text": "This location is best suited for the city for people who want to get healthier healing massages! Also Angle has electric massages and healings here for people! They have so nice prices program massages style and all of them are working hard! They have best skills and license  for giving people helpful health massage!    That day  was Mother’s Day, we were happy to get here  to see smile front desk lady and nice sunny young Massage therapists! They gave customers good price ( couples stay one room only pay $55 for each ! ) and high quality  healing massage! The lady name Rosa and  Nana they did great job , they  put hot oil and hot stone on my back and shoulders with hands doing massage that made me feel good and relieved pain! But those costs they didn’t charge me said Mother’s Day’s special! That warmed my heart! Highly recommended Sedona Wellness Spa!",
+          "relative_time": "2 years ago",
+          "publish_time": "2024-06-18T19:56:14.939205Z",
+          "author": "patty",
+          "author_uri": "https://www.google.com/maps/contrib/110881901911885814534/reviews"
+        }
+      ],
+      "social_links": {},
+      "query": "massage near 85048",
+      "source_file": "leads-massage-near-85048-20260714-222004.json",
+      "source_files": [
+        "leads-massage-near-85048-20260714-222004.json"
+      ],
+      "collected_at": "2026-07-15T05:20:04.554602+00:00",
+      "priority_score": 85
+    }
+  ],
+  "rejected": [
+    {
+      "place_id": "ChIJz99sumsEK4cRjE-Q75MVxBE",
+      "name": "Ahwatukee Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJGQphlWYEK4cRR2FlxZ7bJwc",
+      "name": "Desert Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ_1BnLTIbK4cROFo95fiJ3kk",
+      "name": "Desert Foothills Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJt6AOomwEK4cROu6Iwv9adzA",
+      "name": "Gentle Dental Ahwatukee",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJQWVZdTEbK4cRykkPcFX2z2c",
+      "name": "Foothills Family Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJLStJxmEEK4cRxHwsnAvNeKk",
+      "name": "Mountainside Family Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ559aWLUFK4cR2imBnTIkKSk",
+      "name": "Advanced Dental Health",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ44t_umsEK4cRt8CQRslK1CU",
+      "name": "Mountain Park Dentistry,LLC",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ7f5MiVkFK4cRfxt4zoHHeNM",
+      "name": "Ahwatukee Dental Health",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJf4jddVAEK4cReNIZ5fMUtXk",
+      "name": "Ahwatukee Smiles",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ133YRTEbK4cRcFBsJmCizXU",
+      "name": "Kokopelli Family and Cosmetic Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ-6efUEYEK4cRr0SyKnwLDfQ",
+      "name": "Imagine Dental Ahwatukee",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ6wO5Am0EK4cRTu_gvR6HIvc",
+      "name": "Sonoran Hills Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJP49p5GAEK4cRSg2E9yyM0d8",
+      "name": "Ironwood Dental Center",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJf4jddVAEK4cRZ5p0Qv5NxqA",
+      "name": "Healthy Smiles - Phoenix",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJxU-9bbkFK4cRBREUrgGymhk",
+      "name": "Today's Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJh8rRZUUEK4cR7Mkb4nK53rA",
+      "name": "Tooth Gym - Ahwatukee",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJP0wMZEUEK4cR1dqT32IL0fM",
+      "name": "TruSmile Now",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJh8rRZUUEK4cROSfAA5aA18E",
+      "name": "Atrium Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJv50EQf8FK4cRhGg7O4243c4",
+      "name": "Diamond Smiles AZ: Teeth Whitening & Tooth Gems",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJmd9a1nwEK4cRZNVJh7XFpOU",
+      "name": "Desert Shores Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJQS_ooEsEK4cRzG5a7BRm3Qo",
+      "name": "Dental By Design",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJX3Gd724EK4cRa0moGdXI3yw",
+      "name": "Dentique by Dr. B Cosmetic Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJF3A370YEK4cRB7qpAeEJ7i4",
+      "name": "Foothills Smiles Dentistry and Orthodontics",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJGQphlWYEK4cRMjJRzXbtqVU",
+      "name": "Dr. Janet B. Euzarraga, DDS",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJcwFc7scFK4cRXdfonqQC80w",
+      "name": "Rush Family Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJecCrq7gFK4cRdzsHlz5PNIg",
+      "name": "Shine Dental Arts",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJSfFRdxwbK4cRz2n4XElPOeE",
+      "name": "Big Apple Pediatric Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJh32FjGYEK4cRP8jZSaYNx7s",
+      "name": "Jungle Roots Children's Dentistry & Orthodontics",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJAYJsZm8EK4cR_AP4xdAEVAs",
+      "name": "Gillis & Dalton Family Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJByCi8HwEK4cR-4JpBhTqtw8",
+      "name": "Valley Pediatric Dentists",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJoTt5ODEbK4cRX1BPrSiFi7M",
+      "name": "Dr. Harveer Kaur, DDS, BDS",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJXy44lZgGK4cR-1VkDOtDT5M",
+      "name": "Kyrene Family Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJPXJKnGEHK4cR8-tcxTea1I4",
+      "name": "Smiles of Chandler",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJR8D6Z28EK4cRt45ZPMI4z2I",
+      "name": "Summit Dental Specialty, PLLC",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJMWfv2fupK4cRQWFKowHbDxk",
+      "name": "Exceptional Dentistry of Chandler",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJuQ6_nbEGK4cRZddDLiP1KzY",
+      "name": "Anantuni Family Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJByCi8HwEK4cRhrV_rWl_-LM",
+      "name": "Foothills Dental Studio",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJR2H_yN0GK4cRlzTn3k_L3Cw",
+      "name": "Chandler Family Dental Care",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJqbdz6IQHK4cRvICIKi16Ty4",
+      "name": "Anytime Dental Chandler",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ14CYtUgHK4cRh3fW7ok665c",
+      "name": "Lakeview Dental Care in Chandler",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJIWOMUnxnKocRA50MZx-o4CE",
+      "name": "Acacia Endodontics",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJG4xlW-cGK4cRBuUAVLsNyCw",
+      "name": "Cactus Point Dental",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJIwe90msPK4cRTo6rREcOvrY",
+      "name": "Dr. Jinah Lee DDS",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJf4jddVAEK4cR7_e7iJ1phHA",
+      "name": "AZPerio Ahwatukee",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJq4-rw_oHK4cR37OZnFCgD8M",
+      "name": "Aspire Dental & Implants - Chandler",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJldlLbMAGK4cR1VLeiGknNFc",
+      "name": "Arizona Dental Design",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJkUsEMq4GK4cRZEj-pk2fs8w",
+      "name": "AZ Family Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJZ9KgHwAbK4cRw4XLzx_abS4",
+      "name": "Delux Dental",
+      "reason": "missing phone",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ6wO5Am0EK4cRu1-7R6Y62Jo",
+      "name": "Dr. Collin N. Ito, DMD",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJxc6bKN8GK4cRGCBPRwNdLP0",
+      "name": "Johansen Dental of Chandler",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ3WtWn__nMokRQVj3nUKvfiE",
+      "name": "Crestview Dental",
+      "reason": "missing phone",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJR5d5LHoFK4cR18eAesZ_7PI",
+      "name": "White Teeth AZ East",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJbb9sDbUAK4cRup2n6AQkODM",
+      "name": "Every Smile Family Dentistry",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJX5uVDlgFK4cRYmYPYFd9k94",
+      "name": "Crestview Dental",
+      "reason": "missing phone",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJF3A370YEK4cRhVtlg5ku694",
+      "name": "Every Kid's Dentist & Orthodontics",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJIe86VAAbK4cRvGMGmlmXWRc",
+      "name": "DENTALYN ORAL CARE, PLLC",
+      "reason": "missing phone",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJbx7X0qsAK4cRdDdHZrxdwbk",
+      "name": "Dental Arts of Chandler",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJxc6bKN8GK4cR95Hz3V0R6wk",
+      "name": "Kelly Jorn Cook, DDS",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJ3Wh9g0sHK4cRtQQriMA9MJc",
+      "name": "Aesthetic Family Dental Care",
+      "reason": "has website",
+      "query": "dentists in 85048",
+      "file": "leads-20260714-203120.json"
+    },
+    {
+      "place_id": "ChIJueQWmGYEK4cRx-8mmX_VZWU",
+      "name": "Shayna’s Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJLStJxmEEK4cRfr-BDPRHKEg",
+      "name": "Ahwatukee Nail Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJ0_9vFzwEK4cRNPRk0vzqwzU",
+      "name": "VENICE NAIL LOUNGE",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJ0Y2ihcgbK4cR8hSMcnLX2Vg",
+      "name": "Dip Nail & lashes",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJ6wO5Am0EK4cRdDTTxW9BfL0",
+      "name": "Legend Nails",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJAR_Rbj4bK4cRi007jMGK0YM",
+      "name": "The Hills Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJzaxb4qIHK4cRvrb716eogNM",
+      "name": "OMG! Nail Bar",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJ_d-NLm8EK4cRpdsj3npriu0",
+      "name": "Bamboo Nails Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJ0djhRo0HK4cRA9YsrPLxTr0",
+      "name": "Canvas Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJ9UekbNcAK4cRXW_bz9zTa2Y",
+      "name": "Lux Nail Bar",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJN1XO9tQHK4cRoKQZ7gMjMZs",
+      "name": "Milano Nail Spa Raintree Ranch",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-20260714-204321.json"
+    },
+    {
+      "place_id": "ChIJh9Zo0KoPK4cRzTwhKAxIE8s",
+      "name": "Parker & Sons",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJmaAujXcNK4cRhAXQO7SXvGw",
+      "name": "Day & Night Air Conditioning, Heating, & Plumbing",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJB_B3WV9-BY0Rkzk1AkJrOaY",
+      "name": "Local Roots AC and Plumbing LLC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJj2pEmkCoK4cRnK8uaULXClw",
+      "name": "Rite Way Heating, Cooling & Plumbing: Phoenix",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJv4OkhtFvK4cRvn-d7m_PzLQ",
+      "name": "Any Hour Services - Electric, Plumbing, Heating & Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJC8g1aPtuK4cR480eeJc5gGU",
+      "name": "American Home Water & Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJOTqMFuAOK4cRplqJ0jXa8As",
+      "name": "Penguin Air, Plumbing & Electrical",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJdz-W0ax7K4cRH6iUH03G93M",
+      "name": "North Valley Mechanical HVAC & Plumbing",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJm2mOVdoOK4cRX23E2bR0XG8",
+      "name": "Goettl Air Conditioning and Plumbing - Phoenix AZ",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJw1lsJvppK4cRVtfJYqZsfbc",
+      "name": "APES HVAC & Plumbing",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJfY7Ku6VNKocRnovI17t0e9Y",
+      "name": "Way Cool Plumbing & Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJCf3RuDhsK4cRKLOrJhZUGzA",
+      "name": "Donley A/C & Plumbing",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJDew76zNzK4cRGKsuwWvPwTY",
+      "name": "Cactus Plumbing And Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJ46XaBgFiK4cR-oAu4_lQmEY",
+      "name": "Wyman Plumbing & Mechanical LLC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJ620sHeA4K4cR3wljKVu-zGc",
+      "name": "A Quality HVAC and Plumbing Services LLC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJXRll5voNK4cRcaEPrbuhapk",
+      "name": "AZ Home Services Group AC Repair & Plumbing Services of Phoenix",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJAQAAAMxuK4cRtrwH8V176SY",
+      "name": "D.W. Plumbing, Heating & Cooling Inc.",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJDT6BoJ56hacRKEXzrzw9s8M",
+      "name": "AZ Home Services Group AC Repair & Plumbing Services",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJp4egbwOxK4cRwMoTrpFLydA",
+      "name": "A/C & Plumbing Doctors",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJdzEZcYxtK4cRN__B450dXfI",
+      "name": "Hayes & Sons Plumbing & HVAC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJY_IFEG9vK4cRuRFMcgijlaE",
+      "name": "Deer Valley Plumbing & Air Conditioning",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJd2A_WMipK4cRATOOUNeHdfE",
+      "name": "Precision Air & Plumbing",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJNdA9eQ4EK4cRzhrdXWWNweU",
+      "name": "Rainforest Plumbing & Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJSXiGsjsOK4cR66qMSa9oKyU",
+      "name": "Reeis Air Conditioning, Plumbing & Electrical",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJeX7dBFhvK4cRt27s0E0VXNc",
+      "name": "PlumbSmart Plumbing Heating and Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJTaOiBWRdK4cRyFafGmcQLzA",
+      "name": "1st Choice Plumbing, Air & Insulation",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJl1QNY7wFK4cRs7GmRLeZq68",
+      "name": "Scott's Az Plumbing & Air Conditioning",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJDcNfn6ttK4cRpiAKpM-CBtE",
+      "name": "DeGeorge Plumbing and HVAC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJr2CQ6Dqia20R8q9jZopTFrE",
+      "name": "HQ Plumbing and Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJD-aP1cBvK4cREsA8kWqBSIs",
+      "name": "Wyman Plumbing & Mechanical LLC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJ3ekoI7MPK4cRuzmWJed0Ew4",
+      "name": "American Home Water and Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJga31tLltK4cRSOr99f8qN40",
+      "name": "Lincoln Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJMzZMO65rK4cRq7mmtzJq5QY",
+      "name": "Emergency Master Plumbing & Air LLC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJfQ83x7apK4cRY8ozF0FkbMs",
+      "name": "Ground Zero Plumbing, AC and Electrical - Chandler",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJ1TqXDgsPK4cRjmNCS3whYqI",
+      "name": "ACE Cooling, Heating, Plumbing and Electrical",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJbTe8jCkHK4cR70K7PKKg1u8",
+      "name": "Hansen Family Plumbing & Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJZdZSG76pK4cRXto7W6jDlEw",
+      "name": "Collins Comfort Masters",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJQ35X1LipK4cR7YIvQmsQr7g",
+      "name": "Alliance Plumbing Service & Repair, LLC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJCU4bRpEPK4cRldJIJjBpLMg",
+      "name": "Oh No Plumbing & Air Conditioning",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJO7oaOYcTK4cRXybc2mybjgE",
+      "name": "Plumber Priority One Of Phoenix",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJQUMWZ2YNK4cRG1dUbh2MxpY",
+      "name": "Robins Plumbing, Inc",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJubv8b8hrK4cR5fFKNzkREyA",
+      "name": "All Season Plumbing And Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJgzJ1EAUJK4cR-j5ds9lFahI",
+      "name": "Wolfgangs Cooling, Heating & Plumbing",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJnXhcG7U_K4cR4pCZXJy6MYo",
+      "name": "Anthony's Plumbing",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJKyM5akoRK4cRzCLfU8p5Ngk",
+      "name": "ACE Home Services (formerly Hero Home Services)",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJnYxm9zsNK4cRn3NaE_n_bgw",
+      "name": "Affordable Plumbing, Rooter and Water Heaters",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJMxP_v71rK4cRaPIfkjnbL8I",
+      "name": "Christian Brothers A/C, Plumbing & Electrical",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJGV8LERJCK4cRvzCzJOx1wSQ",
+      "name": "Cool Blew Inc.",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJkzo1KSIOK4cRaj5HI2zMOvQ",
+      "name": "Patrick Riley | Isley's Cooling, Heating, Plumbing, & Electrical",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJM9yAo3ZtK4cRskHCwa-8nLo",
+      "name": "Maloney Plumbing & Drain Services in Phoenix, AZ",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJh-sP0MBlK4cR8S-PCH7fgog",
+      "name": "West Coast Plumbing and Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJn5XOzXRvK4cRIYycVdkV7tA",
+      "name": "Benjamin Franklin Plumbing of Phoenix, AZ",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJO_69iYgLK4cRISLTB4to65g",
+      "name": "All Season Plumbing And Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJ2R6js3oNK4cRWsm32nVVHTI",
+      "name": "All Season Plumbing And Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJ____PyQSK4cR8LIUDp7-f6A",
+      "name": "Walker Plumbing & HVAC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJq6qqqppxK4cRsF80JJDpm0w",
+      "name": "Desert Diamond Air Cooling & Heating",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJO9Tx-MBsK4cRMmr3ov2eVsU",
+      "name": "Hobaica Services",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJlTJU8IlvK4cRoRR-_WUkmuo",
+      "name": "Luxury Air Conditioning & Plumbing",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJp1zUpfwVK4cRLCgc1UQcJDg",
+      "name": "Reece HVAC",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJ3QV-F4YJK4cRsEU-VaHc4fE",
+      "name": "All Season Plumbing And Air",
+      "reason": "has website",
+      "query": "HVAC plumbing in Phoenix AZ",
+      "file": "leads-hvac-plumbing-in-phoenix-az-20260714-211250.json"
+    },
+    {
+      "place_id": "ChIJkTof78cIK4cREdNc2TSfePM",
+      "name": "Sol Touch Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJzcwsmwkJK4cR_R_SjxHcOjY",
+      "name": "Moon Massage & Foot Spa",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJHTfraOcJK4cRVzbTS2HmJDQ",
+      "name": "The River Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJsy93djEHK4cRZPj0shqdc08",
+      "name": "Serenity Massage Tempe",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJpSLTeiQHK4cRB15LvIdl3YA",
+      "name": "Massage W",
+      "reason": "already in prior output",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJxQf-mLwJK4cRBMsDw3XbDTU",
+      "name": "Astonished! Massage & Facial Spa",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJWfT9xBoFK4cR21bjUdMK2J8",
+      "name": "I Care Massage & Head Spa",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJm_OvgVUIK4cRDX7j8p7gc48",
+      "name": "Massage Envy",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJec1mvtcIK4cRuYOR_Ici6ck",
+      "name": "Sonoran Serenity Spa",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJowfK8XkHK4cRE2I4b45wukg",
+      "name": "Lotus Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJeTY9WK8JK4cRN7vz_riGmN0",
+      "name": "Anna's Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJw0KWLPoJK4cRS9EAhl_bwvM",
+      "name": "ATANA Head Spa",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJf0wEc8EJK4cRtvdpANLe65Y",
+      "name": "SKYCLOUD Reflexology & Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJy9s7lbIJK4cRtU63_uKiE7U",
+      "name": "BulaBreath Wellness LLC",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJhSJbynQJK4cRQW2XepRteJo",
+      "name": "Bodiology - Therapeutic Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ9TVl5EUPK4cRkgC3A-r41ac",
+      "name": "Intuitive Touch Massage By Jon, LLC",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJbfyr2iIJK4cR_OKeZzl1byY",
+      "name": "State of Flow Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJTTJvw3kGK4cRbCMS3V7EplE",
+      "name": "Massage Envy",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJWcbJ_F0JK4cRL1IQHhWRzVs",
+      "name": "Heavenly Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJv2E6p7ypK4cRsL0ikzGuVIk",
+      "name": "Zenergy Massage & Bodywork",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJM2OB0MsFK4cRr-OyQ2Ns2AM",
+      "name": "Balenchino Mobile Massage Clinic",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJNf1N5RwJK4cRXqPdhOg8xy8",
+      "name": "Southwest Holistic Wellness",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJJ2xqnxgGK4cRkCZWEnxI9P4",
+      "name": "Elements Massage - Tempe",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJbWsH8Q0GK4cRMv22B3ycmUk",
+      "name": "Ascension Massage Therapy",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJd3gJ3TgPK4cRZnaIVGbea3M",
+      "name": "Narande Spa",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ1TjDYMSpK4cR72aY4GwC8sA",
+      "name": "Elite Medical Massage LLC",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ_4XnkJ4HK4cRRpC4Vvs-l_4",
+      "name": "Sage Massage & Wellness",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJYSLcVLcHK4cRAoQzv2RykIs",
+      "name": "Goddess Wellness and Beauty",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJs8oZHQAHK4cRnzZsnteJmy4",
+      "name": "Phoenix Earth Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJj5TNhUkJK4cRUTm7d_3ObWQ",
+      "name": "The Healing Tree Collective",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJHQtUzO4IK4cRs0IEtK2BSNY",
+      "name": "Southwest Institute of Healing Arts",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ4bdg3z8JK4cR2o8nd82fxvE",
+      "name": "Busy Hands Aromatherapy Massage LLC",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJbWYKgEIJK4cR7h6rmCclaqY",
+      "name": "Body Retreat",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJbZrPY-cJK4cR0ZVUkisNgkU",
+      "name": "Song Kāi Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJn1O8dTapK4cRDU5qz5XMa0g",
+      "name": "AI Massage Spa",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ-Q2E4QUHK4cRJ9LHCgJ_Ax4",
+      "name": "Southwest Stretch and Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJpQT6jpcGS2oRcncW8-4XjkM",
+      "name": "Earth Ra Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ9-DIqhIJK4cRIjIhLMMO8wY",
+      "name": "Tytin Wellness",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJfSQEmlwHK4cRc6crdqCo1ZY",
+      "name": "Sunstone Massage & Bodywork",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ6bKWgP4JK4cRx6KhwVHmpOI",
+      "name": "Tempe Gut Solutions",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJbxE5yeQGK4cRWZ6_iq965YQ",
+      "name": "Golden Feet Reflexology",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJh_CgSBkHK4cRxYPvgEgQKVI",
+      "name": "My Healing Advantage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJA0lE4VkPK4cRLlecL5bk6pE",
+      "name": "Totally Chi Reflexology",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJQ7NSRZwHK4cR3vTHTmqeDjs",
+      "name": "Urban Soul",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJC_XM-CgPK4cRfS0Y-qGi0lI",
+      "name": "Sol Wellness Reiki & Massage Therapy",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJd7ECCI4HK4cRo-QYtioTlKI",
+      "name": "Pure Vida Massage LLC",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJdRCPe6-oK4cRppAe5WDosNo",
+      "name": "Blue Massage",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJxY619-EHK4cRl4ffcvuFsTo",
+      "name": "Comfort Foot",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ3XpiHI8HK4cRdbSNO6A74pA",
+      "name": "Da Tang Foot Spa",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJrwQyIUoJK4cRaJidQ6SNJM8",
+      "name": "Lapis Skin Lounge- Tempe Facials-Body Treatments",
+      "reason": "has website from search",
+      "query": "massage in 85281",
+      "file": "leads-massage-in-85281-20260714-233335.json"
+    },
+    {
+      "place_id": "ChIJ12B2msgFK4cRW2FEL3Oru64",
+      "name": "Healing Hands Massage Services",
+      "reason": "has website",
+      "query": "massage near 85048",
+      "file": "leads-massage-near-85048-20260714-222004.json"
+    },
+    {
+      "place_id": "ChIJRc1EHFAEK4cRFCLq235IxQw",
+      "name": "T3 Therapeutic Bodywork & Massage Ahwatukee",
+      "reason": "missing phone",
+      "query": "massage near 85048",
+      "file": "leads-massage-near-85048-20260714-222004.json"
+    },
+    {
+      "place_id": "ChIJWdowX5AHK4cRcSYGlJaACGY",
+      "name": "ZenPhoria",
+      "reason": "has website",
+      "query": "massage near 85048",
+      "file": "leads-massage-near-85048-20260714-222004.json"
+    },
+    {
+      "place_id": "ChIJGYv9WjqvK4cRfd8Od_UxvZU",
+      "name": "Sk Thai Massage",
+      "reason": "has website",
+      "query": "massage near 85048",
+      "file": "leads-massage-near-85048-20260714-222004.json"
+    },
+    {
+      "place_id": "ChIJpSLTeiQHK4cRB15LvIdl3YA",
+      "name": "Massage W",
+      "reason": "has website",
+      "query": "massage near 85048",
+      "file": "leads-massage-near-85048-20260714-222004.json"
+    },
+    {
+      "place_id": "ChIJNTbDT8arK4cR0D9trxwRnKQ",
+      "name": "Thai Royal Massage Spa chandler",
+      "reason": "has website",
+      "query": "massage near 85048",
+      "file": "leads-massage-near-85048-20260714-222004.json"
+    },
+    {
+      "place_id": "ChIJueQWmGYEK4cRx-8mmX_VZWU",
+      "name": "Shayna’s Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJLStJxmEEK4cRfr-BDPRHKEg",
+      "name": "Ahwatukee Nail Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJ0_9vFzwEK4cRNPRk0vzqwzU",
+      "name": "VENICE NAIL LOUNGE",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJ0Y2ihcgbK4cR8hSMcnLX2Vg",
+      "name": "Dip Nail & lashes",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJ6wO5Am0EK4cRdDTTxW9BfL0",
+      "name": "Legend Nails",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJAR_Rbj4bK4cRi007jMGK0YM",
+      "name": "The Hills Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJzaxb4qIHK4cRvrb716eogNM",
+      "name": "OMG! Nail Bar",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJ_d-NLm8EK4cRpdsj3npriu0",
+      "name": "Bamboo Nails Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJ0djhRo0HK4cRA9YsrPLxTr0",
+      "name": "Canvas Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJ9UekbNcAK4cRXW_bz9zTa2Y",
+      "name": "Lux Nail Bar",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJN1XO9tQHK4cRoKQZ7gMjMZs",
+      "name": "Milano Nail Spa Raintree Ranch",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-204935.json"
+    },
+    {
+      "place_id": "ChIJueQWmGYEK4cRx-8mmX_VZWU",
+      "name": "Shayna’s Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJLStJxmEEK4cRfr-BDPRHKEg",
+      "name": "Ahwatukee Nail Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJ0_9vFzwEK4cRNPRk0vzqwzU",
+      "name": "VENICE NAIL LOUNGE",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJ0Y2ihcgbK4cR8hSMcnLX2Vg",
+      "name": "Dip Nail & lashes",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJ6wO5Am0EK4cRdDTTxW9BfL0",
+      "name": "Legend Nails",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJAR_Rbj4bK4cRi007jMGK0YM",
+      "name": "The Hills Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJzaxb4qIHK4cRvrb716eogNM",
+      "name": "OMG! Nail Bar",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJ_d-NLm8EK4cRpdsj3npriu0",
+      "name": "Bamboo Nails Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJ0djhRo0HK4cRA9YsrPLxTr0",
+      "name": "Canvas Nails & Spa",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJ9UekbNcAK4cRXW_bz9zTa2Y",
+      "name": "Lux Nail Bar",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    },
+    {
+      "place_id": "ChIJN1XO9tQHK4cRoKQZ7gMjMZs",
+      "name": "Milano Nail Spa Raintree Ranch",
+      "reason": "has website",
+      "query": "nail salons near 85048",
+      "file": "leads-nail-salons-near-85048-20260714-205016.json"
+    }
+  ]
+};
