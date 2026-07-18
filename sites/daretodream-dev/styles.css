@@ -319,13 +319,6 @@ body.is-past-story .site-header::after {
 .manifesto .eyebrow { color: #aaa69e; }
 .manifesto h2 { text-wrap: balance; }
 .manifesto-intro h2 { max-width: 1300px; font-size: clamp(46px, 8.5vw, 132px); }
-.manifesto-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 14vw; border-top: 1px solid var(--line); }
-.principle { min-height: 390px; padding: 32px 32px 52px 0; border-right: 1px solid var(--line); }
-.principle + .principle { padding-left: 32px; }
-.principle:last-child { border-right: 0; }
-.principle > span { color: #777; font-size: 10px; letter-spacing: .2em; }
-.principle h3 { margin: 130px 0 20px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(44px, 5vw, 74px); font-style: italic; font-weight: 400; letter-spacing: -.055em; }
-.principle p { max-width: 330px; margin: 0; color: #a4a19a; font-size: 14px; line-height: 1.7; }
 .closing { display: flex; min-height: 100vh; flex-direction: column; align-items: center; justify-content: center; padding: 13vw 0; text-align: center; }
 .closing > p:first-child { margin: 0 0 30px; color: #8c8983; font-size: 9px; letter-spacing: .3em; }
 .closing h2 { font-size: clamp(58px, 10vw, 160px); }
@@ -519,9 +512,6 @@ body.is-past-story .site-header::after {
   .primary-cta { bottom: 92px; }
   .manifesto { --section-pad: 96px; padding: 120px 22px 0; }
   .manifesto-intro h2 { font-size: clamp(44px, 14vw, 70px); }
-  .manifesto-grid { grid-template-columns: 1fr; }
-  .principle, .principle + .principle { min-height: auto; padding: 28px 0 56px; border-right: 0; border-bottom: 1px solid var(--line); }
-  .principle h3 { margin: 64px 0 18px; }
   .closing { min-height: 88vh; }
   .business-nav { top: 69px; justify-content: flex-start; width: calc(100% + 44px); margin-left: -22px; overflow-x: auto; padding-inline: 22px; scrollbar-width: none; }
   .business-nav::-webkit-scrollbar { display: none; }
@@ -564,8 +554,7 @@ body.is-past-story .site-header::after {
 
 @media (min-width: 1900px) {
   .manifesto { padding-inline: max(7vw, calc((100vw - 2200px) / 2)); }
-  .manifesto-intro, .business-section, .closing, .manifesto-grid { max-width: 2200px; margin-inline: auto; }
-  .manifesto-grid { margin-top: 14vw; }
+  .manifesto-intro, .business-section, .closing { max-width: 2200px; margin-inline: auto; }
   .business-nav { width: 100vw; margin-left: calc((100vw - 100%) / -2); }
 }
 
