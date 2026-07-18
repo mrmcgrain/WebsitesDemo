@@ -1,26 +1,158 @@
-const data = window.LEADS_DASHBOARD_DATA || {summary:{}, leads:[], batches:[], rejected:[]};
+let data = window.LEADS_DASHBOARD_DATA || {summary:{}, leads:[], batches:[], rejected:[]};
 const $ = (id) => document.getElementById(id);
 const state = { search:'', category:'all', query:'all', rating:0, sort:'score', selected:null };
+const controller = { available:false, hasApiKey:false, pollTimer:null, renderedJobId:null };
 const fmt = new Intl.NumberFormat();
 const clean = (v) => (v ?? '').toString().trim();
 const unique = (arr) => [...new Set(arr.filter(Boolean))].sort((a,b)=>a.localeCompare(b));
 const tel = (phone) => 'tel:' + clean(phone).replace(/[^+\d]/g,'');
-function setOptions(select, values, allLabel){ select.innerHTML = `<option value="all">${allLabel}</option>` + values.map(v=>`<option value="${escapeAttr(v)}">${escapeHtml(v)}</option>`).join(''); }
+function setOptions(select, values, allLabel, preferred='all'){
+  select.innerHTML = `<option value="all">${allLabel}</option>` + values.map(v=>`<option value="${escapeAttr(v)}">${escapeHtml(v)}</option>`).join('');
+  select.value = values.includes(preferred) ? preferred : 'all';
+}
 function escapeHtml(s){ return clean(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
 function escapeAttr(s){ return escapeHtml(s); }
+
 function init(){
+  ['search','category','query','rating','sort'].forEach(id => $(id).addEventListener(id==='search'?'input':'change', (event)=>{
+    state[id] = id==='rating' ? Number(event.target.value) : event.target.value;
+    render();
+  }));
+  $('export-csv').addEventListener('click', copyCsv);
+  $('collector-form').addEventListener('submit', runLeadSearch);
+  hydrateData();
+  connectController();
+}
+
+function hydrateData(preferredQuery){
   $('stat-leads').textContent = fmt.format(data.summary.lead_count || data.leads.length);
   $('stat-files').textContent = fmt.format(data.summary.file_count || data.batches.length);
   $('stat-rejected').textContent = fmt.format(data.summary.rejected_count || data.rejected.length);
   const avg = data.leads.reduce((a,l)=>a+(Number(l.rating)||0),0)/(data.leads.length||1);
   $('stat-avg').textContent = avg ? avg.toFixed(1) : '—';
   $('last-generated').textContent = data.summary.generated_at ? `Data bundle generated ${new Date(data.summary.generated_at).toLocaleString()}` : 'Generated data bundle unavailable';
-  setOptions($('category'), unique(data.leads.map(l=>l.category || 'Unknown')), 'All categories');
-  setOptions($('query'), unique(data.leads.map(l=>l.query || 'Unknown query')), 'All queries');
-  ['search','category','query','rating','sort'].forEach(id => $(id).addEventListener(id==='search'?'input':'change', (event)=>{ state[id] = id==='rating' ? Number(event.target.value) : event.target.value; render(); }));
-  $('export-csv').addEventListener('click', copyCsv);
-  renderBatches(); render();
+  setOptions($('category'), unique(data.leads.map(l=>l.category || 'Unknown')), 'All categories', state.category);
+  const queries = unique(data.leads.map(l=>l.query || 'Unknown query'));
+  state.query = preferredQuery && queries.includes(preferredQuery) ? preferredQuery : (queries.includes(state.query) ? state.query : 'all');
+  setOptions($('query'), queries, 'All queries', state.query);
+  renderBatches();
+  render();
 }
+
+async function connectController(){
+  try{
+    const response = await fetch('./api/status', {cache:'no-store'});
+    if(!response.ok) throw new Error('Local controller unavailable');
+    const status = await response.json();
+    controller.available = true;
+    controller.hasApiKey = !!status.server?.has_api_key;
+    const defaults = status.server?.defaults || {};
+    $('business-type').value ||= defaults.business_type || '';
+    $('location').value ||= defaults.location || '';
+    $('lead-target').value = defaults.limit || $('lead-target').value;
+    $('enrich-social').checked = defaults.enrich_social !== false;
+    renderRules(status.server?.qualification || {});
+    updateControllerStatus(status);
+  }catch{
+    controller.available = false;
+    controller.hasApiKey = false;
+    $('mode-badge').textContent = 'Published view-only mode';
+    $('mode-badge').dataset.mode = 'readonly';
+    $('run-search').disabled = true;
+    $('collector-status').dataset.status = 'readonly';
+    $('collector-message').textContent = 'Run dashboard_server.py locally to search and save new lead files.';
+    $('collector-usage').textContent = 'The published GitHub Pages dashboard can safely display leads, but it cannot store an API key or write JSON files.';
+  }
+}
+
+function renderRules(rules){
+  $('rule-phone').textContent = rules.require_phone === false ? 'Phone optional' : 'Phone required';
+  $('rule-website').textContent = rules.require_no_website === false ? 'Websites allowed' : 'No website';
+  $('rule-chain').textContent = rules.exclude_chains === false ? 'Chain filter off' : 'Chains excluded';
+}
+
+function updateControllerStatus(payload){
+  const server = payload.server || {};
+  const job = payload.job || {status:'idle'};
+  const running = ['queued','running'].includes(job.status);
+  $('mode-badge').textContent = controller.hasApiKey ? 'Local search ready' : 'API key needed';
+  $('mode-badge').dataset.mode = controller.hasApiKey ? 'ready' : 'warning';
+  $('run-search').disabled = running || !controller.hasApiKey;
+  $('run-search').textContent = running ? 'Search running…' : 'Run lead search';
+  $('collector-status').dataset.status = job.status;
+  $('collector-message').textContent = controller.hasApiKey ? (job.message || 'Ready for a city or ZIP search.') : (server.config_error || 'Add api_key to config.yaml before running a live search.');
+  const usage = server.usage || {};
+  $('collector-usage').textContent = usage.monthly_limit ? `${fmt.format(usage.requests || 0)} of ${fmt.format(usage.monthly_limit)} monthly requests used · ${fmt.format(usage.max_calls_per_run || 0)} max calls per run` : 'Usage limits load from config.yaml.';
+  const saved = $('saved-json');
+  if(job.status === 'success' && job.json_file){
+    saved.href = `./output/${encodeURIComponent(job.json_file)}`;
+    saved.hidden = false;
+  }else{
+    saved.hidden = true;
+  }
+  if(running){
+    window.clearTimeout(controller.pollTimer);
+    controller.pollTimer = window.setTimeout(pollController, 1500);
+  }else if(job.status === 'success' && job.id && controller.renderedJobId !== job.id){
+    controller.renderedJobId = job.id;
+    reloadDashboardData(job.query);
+  }
+}
+
+async function pollController(){
+  try{
+    const response = await fetch('./api/status', {cache:'no-store'});
+    if(!response.ok) throw new Error('Status request failed');
+    updateControllerStatus(await response.json());
+  }catch{
+    $('collector-status').dataset.status = 'error';
+    $('collector-message').textContent = 'Lost contact with the local search service. Refresh after restarting it.';
+    $('run-search').disabled = false;
+    $('run-search').textContent = 'Run lead search';
+  }
+}
+
+async function runLeadSearch(event){
+  event.preventDefault();
+  if(!controller.available || !controller.hasApiKey) return;
+  const request = {
+    business_type: clean($('business-type').value),
+    location: clean($('location').value),
+    limit: Number($('lead-target').value),
+    enrich_social: $('enrich-social').checked,
+    include_prior: $('include-prior').checked,
+  };
+  $('run-search').disabled = true;
+  $('run-search').textContent = 'Starting…';
+  $('saved-json').hidden = true;
+  try{
+    const response = await fetch('./api/search', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(request)});
+    const payload = await response.json();
+    if(!response.ok) throw new Error(payload.error || 'Search could not start.');
+    updateControllerStatus({server:{has_api_key:true}, job:payload.job});
+  }catch(error){
+    $('collector-status').dataset.status = 'error';
+    $('collector-message').textContent = error.message;
+    $('run-search').disabled = false;
+    $('run-search').textContent = 'Run lead search';
+  }
+}
+
+async function reloadDashboardData(preferredQuery){
+  try{
+    const response = await fetch(`./api/data?t=${Date.now()}`, {cache:'no-store'});
+    if(!response.ok) throw new Error('New lead data could not be loaded.');
+    data = await response.json();
+    state.selected = null;
+    state.search = '';
+    $('search').value = '';
+    hydrateData(preferredQuery);
+  }catch(error){
+    $('collector-status').dataset.status = 'error';
+    $('collector-message').textContent = error.message;
+  }
+}
+
 function filtered(){
   const q = state.search.toLowerCase();
   let rows = data.leads.filter(l => {

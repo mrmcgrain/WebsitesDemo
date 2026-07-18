@@ -1,4 +1,4 @@
-window.LEADS_DASHBOARD_DATA = {
+{
   "summary": {
     "generated_at": "2026-07-18T17:39:17.517357+00:00",
     "source_dir": "G:\\23\\google-places-leads\\output",
@@ -3934,4 +3934,4 @@ window.LEADS_DASHBOARD_DATA = {
       "file": "leads-nail-salons-near-85048-20260714-205016.json"
     }
   ]
-};
+}

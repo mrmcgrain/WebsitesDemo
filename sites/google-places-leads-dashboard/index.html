@@ -22,6 +22,51 @@
   </header>
 
   <main class="shell">
+    <section class="collector-panel" aria-labelledby="collector-title">
+      <div class="collector-copy">
+        <div class="collector-heading">
+          <div>
+            <p class="eyebrow">Find qualified leads</p>
+            <h2 id="collector-title">Run a city or ZIP search</h2>
+          </div>
+          <span id="mode-badge" class="mode-badge">Checking local server…</span>
+        </div>
+        <p>Search Google Places, apply the phone/no-website qualification rules, save a timestamped JSON file, and load the new leads here.</p>
+        <div class="rule-row" aria-label="Qualification rules">
+          <span id="rule-phone">Phone required</span>
+          <span id="rule-website">No website</span>
+          <span id="rule-chain">Chains excluded</span>
+        </div>
+      </div>
+      <form id="collector-form" class="collector-form">
+        <label>
+          <span>Business type</span>
+          <input id="business-type" name="business_type" required maxlength="80" placeholder="Nail salons, plumbers, dentists…" />
+        </label>
+        <label>
+          <span>City, area, or ZIP</span>
+          <input id="location" name="location" required maxlength="100" placeholder="Phoenix AZ or 85048" />
+        </label>
+        <label>
+          <span>Qualified lead target</span>
+          <input id="lead-target" name="limit" type="number" min="1" max="50" value="10" required />
+        </label>
+        <div class="collector-options">
+          <label class="check-field"><input id="enrich-social" type="checkbox" checked /> <span>Find social links</span></label>
+          <label class="check-field"><input id="include-prior" type="checkbox" /> <span>Re-check prior places</span></label>
+        </div>
+        <button id="run-search" class="primary run-search" type="submit">Run lead search</button>
+      </form>
+      <div id="collector-status" class="collector-status" data-status="idle" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <div>
+          <strong id="collector-message">Connecting to the local search service…</strong>
+          <p id="collector-usage"></p>
+        </div>
+        <a id="saved-json" class="secondary" href="#" target="_blank" hidden>Open saved JSON</a>
+      </div>
+    </section>
+
     <section class="stats-grid" aria-label="Lead summary">
       <article><span id="stat-leads">—</span><p>unique leads</p></article>
       <article><span id="stat-files">—</span><p>JSON files</p></article>
