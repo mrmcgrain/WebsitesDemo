@@ -13,6 +13,7 @@
   <a class="skip-link" href="#manifesto">Skip the animation</a>
 
   <header class="site-header">
+    <canvas class="header-lightning" id="header-lightning" aria-hidden="true"></canvas>
     <a class="wordmark" href="#top" aria-label="daretodream.dev, home">
       <span class="mark-dot" aria-hidden="true"></span>
       daretodream.dev
@@ -108,13 +109,273 @@
       <div class="closing reveal">
         <p>THE ORBIT NEVER ENDS</p>
         <h2>What will you<br /><em>dare to dream?</em></h2>
-        <a href="#top" class="return-link">Return to the beginning <span aria-hidden="true">↑</span></a>
+        <p class="closing-answer">Tell us—and we’ll help you build it.</p>
+        <a href="#vision" class="return-link">Continue the journey <span aria-hidden="true">↓</span></a>
       </div>
+
+      <nav class="business-nav" aria-label="Business sections">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a class="business-nav-cta" href="#start-project">Start a Project</a>
+      </nav>
+
+      <section class="business-section vision-section" id="vision" aria-labelledby="vision-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Built for people with a goal</p>
+          <h2 id="vision-title">Your mission deserves more than an <em>ordinary website.</em></h2>
+        </div>
+        <div class="vision-copy reveal">
+          <p>Whether you are growing a business, serving a community, launching a campaign, or bringing a new idea to life, we create digital experiences designed around what you want to accomplish.</p>
+          <p class="brand-promise">You bring the idea. We design, build, and launch it.</p>
+          <a class="business-cta" href="#start-project">Show us your vision <span aria-hidden="true">↘</span></a>
+        </div>
+      </section>
+
+      <section class="business-section services-section" id="services" aria-labelledby="services-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What we build</p>
+          <h2 id="services-title">Digital work shaped around the <em>outcome.</em></h2>
+        </div>
+        <div class="service-orbit">
+          <article class="service-line reveal" data-accent="red">
+            <div class="service-index"><i></i><span>01</span></div>
+            <div>
+              <h3>Business Websites</h3>
+              <p>Professional websites that build trust, explain your value, and make it easier for customers to take the next step.</p>
+              <p class="service-outcome">Outcome / A credible home for your business that turns attention into action.</p>
+            </div>
+          </article>
+          <article class="service-line reveal" data-accent="blue">
+            <div class="service-index"><i></i><span>02</span></div>
+            <div>
+              <h3>Landing Pages</h3>
+              <p>Focused pages for campaigns, services, events, fundraising, lead generation, and new ideas.</p>
+              <p class="service-outcome">Outcome / One clear message and one clear next step for your audience.</p>
+            </div>
+          </article>
+          <article class="service-line reveal" data-accent="gold">
+            <div class="service-index"><i></i><span>03</span></div>
+            <div>
+              <h3>3D &amp; Interactive Websites</h3>
+              <p>Scroll-driven stories, responsive animation, immersive visuals, and digital experiences people remember.</p>
+              <p class="service-outcome">Outcome / A distinctive experience that makes the idea impossible to ignore.</p>
+            </div>
+          </article>
+          <article class="service-line reveal" data-accent="blue">
+            <div class="service-index"><i></i><span>04</span></div>
+            <div>
+              <h3>Website Refactoring</h3>
+              <p>Improve an existing website’s design, performance, mobile experience, accessibility, security, and maintainability.</p>
+              <p class="service-outcome">Outcome / A faster, clearer, more dependable site without starting over blindly.</p>
+            </div>
+          </article>
+          <article class="service-line reveal" data-accent="red">
+            <div class="service-index"><i></i><span>05</span></div>
+            <div>
+              <h3>Managed Hosting &amp; Care</h3>
+              <p>Dependable deployment, SSL, monitoring, backups, updates, analytics, and continued support after launch.</p>
+              <p class="service-outcome">Outcome / A website that stays secure, available, and looked after.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="business-section path-section" id="choose-path" aria-labelledby="path-title">
+        <div class="path-intro reveal">
+          <p class="eyebrow">Choose your path</p>
+          <h2 id="path-title">Where are you <em>starting from?</em></h2>
+          <p>Select the situation that feels closest. We’ll point you toward a useful place to begin.</p>
+        </div>
+        <div class="project-selector reveal">
+          <fieldset>
+            <legend class="sr-only">Choose your current project situation</legend>
+            <label><input type="radio" name="project-path" value="first-website" /><span>I need my first website</span></label>
+            <label><input type="radio" name="project-path" value="website-help" /><span>My current website needs help</span></label>
+            <label><input type="radio" name="project-path" value="launching" /><span>I’m launching something new</span></label>
+            <label><input type="radio" name="project-path" value="interactive" /><span>I want an unforgettable interactive experience</span></label>
+            <label><input type="radio" name="project-path" value="hosting" /><span>I need dependable hosting and support</span></label>
+          </fieldset>
+          <div class="path-recommendation" aria-live="polite">
+            <span>Recommendation</span>
+            <p id="path-recommendation">Choose a path to see where we recommend starting.</p>
+            <a class="business-cta path-start" href="#start-project" hidden>Start This Project <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="business-section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Featured experiences</p>
+          <h2 id="work-title">Ideas made <em>tangible.</em></h2>
+        </div>
+        <div class="project-list">
+          <article class="project-feature reveal">
+            <div class="project-visual orbit-project" aria-hidden="true">
+              <span class="mini-orbit"><i></i><i></i><i></i></span>
+              <b>∞</b>
+            </div>
+            <div class="project-copy">
+              <p class="project-category">3D Interactive Experience / 01</p>
+              <h3>Dare to Dream</h3>
+              <p>An interactive, scroll-controlled journey through courage, curiosity, imagination, and possibility.</p>
+              <span class="current-project">You’re inside it <i aria-hidden="true">●</i></span>
+            </div>
+          </article>
+          <article class="project-feature project-feature-reverse reveal">
+            <div class="project-visual null-project" aria-hidden="true">
+              <span>NULL / CORP</span>
+              <b>01</b>
+            </div>
+            <div class="project-copy">
+              <p class="project-category">3D Experimental Experience / 02</p>
+              <h3>NullCorp</h3>
+              <p>A developer-focused exploration of intelligent systems, experimental interfaces, and ideas moving from nothing to production.</p>
+              <a class="project-link nullcorp-link" href="#" aria-disabled="true">Preview coming soon</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="business-section process-section" id="process" aria-labelledby="process-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How we work</p>
+          <h2 id="process-title">A clear path from idea to <em>orbit.</em></h2>
+        </div>
+        <ol class="process-path">
+          <li class="reveal"><span>01</span><i></i><div><h3>Dream</h3><p>Tell us what you want to change, create, or accomplish.</p></div></li>
+          <li class="reveal"><span>02</span><i></i><div><h3>Discover</h3><p>We define the audience, requirements, priorities, and measures of success.</p></div></li>
+          <li class="reveal"><span>03</span><i></i><div><h3>Design</h3><p>We shape the content, visual direction, interaction, and user journey.</p></div></li>
+          <li class="reveal"><span>04</span><i></i><div><h3>Develop</h3><p>We build, test, refine, and review the experience across devices.</p></div></li>
+          <li class="reveal"><span>05</span><i></i><div><h3>Launch</h3><p>We deploy the site, connect the domain, secure it, and verify the production experience.</p></div></li>
+          <li class="reveal"><span>06</span><i></i><div><h3>Grow</h3><p>We can continue hosting, monitoring, supporting, and improving the site.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="business-section pricing-section" id="pricing" aria-labelledby="pricing-title">
+        <div class="pricing-intro reveal">
+          <p class="eyebrow">Starting prices</p>
+          <h2 id="pricing-title">A clear place to <em>begin.</em></h2>
+          <p>Every project is different, but you should have an idea of where the journey starts. After reviewing your goals, we’ll provide a clear scope and proposal.</p>
+        </div>
+        <div class="price-list reveal">
+          <div><span>Landing Pages</span><strong>Starting at $750</strong></div>
+          <div><span>Business Websites</span><strong>Starting at $1,500</strong></div>
+          <div><span>3D &amp; Interactive Experiences</span><strong>Starting at $2,500</strong></div>
+          <div><span>Website Refactoring</span><strong>Starting at $750</strong></div>
+          <div><span>Managed Hosting &amp; Care</span><strong>Starting at $49/month</strong></div>
+          <p>Nonprofit, community, and custom project scopes may receive a tailored proposal.</p>
+        </div>
+      </section>
+
+      <section class="business-section contact-section" id="start-project" aria-labelledby="contact-title">
+        <div class="contact-intro reveal">
+          <p class="eyebrow">Start a Project</p>
+          <h2 id="contact-title">Put your idea <em>in orbit.</em></h2>
+          <p>Tell us what you are building, changing, or hoping to accomplish. We’ll review your project and respond within one business day.</p>
+          <a href="mailto:michael.r.mcgrain@gmail.com">michael.r.mcgrain@gmail.com</a>
+        </div>
+
+        <!-- FormSubmit sends the first submission only after the owner confirms its activation email. -->
+        <form class="project-form reveal" id="project-form" action="https://formsubmit.co/michael.r.mcgrain@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New Dare to Dream project interest" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_next" id="form-next" value="" />
+          <div class="honeypot" aria-hidden="true"><label>Leave this field empty <input type="text" name="_honey" tabindex="-1" autocomplete="off" /></label></div>
+
+          <div class="form-success" id="project-success" role="status" tabindex="-1" hidden>
+            <strong>Your idea is officially in orbit.</strong>
+            <p>We’ll review it and reach out within one business day.</p>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+              <input id="contact-name" name="Name" type="text" autocomplete="name" required aria-describedby="contact-name-error" />
+              <span class="field-error" id="contact-name-error"></span>
+            </div>
+            <div class="field">
+              <label for="organization">Organization or business <span aria-hidden="true">*</span></label>
+              <input id="organization" name="Organization" type="text" autocomplete="organization" required aria-describedby="organization-error" />
+              <span class="field-error" id="organization-error"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input id="email" name="Email" type="email" autocomplete="email" required aria-describedby="email-error" />
+              <span class="field-error" id="email-error"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span>Optional</span></label>
+              <input id="phone" name="Phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="organization-type">Organization type <span aria-hidden="true">*</span></label>
+              <select id="organization-type" name="Organization type" required aria-describedby="organization-type-error">
+                <option value="">Choose one</option>
+                <option>Small business</option><option>Nonprofit</option><option>Community organization</option><option>Mission-driven project</option><option>Other</option>
+              </select>
+              <span class="field-error" id="organization-type-error"></span>
+            </div>
+            <div class="field">
+              <label for="service-interest">Service of interest <span aria-hidden="true">*</span></label>
+              <select id="service-interest" name="Service of interest" required aria-describedby="service-interest-error">
+                <option value="">Choose one</option>
+                <option>Business website</option><option>Landing page</option><option>3D or interactive website</option><option>Website refactoring</option><option>Managed hosting and care</option><option>Not sure yet</option>
+              </select>
+              <span class="field-error" id="service-interest-error"></span>
+            </div>
+            <div class="field field-wide">
+              <label for="project-goal">What are you hoping to accomplish? <span aria-hidden="true">*</span></label>
+              <textarea id="project-goal" name="Project goal" rows="5" required aria-describedby="project-goal-error"></textarea>
+              <span class="field-error" id="project-goal-error"></span>
+            </div>
+            <div class="field">
+              <label for="existing-site">Existing website <span>Optional</span></label>
+              <input id="existing-site" name="Existing website" type="url" inputmode="url" placeholder="https://" />
+            </div>
+            <div class="field">
+              <label for="audience">Audience <span>Optional</span></label>
+              <input id="audience" name="Audience" type="text" placeholder="Who should this reach?" />
+            </div>
+            <div class="field">
+              <label for="timeframe">Desired launch timeframe <span>Optional</span></label>
+              <input id="timeframe" name="Desired launch timeframe" type="text" placeholder="A date, month, or flexible" />
+            </div>
+            <div class="field">
+              <label for="budget">Approximate budget <span>Optional</span></label>
+              <select id="budget" name="Approximate budget">
+                <option value="">Choose a range</option><option>Under $1,000</option><option>$1,000–$2,500</option><option>$2,500–$5,000</option><option>$5,000–$10,000</option><option>$10,000+</option><option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="referral">How did you hear about us? <span>Optional</span></label>
+              <input id="referral" name="How they heard about us" type="text" />
+            </div>
+            <div class="field check-field">
+              <label><input type="checkbox" name="Managed hosting interest" value="Yes" /><span>I’m interested in managed hosting and continued support.</span></label>
+            </div>
+          </div>
+          <button class="submit-button" type="submit">Share Your Dream <span aria-hidden="true">↗</span></button>
+          <p class="form-note">Required fields are marked with an asterisk. Your information is used only to respond to your project inquiry.</p>
+        </form>
+      </section>
     </section>
+
+    <footer class="site-footer">
+      <div>
+        <a class="footer-brand" href="#top">Dare to Dream</a>
+        <p>Phoenix, Arizona</p>
+        <p>Your mission deserves more than an ordinary website.</p>
+      </div>
+      <nav aria-label="Footer navigation"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#pricing">Pricing</a><a href="#start-project">Start a Project</a></nav>
+      <div class="footer-contact"><a href="mailto:michael.r.mcgrain@gmail.com">michael.r.mcgrain@gmail.com</a><p>© <span id="current-year">2026</span> Dare to Dream</p><p>Built with intention.</p></div>
+    </footer>
   </main>
 
   <noscript>
-    <div class="noscript">Enable JavaScript to experience the scroll-controlled orbit.</div>
+    <div class="noscript">Business information and the project form remain available. Enable JavaScript for the orbit animation and project recommendations.</div>
   </noscript>
   <script src="script.js"></script>
 </body>

@@ -3,6 +3,9 @@
   const ctx = canvas.getContext('2d', { alpha: false });
   const headerCanvas = document.querySelector('#header-orbit');
   const headerCtx = headerCanvas.getContext('2d');
+  const lightningCanvas = document.querySelector('#header-lightning');
+  const lightningCtx = lightningCanvas.getContext('2d');
+  const siteHeader = document.querySelector('.site-header');
   const story = document.querySelector('.scroll-story');
   const beats = [...document.querySelectorAll('.beat')];
   const progressFill = document.querySelector('.progress-fill');
@@ -26,6 +29,9 @@
   let mouseX = 0;
   let mouseY = 0;
   let raf = 0;
+  let nextLightning = 1600 + Math.random() * 1800;
+  let lightningCount = 0;
+  const lightningBolts = [];
 
   function clamp(value, min = 0, max = 1) {
     return Math.min(max, Math.max(min, value));
@@ -40,6 +46,11 @@
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const headerRect = siteHeader.getBoundingClientRect();
+    lightningCanvas.width = Math.round(headerRect.width * dpr);
+    lightningCanvas.height = Math.round(headerRect.height * dpr);
+    lightningCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
   function lemniscate(t, scale = 1) {
@@ -176,6 +187,95 @@
     });
   }
 
+  function createLightning(timestamp, strong = false) {
+    const headerWidth = siteHeader.clientWidth;
+    const headerHeight = siteHeader.clientHeight;
+    const segments = strong ? 12 : 9;
+    const centerX = headerWidth * (.07 + Math.random() * .86);
+    const points = [];
+    const branches = [];
+
+    for (let i = 0; i <= segments; i++) {
+      const progress = i / segments;
+      const wave = Math.sin(progress * Math.PI * (2 + Math.random() * 2)) * 8;
+      points.push({
+        x: clamp(centerX + wave + (Math.random() - .5) * (strong ? 28 : 18), 4, headerWidth - 4),
+        y: -5 + progress * (headerHeight + 10)
+      });
+    }
+
+    const branchCount = strong ? 4 : 2;
+    for (let i = 0; i < branchCount; i++) {
+      const anchorIndex = 3 + Math.floor(Math.random() * (segments - 5));
+      const anchor = points[anchorIndex];
+      const direction = Math.random() > .5 ? 1 : -1;
+      branches.push([
+        anchor,
+        { x: anchor.x + direction * (12 + Math.random() * 25), y: anchor.y + 7 + Math.random() * 10 },
+        { x: anchor.x + direction * (25 + Math.random() * 38), y: anchor.y + 15 + Math.random() * 17 }
+      ]);
+    }
+
+    lightningBolts.push({
+      born: timestamp,
+      duration: strong ? 360 : 175,
+      strong,
+      points,
+      branches
+    });
+  }
+
+  function strokeLightningPath(points, alpha, strong) {
+    lightningCtx.beginPath();
+    points.forEach((point, index) => index ? lightningCtx.lineTo(point.x, point.y) : lightningCtx.moveTo(point.x, point.y));
+    lightningCtx.shadowColor = strong ? 'rgba(196, 225, 255, .95)' : 'rgba(142, 205, 255, .62)';
+    lightningCtx.shadowBlur = strong ? 13 : 7;
+    lightningCtx.strokeStyle = `rgba(135, 201, 255, ${alpha * .34})`;
+    lightningCtx.lineWidth = strong ? 3 : 1.7;
+    lightningCtx.stroke();
+    lightningCtx.shadowBlur = strong ? 6 : 3;
+    lightningCtx.strokeStyle = `rgba(244, 250, 255, ${alpha})`;
+    lightningCtx.lineWidth = strong ? 1.15 : .65;
+    lightningCtx.stroke();
+  }
+
+  function drawHeaderLightning(timestamp) {
+    const headerWidth = siteHeader.clientWidth;
+    const headerHeight = siteHeader.clientHeight;
+    lightningCtx.clearRect(0, 0, headerWidth, headerHeight);
+    if (reducedMotion) return;
+
+    if (timestamp >= nextLightning) {
+      lightningCount += 1;
+      const strong = lightningCount % 6 === 0 || Math.random() < .13;
+      createLightning(timestamp, strong);
+      if (strong) createLightning(timestamp + 78, true);
+      nextLightning = timestamp + (strong ? 4600 : 2400) + Math.random() * (strong ? 3600 : 4200);
+    }
+
+    for (let i = lightningBolts.length - 1; i >= 0; i--) {
+      const bolt = lightningBolts[i];
+      const age = timestamp - bolt.born;
+      if (age < 0) continue;
+      if (age > bolt.duration) {
+        lightningBolts.splice(i, 1);
+        continue;
+      }
+
+      const life = 1 - age / bolt.duration;
+      const flicker = .52 + .48 * Math.abs(Math.sin(age * .095));
+      const alpha = life * flicker * (bolt.strong ? .82 : .42);
+      if (bolt.strong) {
+        lightningCtx.fillStyle = `rgba(178, 216, 255, ${alpha * .055})`;
+        lightningCtx.fillRect(0, 0, headerWidth, headerHeight);
+      }
+      strokeLightningPath(bolt.points, alpha, bolt.strong);
+      bolt.branches.forEach((branch) => strokeLightningPath(branch, alpha * .48, false));
+    }
+
+    lightningCtx.shadowBlur = 0;
+  }
+
   function render(timestamp = 0) {
     const easing = reducedMotion ? 1 : .075;
     smoothProgress += (targetProgress - smoothProgress) * easing;
@@ -190,6 +290,7 @@
     bodies.forEach((body) => drawTrail(body, orbitTime + body.phase, smoothProgress));
     bodies.forEach((body, index) => drawBody(body, orbitTime + body.phase, index));
     drawHeaderOrbit(timestamp);
+    drawHeaderLightning(timestamp);
 
     raf = requestAnimationFrame(render);
   }
@@ -233,4 +334,117 @@
   resize();
   updateScroll();
   render();
+})();
+
+(() => {
+  const NULLCORP_PROJECT_URL = ''; // TODO: Add the real NullCorp 3D project URL when it is available.
+  const selectorInputs = [...document.querySelectorAll('input[name="project-path"]')];
+  const recommendation = document.querySelector('#path-recommendation');
+  const pathStart = document.querySelector('.path-start');
+  const serviceSelect = document.querySelector('#service-interest');
+  const hostingCheckbox = document.querySelector('input[name="Managed hosting interest"]');
+  const nullcorpLink = document.querySelector('.nullcorp-link');
+  const form = document.querySelector('#project-form');
+  const nextInput = document.querySelector('#form-next');
+  const successMessage = document.querySelector('#project-success');
+
+  const paths = {
+    'first-website': {
+      service: 'Business website',
+      message: 'Start with a focused business website that clearly explains your value, builds trust, and gives customers an easy next step.'
+    },
+    'website-help': {
+      service: 'Website refactoring',
+      message: 'A website refactor can improve the experience you already have—design, speed, accessibility, security, and maintainability included.'
+    },
+    launching: {
+      service: 'Landing page',
+      message: 'A focused landing page is a practical way to launch the offer, campaign, event, or idea with one clear outcome.'
+    },
+    interactive: {
+      service: '3D or interactive website',
+      message: 'An interactive experience can turn your story into something people explore, remember, and want to share.'
+    },
+    hosting: {
+      service: 'Managed hosting and care',
+      message: 'Managed hosting and care gives you dependable deployment, monitoring, security, backups, and a real path for continued support.'
+    }
+  };
+
+  selectorInputs.forEach((input) => {
+    input.addEventListener('change', () => {
+      const selected = paths[input.value];
+      recommendation.textContent = selected.message;
+      pathStart.hidden = false;
+      serviceSelect.value = selected.service;
+      if (input.value === 'hosting') hostingCheckbox.checked = true;
+    });
+  });
+
+  pathStart.addEventListener('click', () => {
+    window.setTimeout(() => serviceSelect.focus({ preventScroll: true }), 550);
+  });
+
+  if (NULLCORP_PROJECT_URL) {
+    nullcorpLink.href = NULLCORP_PROJECT_URL;
+    nullcorpLink.textContent = 'Explore the experiment';
+    nullcorpLink.removeAttribute('aria-disabled');
+  } else {
+    nullcorpLink.addEventListener('click', (event) => event.preventDefault());
+  }
+
+  document.querySelector('#current-year').textContent = String(new Date().getFullYear());
+
+  if (location.protocol === 'http:' || location.protocol === 'https:') {
+    nextInput.value = `${location.origin}${location.pathname}?submitted=true#project-success`;
+  }
+
+  function fieldFor(control) {
+    return control.closest('.field');
+  }
+
+  function errorFor(control) {
+    const describedBy = control.getAttribute('aria-describedby');
+    return describedBy ? document.getElementById(describedBy) : null;
+  }
+
+  function validationMessage(control) {
+    if (control.validity.valueMissing) return 'Please complete this field.';
+    if (control.validity.typeMismatch) return 'Please enter a valid email address.';
+    if (control.validity.badInput) return 'Please check this value.';
+    return control.validationMessage || 'Please check this field.';
+  }
+
+  function showValidation(control) {
+    const field = fieldFor(control);
+    const error = errorFor(control);
+    if (!field || !error) return;
+    const invalid = !control.validity.valid;
+    field.classList.toggle('is-invalid', invalid);
+    control.setAttribute('aria-invalid', String(invalid));
+    error.textContent = invalid ? validationMessage(control) : '';
+  }
+
+  form.querySelectorAll('[required]').forEach((control) => {
+    control.addEventListener('invalid', (event) => {
+      event.preventDefault();
+      showValidation(control);
+    });
+    control.addEventListener('input', () => showValidation(control));
+    control.addEventListener('change', () => showValidation(control));
+  });
+
+  form.addEventListener('submit', (event) => {
+    if (form.checkValidity()) return;
+    event.preventDefault();
+    const firstInvalid = form.querySelector(':invalid');
+    form.querySelectorAll('[required]').forEach(showValidation);
+    firstInvalid?.focus();
+  });
+
+  const wasSubmitted = new URLSearchParams(location.search).get('submitted') === 'true';
+  if (wasSubmitted) {
+    successMessage.hidden = false;
+    successMessage.focus({ preventScroll: true });
+  }
 })();
