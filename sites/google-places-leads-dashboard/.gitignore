@@ -1,0 +1,4 @@
+config.yaml
+dashboard-config.json
+.dashboard-state.json
+output/*.json

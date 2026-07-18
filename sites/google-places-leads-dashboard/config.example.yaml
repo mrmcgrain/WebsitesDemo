@@ -1,0 +1,14 @@
+# Copy to config.yaml and add your real Google Places API key.
+# Keep config.yaml out of git.
+api_key: "YOUR_GOOGLE_PLACES_API_KEY"
+
+# Defaults that pre-fill the dashboard search form.
+business_type: "nail salons"
+location: "85048"
+limit: 10
+enrich_social: true
+include_prior: false
+
+# Safety/usage caps displayed in the dashboard.
+monthly_request_limit: 5000
+max_calls_per_run: 250
