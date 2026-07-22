@@ -62,6 +62,12 @@
               ld.textContent = JSON.stringify(data);
             } catch {}
           }
+          const map = document.querySelector('.map-placeholder');
+          if (map && !map.querySelector('.google-map-frame')) {
+            map.classList.add('google-map-live');
+            map.setAttribute('aria-label', 'Google Map for The Paw Spa in Ahwatukee');
+            map.innerHTML = `<iframe class="google-map-frame" title="Google Map showing The Paw Spa in Ahwatukee" src="https://www.google.com/maps?q=The%20Paw%20Spa%203961%20E%20Chandler%20Blvd%20%23109%20Phoenix%20AZ%2085048&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a class="map-open-link" href="https://www.google.com/maps/place/The+Paw+Spa/@33.3033524,-111.9977527,17z/data=!3m1!4b1!4m6!3m5!1s0x872b0461c6492b2d:0xfab50462e184d8df!8m2!3d33.3033524!4d-111.9977527!16s%2Fg%2F1w04kksr?entry=ttu&g_ep=EgoyMDI2MDcxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Open The Paw Spa in Google Maps</a>`;
+          }
           return Boolean(actions && plan);
         };
         let tries = 0;
