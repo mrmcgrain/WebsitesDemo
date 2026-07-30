@@ -69,6 +69,9 @@ def main():
 
     age_dialogs = [a for t, a in tags if a.get("role") == "dialog" and a.get("aria-modal") == "true"]
     require(len(age_dialogs) == 1, "age gate uses one modal dialog", failures)
+    main_targets = [a for t, a in tags if t == "main" and a.get("id") == "main"]
+    require(len(main_targets) == 1 and main_targets[0].get("tabindex") == "-1",
+            "main content is a programmatic focus target after age confirmation", failures)
 
     if failures:
         for failure in failures:

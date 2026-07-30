@@ -13,7 +13,7 @@
     localStorage.setItem(ageKey, 'yes');
     ageGate.hidden = true;
     body.classList.remove('is-locked');
-    document.querySelector('.brand').focus();
+    document.getElementById('main').focus({ preventScroll: true });
   };
   if (localStorage.getItem(ageKey) === 'yes') {
     ageGate.hidden = true;
