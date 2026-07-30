@@ -4,19 +4,123 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0A0A0A" />
-    <meta name="description" content="Mistress Rose is a professional dominatrix and fetish companion offering a premium, discreet, consent-led boutique experience for adults 18+." />
+    <meta name="description" content="Miss Debrah Rose is a professional dominatrix and fetish companion offering a premium, discreet, consent-led boutique experience for adults 18+." />
     <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Mistress Rose | Premium Dominatrix & Fetish Companion" />
+    <meta property="og:title" content="Miss Debrah Rose | Premium Dominatrix & Fetish Companion" />
     <meta property="og:description" content="Confidence. Control. Discretion. An unforgettable luxury experience." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og-placeholder.svg" />
-    <meta property="og:site_name" content="Mistress Rose" />
+    <meta property="og:image" content="./assets/photos/mr-og.webp" />
+    <meta property="og:site_name" content="Miss Debrah Rose" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <title>Mistress Rose | Premium Dominatrix & Fetish Companion</title>
+    <title>Miss Debrah Rose | Premium Dominatrix & Fetish Companion</title>
     <script type="module" crossorigin src="./assets/index-CvW9wIM7.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-D8v-zRbm.css">
+    <style>
+      .mr-photo-ready{position:relative;isolation:isolate;background:#12090d!important}
+      .mr-photo-ready>.mr-photo-image{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;z-index:2;filter:saturate(.92) contrast(1.04)}
+      .mr-photo-ready>*:not(.mr-photo-image){display:none!important}
+      .mr-photo-hero>.mr-photo-image{object-position:50% 27%;filter:saturate(.82) contrast(1.08) brightness(.76)}
+      .mr-photo-about>.mr-photo-image{object-position:50% 28%}
+      .mr-photo-service>.mr-photo-image{object-position:50% 20%}
+      .mr-photo-gallery>.mr-photo-image{object-position:50% 24%;transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .4s ease}
+      button:hover .mr-photo-gallery>.mr-photo-image,button:focus-visible .mr-photo-gallery>.mr-photo-image{transform:scale(1.035);filter:saturate(1) contrast(1.05)}
+      .mr-photo-vignette::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(90deg,rgba(10,10,10,.78),rgba(10,10,10,.16) 58%,rgba(10,10,10,.04)),linear-gradient(0deg,rgba(10,10,10,.5),transparent 48%)}
+      .mr-age{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:22px;background:rgba(7,3,6,.82);backdrop-filter:blur(20px)}
+      .mr-age[hidden]{display:none}
+      .mr-age-card{width:min(560px,100%);border:1px solid rgba(212,175,55,.3);border-radius:28px;background:linear-gradient(145deg,#1a0b10,#090708);padding:30px;box-shadow:0 30px 100px rgba(0,0,0,.62)}
+      .mr-age-kicker{margin:0 0 12px;color:#d4af37;font:700 11px/1.2 Inter,sans-serif;letter-spacing:.28em;text-transform:uppercase}
+      .mr-age h2{margin:0;color:#fff;font:600 clamp(2.6rem,8vw,4.6rem)/.86 Cinzel,Georgia,serif;letter-spacing:-.05em}
+      .mr-age p{margin:18px 0 0;color:rgba(255,255,255,.72);font:400 16px/1.7 Inter,sans-serif}
+      .mr-age-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+      .mr-age-actions button,.mr-age-actions a{min-height:48px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0 20px;border:1px solid rgba(255,255,255,.2);font:800 12px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+      .mr-age-enter{background:#8b0000;border-color:#8b0000!important;color:white;cursor:pointer}.mr-age-leave{color:white;background:rgba(255,255,255,.05)}
+      .mr-age-actions button:focus-visible,.mr-age-actions a:focus-visible{outline:2px solid #d4af37;outline-offset:4px}
+      .mr-age-open{overflow:hidden}
+      @media(max-width:640px){.mr-age-actions button,.mr-age-actions a{width:100%}.mr-age-card{padding:24px}.mr-photo-hero>.mr-photo-image{object-position:57% 24%}}
+      @media(prefers-reduced-motion:reduce){.mr-photo-gallery>.mr-photo-image{transition:none!important}button:hover .mr-photo-gallery>.mr-photo-image{transform:none}}
+    </style>
   </head>
   <body>
+    <div class="mr-age" id="mrAgeGate" role="dialog" aria-modal="true" aria-labelledby="mrAgeTitle" aria-describedby="mrAgeText">
+      <div class="mr-age-card">
+        <p class="mr-age-kicker">Adults only · consent required</p>
+        <h2 id="mrAgeTitle">Enter with intention.</h2>
+        <p id="mrAgeText">This premium adult brand preview is intended for visitors 18+. It presents client-supplied editorial imagery in a consent-forward, discreet, non-explicit setting.</p>
+        <div class="mr-age-actions"><button class="mr-age-enter" id="mrAgeEnter" type="button">I am 18+ — Enter</button><a class="mr-age-leave" href="../../">Leave</a></div>
+      </div>
+    </div>
     <div id="root"></div>
+    <script>
+      (() => {
+        const base = './assets/photos/';
+        const servicePhotos = {
+          'Dominant Roleplay': 'mr-service-01.webp',
+          'Fetish Exploration': 'mr-service-02.webp',
+          'Power Exchange': 'mr-service-03.webp',
+          'Sensory Experiences': 'mr-service-04.webp',
+          'Luxury Companion Sessions': 'mr-service-05.webp',
+          'Custom Experiences': 'mr-service-06.webp'
+        };
+        const galleryPhotos = ['mr-gallery-01.webp','mr-gallery-02.webp','mr-gallery-03.webp','mr-gallery-04.webp','mr-gallery-05.webp','mr-gallery-06.webp'];
+        const galleryLabels = ['Editorial portrait','Wardrobe portrait','Full-length portrait','Personal portrait','Close portrait','Seated editorial portrait'];
+
+        const applyPhoto = (el, file, label, kind, eager = false) => {
+          if (!el || el.dataset.mrPhoto) return;
+          el.dataset.mrPhoto = file;
+          el.classList.add('mr-photo-ready', `mr-photo-${kind}`);
+          if (kind === 'hero') el.classList.add('mr-photo-vignette');
+          el.setAttribute('aria-label', label);
+          const img = document.createElement('img');
+          img.className = 'mr-photo-image';
+          img.src = base + file;
+          img.alt = '';
+          img.setAttribute('aria-hidden','true');
+          img.decoding = 'async';
+          img.loading = 'eager';
+          if (eager) img.fetchPriority = 'high';
+          el.appendChild(img);
+        };
+
+        const installPhotos = () => {
+          const placeholders = [...document.querySelectorAll('[role="img"][aria-label]')];
+          if (!placeholders.length) return false;
+          placeholders.forEach((el) => {
+            const label = el.getAttribute('aria-label') || '';
+            if (label.startsWith('Hero Image Placeholder')) return applyPhoto(el,'mr-hero.webp','Miss Debrah Rose editorial portrait','hero',true);
+            if (label.startsWith('Large Portrait Placeholder')) return applyPhoto(el,'mr-about.webp','Miss Debrah Rose portrait','about',true);
+            for (const [title,file] of Object.entries(servicePhotos)) {
+              if (label.startsWith(title + ' —')) return applyPhoto(el,file,`${title} — Miss Debrah Rose`,'service');
+            }
+            const match = label.match(/(\d{2})/);
+            if (match && /Studio|Elegant Portraits|Wardrobe|Lifestyle/.test(label)) {
+              const index = (Number(match[1]) - 1) % galleryPhotos.length;
+              applyPhoto(el,galleryPhotos[index],`${galleryLabels[index]} of Miss Debrah Rose`,'gallery');
+              const button = el.closest('button');
+              if (button) button.setAttribute('aria-label',`Open ${galleryLabels[index]} ${match[1]}`);
+            }
+          });
+          return Boolean(document.querySelector('.mr-photo-hero'));
+        };
+
+        let attempts = 0;
+        const timer = setInterval(() => { attempts += 1; if (installPhotos() || attempts > 80) clearInterval(timer); }, 100);
+        window.addEventListener('load', installPhotos);
+        const appRoot = document.getElementById('root');
+        if (appRoot) new MutationObserver(() => installPhotos()).observe(appRoot,{childList:true,subtree:true});
+
+        const gate = document.getElementById('mrAgeGate');
+        const enter = document.getElementById('mrAgeEnter');
+        const storageKey = 'mistressRosePremiumAgeOk';
+        const dismiss = () => {
+          localStorage.setItem(storageKey,'yes');
+          gate.hidden = true;
+          document.documentElement.classList.remove('mr-age-open');
+          document.querySelector('#root a, #root button')?.focus({preventScroll:true});
+        };
+        if (localStorage.getItem(storageKey) === 'yes') gate.hidden = true;
+        else document.documentElement.classList.add('mr-age-open');
+        enter.addEventListener('click', dismiss);
+      })();
+    </script>
   </body>
 </html>
