@@ -20,5 +20,27 @@
     "date": "2026-08-29",
     "number": 1,
     "dated_slug": "2026-08-29-phoenix-ac-filter-size-finder"
+  },
+  {
+    "slug": "hoa-landscape-violation-photo-log",
+    "title": "HOA Landscape Violation Photo Log",
+    "search": "arizona hoa landscape violation proof photos",
+    "problem": "Homeowners need boring proof that weeds, gravel, and tree trimming were handled before the deadline.",
+    "audience": "Arizona homeowners responding to HOA landscape notices.",
+    "checklist": [
+      "Take one wide photo from the street before doing any work.",
+      "Photograph each cited area separately with the notice number visible nearby.",
+      "Save receipts for gravel, weed treatment, haul-away, or landscaping labor.",
+      "Take matching after photos at the same angle and time of day if possible.",
+      "Email the HOA a short note with photos attached before the cure-date deadline."
+    ],
+    "affiliate": [
+      "weed killer",
+      "landscape crew referral",
+      "green waste pickup"
+    ],
+    "date": "2026-08-30",
+    "number": 2,
+    "dated_slug": "2026-08-30-hoa-landscape-violation-photo-log"
   }
 ]
