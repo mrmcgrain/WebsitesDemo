@@ -42,5 +42,27 @@
     "date": "2026-08-30",
     "number": 2,
     "dated_slug": "2026-08-30-hoa-landscape-violation-photo-log"
+  },
+  {
+    "slug": "garage-door-spring-symptom-checker",
+    "title": "Garage Door Spring Symptom Checker",
+    "search": "garage door spring broken symptoms phoenix",
+    "problem": "A stuck garage door is urgent, but homeowners often cannot tell if the spring, opener, or track failed.",
+    "audience": "Suburban homeowners comparing repair calls before booking service.",
+    "checklist": [
+      "Do not pull hard on the opener if the door feels unusually heavy.",
+      "Look above the door for a visible gap in the torsion spring coil.",
+      "Check whether cables are loose or hanging near the track.",
+      "Listen for opener motor noise with no door movement, then stop testing.",
+      "Ask repair companies for spring-cycle rating, warranty, and same-day availability."
+    ],
+    "affiliate": [
+      "garage repair lead",
+      "home warranty",
+      "smart garage controller"
+    ],
+    "date": "2026-08-31",
+    "number": 3,
+    "dated_slug": "2026-08-31-garage-door-spring-symptom-checker"
   }
 ]
