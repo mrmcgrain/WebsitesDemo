@@ -86,5 +86,27 @@
     "date": "2026-09-01",
     "number": 4,
     "dated_slug": "2026-09-01-pool-filter-cleaning-log-arizona"
+  },
+  {
+    "slug": "moving-box-count-estimator",
+    "title": "Moving Box Count Estimator",
+    "search": "how many moving boxes for two bedroom apartment",
+    "problem": "People underestimate box count and end up buying expensive emergency boxes the night before moving.",
+    "audience": "Renters planning a local move and comparing mover quotes.",
+    "checklist": [
+      "Count closets first; they usually drive the surprise box total.",
+      "Use small boxes for books, dishes, tools, and pantry cans.",
+      "Use medium boxes for most household goods; avoid overfilling large boxes.",
+      "Reserve wardrobe boxes for hanging clothes only if wrinkle-free delivery matters.",
+      "Buy tape, labels, and a marker pack before packing day starts."
+    ],
+    "affiliate": [
+      "moving boxes",
+      "local movers",
+      "storage unit"
+    ],
+    "date": "2026-09-02",
+    "number": 5,
+    "dated_slug": "2026-09-02-moving-box-count-estimator"
   }
 ]
