@@ -108,5 +108,27 @@
     "date": "2026-09-02",
     "number": 5,
     "dated_slug": "2026-09-02-moving-box-count-estimator"
+  },
+  {
+    "slug": "water-heater-age-lookup",
+    "title": "Water Heater Age Lookup Checklist",
+    "search": "water heater serial number age lookup",
+    "problem": "Homeowners see a rusty tank and need to know whether it is near end-of-life before it leaks.",
+    "audience": "Homeowners, landlords, and buyers reviewing inspection notes.",
+    "checklist": [
+      "Photograph the model and serial-number sticker before searching online.",
+      "Find the manufacturer date code; brand formats differ.",
+      "Check for water in the drain pan, rust trails, or damp flooring nearby.",
+      "Ask for replacement quotes before failure if the tank is 10+ years old.",
+      "Note whether the unit is gas, electric, tankless, garage, closet, or attic mounted."
+    ],
+    "affiliate": [
+      "plumber referral",
+      "leak detector",
+      "home warranty"
+    ],
+    "date": "2026-09-03",
+    "number": 6,
+    "dated_slug": "2026-09-03-water-heater-age-lookup"
   }
 ]
