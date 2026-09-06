@@ -174,5 +174,27 @@
     "date": "2026-09-05",
     "number": 8,
     "dated_slug": "2026-09-05-moving-box-count-estimator-2026-09-05"
+  },
+  {
+    "slug": "phoenix-ac-filter-size-finder-2026-09-06",
+    "title": "Phoenix AC Filter Size Finder Update",
+    "search": "phoenix ac filter sizes apartments homes",
+    "problem": "People forget HVAC filter dimensions, then buy the wrong 3-pack during the first 110\u00b0 week.",
+    "audience": "Phoenix renters, homeowners, and property managers doing routine AC maintenance.",
+    "checklist": [
+      "Open the return grille and photograph the printed dimensions on the old filter.",
+      "If the label is unreadable, measure length, width, and depth with a tape measure.",
+      "Write the size on the inside of the utility closet door.",
+      "Set a 45-day reminder during monsoon/dust season; 60-90 days is fine in cooler months.",
+      "Buy MERV 8-11 for most residential systems unless the HVAC tech specifies otherwise."
+    ],
+    "affiliate": [
+      "filter subscription",
+      "HVAC tune-up",
+      "smart thermostat"
+    ],
+    "date": "2026-09-06",
+    "number": 9,
+    "dated_slug": "2026-09-06-phoenix-ac-filter-size-finder-2026-09-06"
   }
 ]
