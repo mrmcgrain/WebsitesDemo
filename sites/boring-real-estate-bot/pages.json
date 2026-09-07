@@ -196,5 +196,27 @@
     "date": "2026-09-06",
     "number": 9,
     "dated_slug": "2026-09-06-phoenix-ac-filter-size-finder-2026-09-06"
+  },
+  {
+    "slug": "pool-filter-cleaning-log-arizona-2026-09-07",
+    "title": "Arizona Pool Filter Cleaning Log Update",
+    "search": "how often clean pool filter arizona dust storm",
+    "problem": "Dust storms and summer use make pool filters clog faster than generic national advice suggests.",
+    "audience": "Arizona pool owners deciding whether to DIY or hire pool service.",
+    "checklist": [
+      "Record clean-filter PSI after a full backwash or cartridge cleaning.",
+      "Clean again when pressure rises 8-10 PSI over the baseline.",
+      "After a dust storm, skim first, then check PSI before running the pump longer.",
+      "Inspect cartridges for cracked bands, flattened pleats, or brittle end caps.",
+      "Keep a dated note of cleanings so pool techs can spot recurring problems."
+    ],
+    "affiliate": [
+      "pool service quote",
+      "replacement cartridge",
+      "robot pool cleaner"
+    ],
+    "date": "2026-09-07",
+    "number": 10,
+    "dated_slug": "2026-09-07-pool-filter-cleaning-log-arizona-2026-09-07"
   }
 ]
