@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Follow the Request · API field lab</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div><span class="eyebrow">API FIELD LAB / 01</span><h1>Follow the request<span class="title-dot">.</span></h1></div>
+    <div class="header-note">One message. Every boundary.<br><span>AI writes code. You understand it.</span></div>
+  </header>
+  <form id="request-form" class="toolbar">
+    <label for="message">Your message<input id="message" name="message" value="Hello class" required maxlength="200" autocomplete="off"></label>
+    <label for="mode">Experiment<select id="mode"><option value="live">Live echo · httpbin</option><option value="http-error">Live HTTP 404 · httpbin</option><option value="no-data">Local no-data fixture</option></select></label>
+    <button id="send" type="submit" class="primary">Send request <span aria-hidden="true">↗</span></button>
+    <div class="transport" role="group" aria-label="Teaching replay controls"><button id="restart" type="button" disabled aria-label="Restart replay">↺</button><button id="previous" type="button" disabled>Previous</button><button id="next" type="button" disabled>Next step →</button></div>
+  </form>
+  <div class="session-bar"><p id="status" role="status" aria-live="polite">Ready. Send a message, then slow down the story.</p><span id="capture">No transaction yet</span></div>
+  <main class="workspace">
+    <section class="panel flow-panel" aria-labelledby="flow-title">
+      <div class="panel-heading"><h2 id="flow-title"><span class="panel-number">01</span> The journey</h2><span id="step-count" class="pill">READY</span></div>
+      <p id="replay-label" class="panel-caption">Teaching replay. Network requests run at normal speed.</p>
+      <nav id="stage-track" aria-label="Replay stages"></nav>
+      <div class="diagram">
+        <svg viewBox="0 0 620 285" role="img" aria-labelledby="diagram-title diagram-desc">
+          <title id="diagram-title">Request and response journey</title><desc id="diagram-desc">JavaScript hands the request to browser networking. The API responds. The browser reads the JSON and JavaScript updates the page. The Promise stays with JavaScript.</desc>
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/></marker></defs>
+          <path class="wire outbound" d="M175 86 H241 M376 86 H440" marker-end="url(#arrow)"/>
+          <path class="wire inbound" d="M440 117 H376 M309 145 V200 M376 232 H440" marker-end="url(#arrow)"/>
+          <text class="wire-label" x="212" y="70">SEND</text><text class="wire-label" x="409" y="139">RETURN</text>
+          <g id="node-js" class="node"><rect x="35" y="66" width="140" height="79" rx="12"/><text x="105" y="99">JavaScript</text><text class="node-sub" x="105" y="122">your async function</text></g>
+          <g id="node-browser" class="node"><rect x="241" y="66" width="135" height="79" rx="12"/><text x="309" y="99">Browser</text><text class="node-sub" x="309" y="122">networking</text></g>
+          <g id="node-api" class="node"><rect x="440" y="66" width="145" height="79" rx="12"/><text x="512" y="99">httpbin API</text><text class="node-sub" x="512" y="122">external server</text></g>
+          <g id="node-json" class="node"><rect x="241" y="200" width="135" height="64" rx="12"/><text x="309" y="225">Parsed object</text><text class="node-sub" x="309" y="247">JavaScript data</text></g>
+          <g id="node-screen" class="node"><rect x="440" y="200" width="145" height="64" rx="12"/><text x="512" y="225">Your page</text><text class="node-sub" x="512" y="247">rendered result</text></g>
+          <g id="packet" transform="translate(105 40)"><circle r="12"/><path d="M-6 -4 H6 V4 H-6 Z M-6 -4 L0 0 L6 -4"/></g>
+        </svg>
+        <div id="promise" class="promise"><span class="promise-light"></span><span id="promise-text">Promise lives here</span></div>
+      </div>
+      <div class="flow-foot"><span id="packet-label">Waiting for your first message</span><span>Server internals are a simplified illustration.</span></div>
+    </section>
+    <section class="panel code-panel" aria-labelledby="code-title">
+      <div class="panel-heading"><h2 id="code-title"><span class="panel-number">02</span> The actual code</h2><span class="pill neutral">app.js</span></div>
+      <p class="panel-caption">Source from the running request function. The active lines light up.</p>
+      <pre id="code" tabindex="0" aria-label="Actual JavaScript request function"></pre>
+    </section>
+    <section class="panel response-panel" aria-labelledby="response-title">
+      <div class="panel-heading"><h2 id="response-title"><span class="panel-number">03</span> Request / response</h2><span id="http-status" class="pill neutral">—</span></div>
+      <p class="panel-caption">App-recorded evidence. Verify the HTTP transaction in DevTools Network.</p>
+      <div class="request-meta"><div><span id="request-method">GET</span><code id="request-url">The request URL appears at step 2.</code></div><div><span>TIME</span><code id="timing">Actual duration appears when the replay reaches the response.</code></div></div>
+      <pre id="response-body" tabindex="0" aria-label="Response JSON">The parsed response appears at step 6.</pre>
+    </section>
+    <section class="panel logs-panel" aria-labelledby="logs-title">
+      <div class="panel-heading"><h2 id="logs-title"><span class="panel-number">04</span> App logs</h2><span class="pill neutral">console.log</span></div>
+      <p class="panel-caption">Same events sent to the real Console. Replay reveals them one step at a time.</p>
+      <div id="logs" tabindex="0" aria-label="Recorded application logs"><p class="empty-log">The first clue starts with a click.</p></div>
+    </section>
+  </main>
+  <footer class="lesson-strip"><div><span id="stage-kicker" class="eyebrow">BEFORE THE REQUEST</span><h2 id="stage-title">Make the invisible visible.</h2><p id="explanation">Send a message. Then use Next step to trace it through the browser, the API, and your code.</p></div><div class="result-card"><span class="eyebrow">REPLAY RESULT</span><p id="result" aria-live="polite">No message yet</p></div></footer>
+  <section class="debug-section">
+    <div><h2>A successful request can still produce a bug.</h2><p>Inspect the object before trusting your assumptions.</p></div>
+    <button id="debug" type="button" disabled aria-controls="debug-example" aria-expanded="false">Try the wrong-field example</button>
+    <div id="debug-example" hidden><span class="pill">INTENTIONAL TEACHING BUG</span><div class="debug-grid"><div><code>data.message</code><pre id="wrong-value"></pre></div><div><code>data.args.message</code><pre id="right-value"></pre></div></div><p id="debug-explanation"></p></div>
+  </section>
+  <p class="page-note">Use F12 to open real DevTools. Arrow keys step through replay when focus is outside inputs. Send only non-sensitive messages. <a href="PRESENTATION.md">Three-minute presenter guide</a></p>
+</body>
+</html>
