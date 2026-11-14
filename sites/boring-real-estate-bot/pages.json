@@ -1538,5 +1538,27 @@
     "date": "2026-11-13",
     "number": 70,
     "dated_slug": "2026-11-13-water-heater-age-lookup-2026-11-13"
+  },
+  {
+    "slug": "short-term-rental-supply-restock-list-2026-11-14",
+    "title": "Short-Term Rental Restock List Update",
+    "search": "airbnb restock checklist toiletries towels kitchen",
+    "problem": "Hosts lose reviews over boring missing items: batteries, paper towels, coffee filters, and trash bags.",
+    "audience": "Small short-term rental hosts and cleaners doing same-day turnovers.",
+    "checklist": [
+      "Create minimum par levels for paper towels, toilet paper, trash bags, and soap.",
+      "Keep batteries for remotes, keypad locks, smoke detectors, and fans.",
+      "Photograph supply closets after every turnover for accountability.",
+      "Separate guest-facing extras from cleaner-only backup inventory.",
+      "Review restock receipts monthly to catch waste or underpricing."
+    ],
+    "affiliate": [
+      "bulk supplies",
+      "smart lock batteries",
+      "cleaning service"
+    ],
+    "date": "2026-11-14",
+    "number": 71,
+    "dated_slug": "2026-11-14-short-term-rental-supply-restock-list-2026-11-14"
   }
 ]
